@@ -1,5 +1,5 @@
-Grading at 09/01/2017:03:48:32.807674
-For commit ID 580da5cde26b6e438f6bb6004ca91b9c9c71446c
+Grading at 09/01/2017:03:49:42.945825
+For commit ID 3fd5ac381622fdde83887aa82d8c5d2cbf5786fe
 Checking syntax of declarations, and code that uses them
 mytypes.c has either illegal, or un-useable declarations
 the mostly likely causes are that you
