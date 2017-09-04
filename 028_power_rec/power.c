@@ -8,7 +8,7 @@ unsigned power(unsigned x, unsigned y)
         return 0;
     
     if (y==0)
-        return x;
+        return 1;
     
     return x * power(x, y-1);
 }
