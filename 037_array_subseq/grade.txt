@@ -1,0 +1,12 @@
+Grading at 09/08/2017:17:14:12.112474
+For commit ID 14599c5f0cf6630ca84644aaaeb5fad7cf11488f
+Attempting to compile maxSeq.c 
+maxSeq.c:2:1: error: unknown type name ‘size_t’
+ size_t  maxSeq(int * array, size_t n)
+ ^
+maxSeq.c:2:29: error: unknown type name ‘size_t’
+ size_t  maxSeq(int * array, size_t n)
+                             ^
+The code did not compile!
+
+Overall Grade: F
