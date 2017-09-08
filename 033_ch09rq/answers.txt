@@ -3,7 +3,7 @@ D r#Question No. 2
 C r#Question No. 3
 D r#Question No. 4
 B r#Question No. 5
-B r#Question No. 6
+E r#Question No. 6
 D #Question No. 7
 D #Question No. 8
 C #Question No. 9
