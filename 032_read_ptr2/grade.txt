@@ -1,10 +1,9 @@
-Grading at 09/08/2017:00:18:55.797333
-For commit ID d3e87ebbeaf4bff417b4f71a1b8d44180159337a
+Grading at 09/08/2017:00:20:26.177757
+For commit ID b30ae1f13e257d3cde1b8c3db20a41b7d7524a61
 Attempting to compile test.c
 gcc -o test.exe test.c
 compiled
-Line_1_did_not_match
-Your file did not match the expected ouput
-Your output did not match what we expected.
+Your file matched the expected output
+Your output matched what we expected
 
-Overall Grade: FAILED
+Overall Grade: PASSED
