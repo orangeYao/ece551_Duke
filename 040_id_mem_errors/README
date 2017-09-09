@@ -29,3 +29,11 @@ error listed above at least once.
 Submit your answer.txt file
 
 
+19 index out of bounds
+19 use of uninitialized value
+20 use of uninitialized value
+22 use of uninitialized value
+23 return dangling pointer
+28 use of dangling pointer
+
+
