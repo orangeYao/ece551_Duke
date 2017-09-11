@@ -7,5 +7,5 @@ E/A r#Question No. 6
 C r#Question No. 7
 A/B?A #Question No. 8
 C/B r#Question No. 9
-D/C?D #Question No. 10
+C?D #Question No. 10
 F r#Question No. 11
