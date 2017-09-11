@@ -7,14 +7,14 @@ void reverse(char * str) {
   if (str[0] == '\0')
     return;
 
-  int end=0;
+  long long end=0;
   while (str[end] != '\0')
     end++;
 
   char tmp[end+1];
   strncpy(tmp, str, end+1);
 
-  for(int i=0; i<end; i++)
+  for(long long i=0; i<end; i++)
     str[i] = tmp[end - i - 1]; 
 }
 
