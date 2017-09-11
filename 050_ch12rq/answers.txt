@@ -3,9 +3,9 @@ B r#Question No. 2
 K r#Question No. 3
 D r#Question No. 4
 B r#Question No. 5
-E/A #Question No. 6
+A/E/A #Question No. 6
 C r#Question No. 7
 B #Question No. 8
-B #Question No. 9
+C/B r#Question No. 9
 C #Question No. 10
-F #Question No. 11
+F r#Question No. 11
