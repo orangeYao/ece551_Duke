@@ -4,6 +4,9 @@
 
 void reverse(char * str) {
   //WRITE M8E!
+  if (str[0] == '\0')
+    return;
+
   int end=0;
   while (str[end] != '\0')
     end++;
