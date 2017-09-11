@@ -8,8 +8,8 @@ void reverse(char * str) {
   while (str[end] != '\0')
     end++;
 
-  char tmp[end+100];
-  strcpy(tmp, str);
+  char tmp[end+1];
+  strncpy(tmp, str, end+1);
 
   for(int i=0; i<end; i++)
     str[i] = tmp[end - i - 1]; 
