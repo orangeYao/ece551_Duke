@@ -1,14 +1,12 @@
-Grading at 09/11/2017:03:03:50.995650
-For commit ID 9f80c80d25481b3a46dc23d51956d944c5f90229
+Grading at 09/11/2017:03:15:04.246725
+For commit ID f8e0b69abdd3088e7d038182f5bc905420ac47c7
 Attempting to compile  reverse.c
 Your file matched the expected output
 Your output matched what we expected
 Removing your main() and replacing it with our own to run more tests...
 #################################################
 testcase2:
- - Your program segfaulted.
-your code failed the testcase
-#################################################
+nullptr#################################################
 testcase3:
 Your file matched the expected output
 #################################################
@@ -18,4 +16,4 @@ Your file matched the expected output
 testcase5:
 Your file matched the expected output
 
-Overall Grade: C
+Overall Grade: A
