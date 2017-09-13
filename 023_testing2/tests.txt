@@ -7,7 +7,6 @@ aaaaa bbbbc
 aaabb bbbbc
 xa!7$ adfuh
 axxaa cbbbc
-\n\nddf ddiuh
 99011 22344
 987 7 &&^%$
       bbbbc
@@ -20,4 +19,5 @@ uaama $$$~`
 95531 13555
 """"" """""
 7'7'7 888""
-aaaaa aaaaaaaaaaa
+
+aaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaa
