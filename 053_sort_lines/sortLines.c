@@ -58,18 +58,13 @@ void readStdin(FILE* f)
 
 int main(int argc, char ** argv) {
   FILE *f = NULL;
-  if (argc == 3)
-  {
-    perror("Damn it!");
-    return EXIT_FAILURE;
-  }
 
   if (argc == 1)
     readStdin(f);
 
-  if (argc == 2)
+  for (int i=1; i<argc; i++)
   {
-    f = fopen(argv[1], "r"); 
+    f = fopen(argv[i], "r"); 
     if (f == NULL)
     {
       perror("can't open input file");
