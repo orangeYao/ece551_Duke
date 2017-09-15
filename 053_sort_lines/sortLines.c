@@ -49,6 +49,8 @@ void readStdin(FILE* f)
   for(int j=0; j<i; j++)
       printf("%s", stringss[j]);
 
+  for(int j=0; j<i; j++)
+      free(stringss[j]);
   free(tmp);
   free(stringss);
 }
