@@ -58,6 +58,12 @@ void readStdin(FILE* f)
 
 int main(int argc, char ** argv) {
   FILE *f = NULL;
+  if (argc == 3)
+  {
+    perror("Damn it!");
+    return EXIT_FAILURE;
+  }
+
   if (argc == 1)
     readStdin(f);
 
