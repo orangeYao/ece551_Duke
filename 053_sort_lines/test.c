@@ -4,7 +4,7 @@
 
 
 //This function is used to figure out the ordering
-//of the stringss in qsort.  You do not need
+//of the strings in qsort.  You do not need
 //to modify it.
 int stringOrder(const void * vp1, const void * vp2) {
   const char * const * p1 = vp1;
@@ -16,59 +16,41 @@ void sortData(char ** data, size_t count) {
   qsort(data, count, sizeof(char *), stringOrder);
 }
 
-void readStdin(FILE* f)
+void readStdin2(char ** strings, FILE* f)
 {
-  size_t s=0, i=0; 
-  ssize_t output;
-  char **stringss = NULL;
-  char *tmp = NULL;
+  int i = 0;
+  size_t s; 
+  printf("in readStdin2, before loop \n");
+  //char **string;
+  char *tmp;
 
-  if (f != NULL)
-      output = getline(&tmp, &s, f);
-  else
-      output = getline(&tmp, &s, stdin);
-
-
-  while(output >= 0) 
+  while(getline(&tmp, &s, f) >= 0)
   {
-    stringss = realloc(stringss, (i+1) *sizeof(char *));
-    stringss[i] = malloc(s);
-
-    strcpy(stringss[i], tmp);
-
+    strings = realloc(strings, (i+1) * sizeof(tmp));
+    strings[i] = tmp;
+    //strings[i] = malloc(sizeof(tmp + 2));
+    //    printf("%d: %s", i, strings[0]);
+    printf("%d: %s", i, strings[i]);
     i++;
-
-    if (f != NULL)
-      output = getline(&tmp, &s, f);
-    else
-      output = getline(&tmp, &s, stdin);
   }
-
-  sortData(stringss, i);
-
-  for(int j=0; j<i; j++)
-      printf("%s", stringss[j]);
-
-  free(tmp);
-  free(stringss);
 }
 
-
 int main(int argc, char ** argv) {
-  FILE *f = NULL;
-  if (argc == 1)
-    readStdin(f);
+  char ** strings;
+//  if (argc == 1)
+//    readStdin(strings);
 
   if (argc == 2)
   {
-    f = fopen(argv[1], "r"); 
+    FILE *f = fopen(argv[1], "r"); 
     if (f == NULL)
     {
       perror("can't open input file");
       return EXIT_FAILURE;
     }
 
-    readStdin(f);
+    readStdin2(strings, f);
+
 
     if (fclose(f) != 0)
     {
@@ -77,7 +59,10 @@ int main(int argc, char ** argv) {
     }
 
   }
+  printf("finish\n");
   
+  //WRITE YOUR CODE HERE!
   
+  free(strings);
   return EXIT_SUCCESS;
 }
