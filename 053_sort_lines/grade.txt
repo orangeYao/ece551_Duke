@@ -1,0 +1,46 @@
+Grading at 09/15/2017:04:12:29.909761
+For commit ID cb2b45287b0d3bb84e86fa3238ec7860b33479f1
+Attempting to compile sortLines.c
+#################################################
+testcase1:
+testcase1 failed, your program didn't indicate this is a failure case
+#################################################
+testcase2:
+Your output is correct
+  - Valgrind was clean (no errors, no memory leaks)
+valgrind was clean
+#################################################
+testcase3:
+Your output is correct
+  - Valgrind reported errors
+valgrind was not clean
+==10923== Memcheck, a memory error detector
+==10923== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==10923== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==10923== 
+==10923== Parent PID: 10922
+==10923== 
+==10923== 
+==10923== HEAP SUMMARY:
+==10923==     in use at exit: 600 bytes in 5 blocks
+==10923==   total heap usage: 14 allocs, 9 frees, 9,584 bytes allocated
+==10923== 
+==10923== 600 bytes in 5 blocks are definitely lost in loss record 1 of 1
+==10923==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10923==    by 0x4009D6: readStdin (in sortLines)
+==10923==    by 0x400B47: main (in sortLines)
+==10923== 
+==10923== LEAK SUMMARY:
+==10923==    definitely lost: 600 bytes in 5 blocks
+==10923==    indirectly lost: 0 bytes in 0 blocks
+==10923==      possibly lost: 0 bytes in 0 blocks
+==10923==    still reachable: 0 bytes in 0 blocks
+==10923==         suppressed: 0 bytes in 0 blocks
+==10923== 
+==10923== For counts of detected and suppressed errors, rerun with: -v
+==10923== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+#################################################
+testcase4:
+Your output is incorrect
+
+Overall Grade: F
