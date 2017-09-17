@@ -1,5 +1,5 @@
-Grading at 09/17/2017:20:42:59.001558
-For commit ID fd09bdfbd0fe9c2de8425c413fc5d19dbc7807fe
+Grading at 09/17/2017:21:24:17.431932
+For commit ID abf735bf8c1ee7387478e6fd59bfff95cd6290e0
 Attempting to compile minesweeper.c
 #################################################
 testcase1:
