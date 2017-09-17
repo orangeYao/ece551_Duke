@@ -6,6 +6,6 @@ D r#Question No. 5
 D/G/D r#Question No. 6
 B r#Question No. 7
 D r#Question No. 8
-C #Question No. 9
-A/D #Question No. 10
+A/C #Question No. 9
+D/A/D r#Question No. 10
 I r#Question No. 11
