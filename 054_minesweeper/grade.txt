@@ -1,5 +1,5 @@
-Grading at 09/17/2017:20:28:33.128001
-For commit ID fd2284182b48c26c723e129453d04d53dab6a441
+Grading at 09/17/2017:20:42:59.001558
+For commit ID fd09bdfbd0fe9c2de8425c413fc5d19dbc7807fe
 Attempting to compile minesweeper.c
 #################################################
 testcase1:
@@ -18,6 +18,8 @@ Your output is correct
 valgrind was clean
 #################################################
 testcase4:
-Your output is incorrect
+Your output is correct
+  - Valgrind was clean (no errors, no memory leaks)
+valgrind was clean
 
-Overall Grade: C
+Overall Grade: A
