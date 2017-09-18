@@ -48,11 +48,22 @@ void addCount(counts_t * c, const char * name) {
 
 void printCounts(counts_t * c, FILE * outFile) {
   //WRITE ME
-  for (int i=1; i<c->length; i++)
-    printf("%s: %d\n", c->array[i]->values, c->array[i]->cnt);
+  if (outFile == NULL)
+  {
+    for (int i=1; i<c->length; i++)
+      printf("%s: %d\n", c->array[i]->values, c->array[i]->cnt);
   
-  if (c->array[0]->cnt > 0)
-    printf("%s: %d\n", c->array[0]->values, c->array[0]->cnt);
+    if (c->array[0]->cnt > 0)
+      printf("%s : %d\n", c->array[0]->values, c->array[0]->cnt);
+  } 
+  else
+  {
+    for (int i=1; i<c->length; i++)
+      fprintf(outFile, "%s: %d\n", c->array[i]->values, c->array[i]->cnt);
+  
+    if (c->array[0]->cnt > 0)
+      fprintf(outFile, "%s : %d\n", c->array[0]->values, c->array[0]->cnt);
+  }
 }
 
 void freeCounts(counts_t * c) {
