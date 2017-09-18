@@ -46,6 +46,7 @@ kvarray_t * readKVs(const char * fname) {
   int i = 0;
   kvarray_t * pairs;
   pairs = malloc(sizeof(*pairs));
+  pairs->array = NULL;
   pairs->length = 0;
 
 
@@ -59,6 +60,7 @@ kvarray_t * readKVs(const char * fname) {
     i++;
   }
 
+  free(readin);
   if(fclose(f) != 0)
   {
     perror("can't close file");
@@ -89,15 +91,10 @@ void printKVs(kvarray_t * pairs) {
 
 char * lookupValue(kvarray_t * pairs, const char * key) {
   //WRITE ME
-  char * for_return = NULL;
   for (int i=0; i<pairs->length; i++)
     if(strcmp(pairs->array[i]->key, key) == 0)
-    {
-      for_return = malloc(strlen(pairs->array[i]->value) + 1);
-      strcpy(for_return, pairs->array[i]->value);
+      return pairs->array[i]->value;
 
-      return for_return;
-    }
-  return for_return;
+  return NULL;
 }
 
