@@ -6,9 +6,9 @@
 char * computeOutputFileName(const char * inputName) {
   //WRITE ME
 
-  char * ptr = strstr(inputName, ".txt");
-  if (ptr == NULL)
-      return NULL;
+//  char * ptr = strstr(inputName, ".txt");
+//  if (ptr == NULL)
+//      return NULL;
 
   char * for_return;
 
