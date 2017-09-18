@@ -16,6 +16,6 @@ char * computeOutputFileName(const char * inputName) {
   for_return = malloc(len + 10);
 
   strncpy(for_return, inputName, len);
-  strcpy(for_return + len, ".count");
+  strcpy(for_return + len, ".counts");
   return for_return;
 }
