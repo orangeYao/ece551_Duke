@@ -37,6 +37,13 @@ counts_t * countFile(const char * filename, kvarray_t * kvPairs) {
 int main(int argc, char ** argv) {
   //WRITE ME (plus add appropriate error checking!)
  //read the key/value pairs from the file named by argv[1] (call the result kv)
+ 
+  if (argc < 2)
+  {
+    perror("at least two file as input!");
+    return EXIT_FAILURE;
+  }
+
   kvarray_t * pairs = readKVs(argv[1]);
  //count from 2 to argc (call the number you count i)
  for (int i=2; i<argc; i++)
