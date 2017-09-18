@@ -1,0 +1,14 @@
+Grading at 09/18/2017:17:08:37.144608
+For commit ID db19295854bb2ce056dd382f0a2c162be54062af
+Attempting to compile:
+#################################################
+testcase1:
+valgrind reported memory errors
+#################################################
+testcase2:
+valgrind reported memory errors
+#################################################
+testcase3:
+valgrind reported memory errors
+
+Overall Grade: F
