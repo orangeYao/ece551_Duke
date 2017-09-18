@@ -1,5 +1,5 @@
-Grading at 09/18/2017:17:50:31.297883
-For commit ID 35374cb9e05a7d46f6a3a0e88602938ad22bfd4a
+Grading at 09/18/2017:17:53:08.919715
+For commit ID e2defab602724cfbd36e40f42df045b3e578e0cd
 Attempting to compile:
 #################################################
 testcase1:
@@ -13,6 +13,8 @@ Your output is correct
 valgrind was clean
 #################################################
 testcase3:
-Your output is incorrect
+Your output is correct
+  - Valgrind was clean (no errors, no memory leaks)
+valgrind was clean
 
-Overall Grade: D
+Overall Grade: A
