@@ -1,21 +1,6 @@
-Grading at 09/11/2017:18:05:57.367805
+Grading at 09/19/2017:17:29:36.238896
 For commit ID ff6ff47160879a5dd858a1a55958960c332c4612
 Checking rotateMatrix1
-Your tests identified the problem with rotateMatrix1
-Checking rotateMatrix2
-Your tests identified the problem with rotateMatrix2
-Checking rotateMatrix3
-Your tests identified the problem with rotateMatrix3
-Checking rotateMatrix4
-Your tests identified the problem with rotateMatrix4
-Checking rotateMatrix5
-Your tests identified the problem with rotateMatrix5
-Checking rotateMatrix6
-Your tests identified the problem with rotateMatrix6
-Checking rotateMatrix7
-Your tests identified the problem with rotateMatrix7
-Checking rotateMatrix8
-Your tests identified the problem with rotateMatrix8
-Your tests identified problems with all broken programs
+***Your tests failed to show that rotateMatrix1 was broken!
 
-Overall Grade: PASSED
+Overall Grade: FAILED
