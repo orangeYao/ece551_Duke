@@ -51,16 +51,42 @@ unsigned int countElectoralVotes(state_t * stateData,
 				 uint64_t * voteCounts, 
 				 size_t nStates) {
   //STEP 2: write me
-  return 0;
+  int rtn = 0;
+  for (int i=0; i<nStates; i++)
+    if (voteCounts[i] * 2 > stateData[i].population)
+      rtn += stateData[i].electoralVotes;
+
+  return rtn;
 }
 
 void printRecounts(state_t * stateData, 
 		   uint64_t * voteCounts, 
 		   size_t nStates) {
   //STEP 3: write me
+  for (int i=0; i<nStates; i++)
+  {
+    double frc = 100.0 * voteCounts[i]/ stateData[i].population;
+    if (frc < 50.5 && frc > 49.5 )
+      printf("%s requires a recount (Candidate A has %.2f%% of the vote)\n", 
+                        stateData[i].name, frc);
+  }
 }
+
 void printLargestWin(state_t * stateData, 
 		     uint64_t * voteCounts, 
 		     size_t nStates) {
   //STEP 4: write me
+  double largest = 0, frc;
+  const char* cptr;
+  for (int i=0; i<nStates; i++)
+  {
+    frc = 100.0 * voteCounts[i]/ stateData[i].population;
+    if (frc > largest)
+    {
+      largest = frc;
+      cptr = stateData[i].name;
+    }
+  }
+  printf("Candidate A won %s with %.2f%% of the vote\n", 
+                        cptr, largest);
 }
