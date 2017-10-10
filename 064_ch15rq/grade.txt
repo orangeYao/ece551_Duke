@@ -1,7 +1,6 @@
-Grading at 10/10/2017:04:13:28.340070
-For commit ID aae1754a10e53859c6283d3436652badab21a5ed
-You do not seem to have a file called answers.txt. Here is what I see:
-answer.txt
-README
+Grading at 10/10/2017:04:14:08.471696
+For commit ID fd14ad65d660f1fa610fca11ee4808ff14ea4a6d
+Reading your quiz answers from answers.txt
+Your quiz answers are correct
 
-Overall Grade: FAILED
+Overall Grade: PASSED
