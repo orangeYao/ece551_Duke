@@ -19,4 +19,90 @@ char * time2str(const time_t * when, long ns) {
   return ans;
 }
 
+void myStat(char * filename)
+{
+   struct stat sb;
+   if (stat(filename, &sb) == -1) {
+       fprintf(stderr, "stat: cannot stat '%s': ", filename);
+       perror ("");
+       exit(EXIT_FAILURE);
+   }
 
+   const char * file_type;
+   char fst;
+
+   switch (sb.st_mode & S_IFMT) {
+   case S_IFBLK:  {file_type = "block device";      fst = 'b';} break;
+   case S_IFCHR:  {file_type = "character device";  fst = 'c';} break;
+   case S_IFDIR:  {file_type = "directory";         fst = 'd';} break;
+   case S_IFIFO:  {file_type = "FIFO/pipe";         fst = 'p';} break;
+   case S_IFLNK:  {file_type = "symlink";           fst = 'l';} break;
+   case S_IFREG:  {file_type = "regular file";      fst = '-';} break;
+   case S_IFSOCK: {file_type = "socket";            fst = 's';} break;
+   default:       {file_type = "unknown?";          fst = '@';} break;
+   }
+
+   printf("  File: '%s'\n", filename);
+   printf("  Size: %-10lu\tBlocks: %-10lu IO Block: %-6lu %s\n", 
+            (long) sb.st_size,
+            (long) sb.st_blocks,
+            (long) sb.st_blksize,
+            file_type);
+
+   printf("Device: %lxh/%lud\tInode: %-10lu  Links: %lu\n",
+            sb.st_dev, sb.st_dev, (long) sb.st_ino, (long) sb.st_nlink);
+
+   char hum[11];
+   for (int i=0; i<11; i++)
+       hum[i] = '-';
+   hum[0] = fst; 
+   hum[10] = '\0';
+
+   if ((sb.st_mode & S_IRUSR) != 0)
+       hum[1] = 'r';
+   if ((sb.st_mode & S_IWUSR) != 0)
+       hum[2] = 'w';
+   if ((sb.st_mode & S_IXUSR) != 0)
+       hum[3] = 'x';
+   if ((sb.st_mode & S_IRGRP) != 0)
+       hum[4] = 'r';
+   if ((sb.st_mode & S_IWGRP) != 0)
+       hum[5] = 'w';
+   if ((sb.st_mode & S_IXGRP) != 0)
+       hum[6] = 'x';
+   if ((sb.st_mode & S_IROTH) != 0)
+       hum[7] = 'r';
+   if ((sb.st_mode & S_IWOTH) != 0)
+       hum[8] = 'w';
+   if ((sb.st_mode & S_IXOTH) != 0)
+       hum[9] = 'x';
+
+   struct passwd *uu =  getpwuid(sb.st_uid);
+   struct group *gg = getgrgid(sb.st_gid);
+
+   printf("Access: (%04o/%s)  Uid: (%5d/%8s)   Gid: (%5d/%8s)\n", 
+           (unsigned int) (sb.st_mode & ~S_IFMT), hum,
+           sb.st_uid, uu->pw_name,
+           sb.st_gid, gg->gr_name);
+
+   char *tmp = time2str(&sb.st_atime, sb.st_atim.tv_nsec);
+   printf("Access: %s\n", tmp);
+   free(tmp);
+   tmp = time2str(&sb.st_mtime, sb.st_mtim.tv_nsec);
+   printf("Modify: %s\n", tmp);
+   free(tmp);
+   tmp = time2str(&sb.st_ctime, sb.st_ctim.tv_nsec);
+   printf("Change: %s\n", tmp);
+   free(tmp);
+   printf(" Birth: -\n");
+
+}
+
+
+int main(int argc, char ** argv)
+{
+  for (int i=1; i<argc; i++)
+      myStat(argv[i]);
+
+  return EXIT_SUCCESS;
+}

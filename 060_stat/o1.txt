@@ -1,0 +1,16 @@
+  File: 'README'
+  Size: 13110     	Blocks: 32         IO Block: 4096   regular file
+Device: fc00h/64512d	Inode: 67679607    Links: 1
+Access: (0664/-rw-rw-r--)  Uid: ( 1135/    zx52)   Gid: ( 1138/    zx52)
+Access: 2017-10-11 15:14:42.889126391 -0400
+Modify: 2017-10-06 09:50:30.385246180 -0400
+Change: 2017-10-06 09:50:30.385246180 -0400
+ Birth: -
+  File: '.'
+  Size: 124       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 67679606    Links: 3
+Access: (0775/drwxrwxr-x)  Uid: ( 1135/    zx52)   Gid: ( 1138/    zx52)
+Access: 2017-10-11 20:55:37.614215617 -0400
+Modify: 2017-10-11 20:55:40.410252082 -0400
+Change: 2017-10-11 20:55:40.410252082 -0400
+ Birth: -
