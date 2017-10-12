@@ -1,8 +1,0 @@
-  File: '.'
-  Size: 190       	Blocks: 0          IO Block: 4096   directory
-Device: fc00h/64512d	Inode: 67679606    Links: 3
-Access: (0775/drwxrwxr-x)  Uid: ( 1135/    zx52)   Gid: ( 1138/    zx52)
-Access: 2017-10-11 22:50:06.295684897 -0400
-Modify: 2017-10-11 22:51:09.817647735 -0400
-Change: 2017-10-11 22:51:09.817647735 -0400
- Birth: -
