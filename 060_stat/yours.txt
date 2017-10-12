@@ -1,0 +1,1504 @@
+  File: '/home/ab590'
+  Size: 236       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 101430071   Links: 6
+Access: (0700/drwx------)  Uid: ( 1013/   ab590)   Gid: ( 1016/   ab590)
+Access: 2017-10-11 11:12:19.292834090 -0400
+Modify: 2017-09-25 23:18:27.314469900 -0400
+Change: 2017-09-25 23:18:27.314469900 -0400
+ Birth: -
+  File: '/home/adh39'
+  Size: 293       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 100678348   Links: 5
+Access: (0700/drwx------)  Uid: ( 1003/   adh39)   Gid: ( 1002/   adh39)
+Access: 2017-10-09 17:19:21.166748507 -0400
+Modify: 2017-09-23 07:12:08.910213636 -0400
+Change: 2017-09-23 07:12:08.910213636 -0400
+ Birth: -
+  File: '/home/adw18'
+  Size: 243       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71975827    Links: 6
+Access: (0700/drwx------)  Uid: ( 1134/   adw18)   Gid: ( 1137/   adw18)
+Access: 2017-10-12 09:03:40.846674453 -0400
+Modify: 2017-10-12 09:03:40.758672079 -0400
+Change: 2017-10-12 09:03:40.758672079 -0400
+ Birth: -
+  File: '/home/ai67'
+  Size: 274       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71544141    Links: 8
+Access: (0700/drwx------)  Uid: ( 1052/    ai67)   Gid: ( 1055/    ai67)
+Access: 2017-10-11 16:00:48.541062480 -0400
+Modify: 2017-09-13 16:17:00.736136555 -0400
+Change: 2017-09-13 16:17:00.736136555 -0400
+ Birth: -
+  File: '/home/akg35'
+  Size: 255       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 101433769   Links: 6
+Access: (0700/drwx------)  Uid: ( 1045/   akg35)   Gid: ( 1048/   akg35)
+Access: 2017-10-11 00:05:31.118771318 -0400
+Modify: 2017-09-30 17:16:32.510697105 -0400
+Change: 2017-09-30 17:16:32.510697105 -0400
+ Birth: -
+  File: '/home/an171'
+  Size: 236       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17642500    Links: 5
+Access: (0700/drwx------)  Uid: ( 1091/   an171)   Gid: ( 1094/   an171)
+Access: 2017-10-10 17:00:25.574686364 -0400
+Modify: 2017-10-05 18:38:13.500985023 -0400
+Change: 2017-10-05 18:38:13.500985023 -0400
+ Birth: -
+  File: '/home/as820'
+  Size: 232       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 103318185   Links: 6
+Access: (0700/drwx------)  Uid: ( 1103/   as820)   Gid: ( 1106/   as820)
+Access: 2017-10-11 11:28:42.104153878 -0400
+Modify: 2017-09-26 13:21:15.925490065 -0400
+Change: 2017-09-26 13:21:15.925490065 -0400
+ Birth: -
+  File: '/home/assignments'
+  Size: 17        	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 33556675    Links: 3
+Access: (0755/drwxr-xr-x)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2017-10-08 22:15:59.346372026 -0400
+Modify: 2017-07-09 20:01:35.915801123 -0400
+Change: 2017-07-09 20:01:35.915801123 -0400
+ Birth: -
+  File: '/home/azr3'
+  Size: 153       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17903341    Links: 3
+Access: (0700/drwx------)  Uid: ( 1099/    azr3)   Gid: ( 1102/    azr3)
+Access: 2017-08-26 07:42:35.517306458 -0400
+Modify: 2017-08-25 20:48:12.093499696 -0400
+Change: 2017-08-26 07:39:20.608061708 -0400
+ Birth: -
+  File: '/home/bcf13'
+  Size: 243       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 34621361    Links: 6
+Access: (0700/drwx------)  Uid: ( 1038/   bcf13)   Gid: ( 1041/   bcf13)
+Access: 2017-10-11 20:19:55.467878399 -0400
+Modify: 2017-10-05 21:13:31.877619679 -0400
+Change: 2017-10-05 21:13:31.877619679 -0400
+ Birth: -
+  File: '/home/bl161'
+  Size: 204       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17925251    Links: 5
+Access: (0700/drwx------)  Uid: ( 1176/   bl161)   Gid: ( 1179/   bl161)
+Access: 2017-10-04 13:56:12.213874977 -0400
+Modify: 2017-08-26 17:42:55.692276657 -0400
+Change: 2017-08-26 17:42:55.692276657 -0400
+ Birth: -
+  File: '/home/bmh34'
+  Size: 292       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 214909      Links: 8
+Access: (0700/drwx------)  Uid: ( 1182/   bmh34)   Gid: ( 1185/   bmh34)
+Access: 2017-10-11 22:22:17.410722083 -0400
+Modify: 2017-10-11 22:24:42.485060809 -0400
+Change: 2017-10-11 22:24:42.485060809 -0400
+ Birth: -
+  File: '/home/cc556'
+  Size: 245       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 33555371    Links: 7
+Access: (0700/drwx------)  Uid: ( 1014/   cc556)   Gid: ( 1017/   cc556)
+Access: 2017-10-11 15:14:33.672994494 -0400
+Modify: 2017-09-17 20:20:48.799859230 -0400
+Change: 2017-09-17 20:20:48.799859230 -0400
+ Birth: -
+  File: '/home/cl414'
+  Size: 233       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17628415    Links: 6
+Access: (0700/drwx------)  Uid: ( 1063/   cl414)   Gid: ( 1066/   cl414)
+Access: 2017-10-10 20:43:44.826860685 -0400
+Modify: 2017-10-10 04:45:49.670760624 -0400
+Change: 2017-10-10 04:45:49.670760624 -0400
+ Birth: -
+  File: '/home/cl423'
+  Size: 280       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 102974528   Links: 8
+Access: (0700/drwx------)  Uid: ( 1064/   cl423)   Gid: ( 1067/   cl423)
+Access: 2017-10-11 17:05:05.921408916 -0400
+Modify: 2017-10-11 18:11:17.269373800 -0400
+Change: 2017-10-11 18:11:17.269373800 -0400
+ Birth: -
+  File: '/home/cmg88'
+  Size: 220       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71539757    Links: 5
+Access: (0700/drwx------)  Uid: ( 1044/   cmg88)   Gid: ( 1047/   cmg88)
+Access: 2017-10-09 16:40:09.572330611 -0400
+Modify: 2017-10-08 14:53:30.229055582 -0400
+Change: 2017-10-08 14:53:30.229055582 -0400
+ Birth: -
+  File: '/home/cx33'
+  Size: 153       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71976523    Links: 3
+Access: (0700/drwx------)  Uid: ( 1137/    cx33)   Gid: ( 1140/    cx33)
+Access: 2017-08-26 07:42:35.517306458 -0400
+Modify: 2017-08-25 20:49:07.522985205 -0400
+Change: 2017-08-26 07:39:20.640062568 -0400
+ Birth: -
+  File: '/home/cy121'
+  Size: 286       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 37140654    Links: 7
+Access: (0700/drwx------)  Uid: ( 1142/   cy121)   Gid: ( 1145/   cy121)
+Access: 2017-10-09 16:06:11.905103656 -0400
+Modify: 2017-10-09 17:28:51.579569851 -0400
+Change: 2017-10-09 17:28:51.579569851 -0400
+ Birth: -
+  File: '/home/cz63'
+  Size: 188       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17914892    Links: 4
+Access: (0700/drwx------)  Uid: ( 1152/    cz63)   Gid: ( 1155/    cz63)
+Access: 2017-08-26 07:42:35.517306458 -0400
+Modify: 2017-08-27 20:58:44.592713454 -0400
+Change: 2017-08-27 20:58:44.592713454 -0400
+ Birth: -
+  File: '/home/dhm25'
+  Size: 153       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 37128473    Links: 3
+Access: (0700/drwx------)  Uid: ( 1087/   dhm25)   Gid: ( 1090/   dhm25)
+Access: 2017-08-26 07:42:35.517306458 -0400
+Modify: 2017-08-25 20:47:54.861037987 -0400
+Change: 2017-08-26 07:39:20.600061492 -0400
+ Birth: -
+  File: '/home/dl261'
+  Size: 263       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 102973256   Links: 6
+Access: (0700/drwx------)  Uid: ( 1059/   dl261)   Gid: ( 1062/   dl261)
+Access: 2017-10-12 01:10:05.957877113 -0400
+Modify: 2017-09-26 21:22:31.466529776 -0400
+Change: 2017-09-26 21:22:31.466529776 -0400
+ Birth: -
+  File: '/home/dl263'
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71546527    Links: 8
+Access: (0700/drwx------)  Uid: ( 1062/   dl263)   Gid: ( 1065/   dl263)
+Access: 2017-10-11 03:44:57.090626787 -0400
+Modify: 2017-10-01 15:08:32.976855608 -0400
+Change: 2017-10-01 15:08:32.976855608 -0400
+ Birth: -
+  File: '/home/dp200'
+  Size: 220       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17642606    Links: 5
+Access: (0700/drwx------)  Uid: ( 1093/   dp200)   Gid: ( 1096/   dp200)
+Access: 2017-10-11 21:18:18.200729144 -0400
+Modify: 2017-10-02 22:22:23.357852607 -0400
+Change: 2017-10-02 22:22:23.357852607 -0400
+ Birth: -
+  File: '/home/drew'
+  Size: 4096      	Blocks: 16         IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 702464      Links: 26
+Access: (0700/drwx------)  Uid: ( 1002/    drew)   Gid: ( 1004/    drew)
+Access: 2017-10-11 16:11:57.738900000 -0400
+Modify: 2017-10-11 16:12:21.259251938 -0400
+Change: 2017-10-11 16:12:21.259251938 -0400
+ Birth: -
+  File: '/home/ds337'
+  Size: 220       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 37130809    Links: 5
+Access: (0700/drwx------)  Uid: ( 1104/   ds337)   Gid: ( 1107/   ds337)
+Access: 2017-10-11 21:20:48.455201597 -0400
+Modify: 2017-10-11 13:37:35.495254035 -0400
+Change: 2017-10-11 13:37:35.495254035 -0400
+ Birth: -
+  File: '/home/dummy'
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 21398956    Links: 6
+Access: (0700/drwx------)  Uid: ( 1184/   dummy)   Gid: ( 1187/   dummy)
+Access: 2017-10-07 11:58:54.027146569 -0400
+Modify: 2017-10-03 19:15:04.250887806 -0400
+Change: 2017-10-03 19:15:04.250887806 -0400
+ Birth: -
+  File: '/home/dw242'
+  Size: 188       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17907401    Links: 4
+Access: (0700/drwx------)  Uid: ( 1118/   dw242)   Gid: ( 1121/   dw242)
+Access: 2017-08-26 07:42:35.517306458 -0400
+Modify: 2017-08-28 16:27:04.596044094 -0400
+Change: 2017-08-28 16:27:04.596044094 -0400
+ Birth: -
+  File: '/home/dw243'
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17907975    Links: 5
+Access: (0700/drwx------)  Uid: ( 1120/   dw243)   Gid: ( 1123/   dw243)
+Access: 2017-10-09 22:00:29.056124502 -0400
+Modify: 2017-10-02 18:14:48.323559329 -0400
+Change: 2017-10-02 18:14:48.323559329 -0400
+ Birth: -
+  File: '/home/dx24'
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71976595    Links: 5
+Access: (0700/drwx------)  Uid: ( 1139/    dx24)   Gid: ( 1142/    dx24)
+Access: 2017-10-10 15:53:33.647609688 -0400
+Modify: 2017-09-06 15:09:29.776512413 -0400
+Change: 2017-09-06 15:09:29.776512413 -0400
+ Birth: -
+  File: '/home/ece551db'
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 53444       Links: 20
+Access: (0710/drwx--x---)  Uid: ( 1001/ece551db)   Gid: ( 1003/ece551db)
+Access: 2017-10-11 16:19:18.837532978 -0400
+Modify: 2017-10-11 17:15:04.185483293 -0400
+Change: 2017-10-11 17:15:04.185483293 -0400
+ Birth: -
+  File: '/home/emg50'
+  Size: 153       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 37121727    Links: 3
+Access: (0700/drwx------)  Uid: ( 1043/   emg50)   Gid: ( 1046/   emg50)
+Access: 2017-08-26 07:42:35.517306458 -0400
+Modify: 2017-08-25 20:46:51.915352015 -0400
+Change: 2017-08-26 07:39:20.560060416 -0400
+ Birth: -
+  File: '/home/ez24'
+  Size: 188       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71594213    Links: 4
+Access: (0700/drwx------)  Uid: ( 1183/    ez24)   Gid: ( 1186/    ez24)
+Access: 2017-09-16 10:44:01.077111412 -0400
+Modify: 2017-09-01 17:28:04.175890067 -0400
+Change: 2017-09-16 10:43:22.924070868 -0400
+ Birth: -
+  File: '/home/fc79'
+  Size: 167       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71003011    Links: 4
+Access: (0700/drwx------)  Uid: ( 1017/    fc79)   Gid: ( 1020/    fc79)
+Access: 2017-08-26 07:42:35.517306458 -0400
+Modify: 2017-08-25 23:28:30.756019867 -0400
+Change: 2017-08-26 07:39:20.540059878 -0400
+ Birth: -
+  File: '/home/fl84'
+  Size: 303       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 37125962    Links: 6
+Access: (0700/drwx------)  Uid: ( 1065/    fl84)   Gid: ( 1068/    fl84)
+Access: 2017-08-29 21:05:42.480885461 -0400
+Modify: 2017-08-29 21:04:43.607229819 -0400
+Change: 2017-08-29 21:04:43.607229819 -0400
+ Birth: -
+  File: '/home/fs98'
+  Size: 232       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71927129    Links: 6
+Access: (0700/drwx------)  Uid: ( 1112/    fs98)   Gid: ( 1115/    fs98)
+Access: 2017-10-10 16:35:29.501135244 -0400
+Modify: 2017-10-10 23:26:52.800880788 -0400
+Change: 2017-10-10 23:26:52.800880788 -0400
+ Birth: -
+  File: '/home/fw48'
+  Size: 204       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 37139982    Links: 5
+Access: (0700/drwx------)  Uid: ( 1121/    fw48)   Gid: ( 1124/    fw48)
+Access: 2017-08-26 07:42:35.517306458 -0400
+Modify: 2017-08-25 22:11:44.635145989 -0400
+Change: 2017-08-26 07:39:20.628062245 -0400
+ Birth: -
+  File: '/home/gab27'
+  Size: 204       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71002738    Links: 5
+Access: (0700/drwx------)  Uid: ( 1010/   gab27)   Gid: ( 1013/   gab27)
+Access: 2017-10-11 11:38:42.829631478 -0400
+Modify: 2017-08-30 11:35:48.337197241 -0400
+Change: 2017-08-30 11:35:48.337197241 -0400
+ Birth: -
+  File: '/home/gm118'
+  Size: 278       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71988942    Links: 6
+Access: (0700/drwx------)  Uid: ( 1175/   gm118)   Gid: ( 1178/   gm118)
+Access: 2017-10-12 10:44:51.648756146 -0400
+Modify: 2017-10-12 10:47:20.564936937 -0400
+Change: 2017-10-12 10:47:20.564936937 -0400
+ Birth: -
+  File: '/home/gml8'
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 286690      Links: 10
+Access: (0700/drwx------)  Uid: ( 1004/    gml8)   Gid: ( 1005/    gml8)
+Access: 2017-10-11 14:56:16.485898984 -0400
+Modify: 2017-10-11 14:39:54.172382331 -0400
+Change: 2017-10-11 14:39:54.172382331 -0400
+ Birth: -
+  File: '/home/gnb4'
+  Size: 248       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 33554909    Links: 6
+Access: (0700/drwx------)  Uid: ( 1012/    gnb4)   Gid: ( 1015/    gnb4)
+Access: 2017-10-08 00:09:26.969565863 -0400
+Modify: 2017-09-29 10:58:35.820765414 -0400
+Change: 2017-09-29 10:58:35.820765414 -0400
+ Birth: -
+  File: '/home/gps10'
+  Size: 204       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 37137163    Links: 5
+Access: (0700/drwx------)  Uid: ( 1110/   gps10)   Gid: ( 1113/   gps10)
+Access: 2017-09-22 10:25:50.931379732 -0400
+Modify: 2017-08-28 18:20:53.963629986 -0400
+Change: 2017-08-28 18:20:53.963629986 -0400
+ Birth: -
+  File: '/home/gt70'
+  Size: 204       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71927811    Links: 4
+Access: (0700/drwx------)  Uid: ( 1114/    gt70)   Gid: ( 1117/    gt70)
+Access: 2017-08-26 07:42:35.517306458 -0400
+Modify: 2017-08-25 21:04:26.219655500 -0400
+Change: 2017-08-26 07:39:20.620062030 -0400
+ Birth: -
+  File: '/home/gw60'
+  Size: 153       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71973136    Links: 3
+Access: (0700/drwx------)  Uid: ( 1122/    gw60)   Gid: ( 1125/    gw60)
+Access: 2017-08-26 07:42:35.517306458 -0400
+Modify: 2017-08-25 20:48:45.990408064 -0400
+Change: 2017-08-26 07:39:20.628062245 -0400
+ Birth: -
+  File: '/home/hb116'
+  Size: 220       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17165649    Links: 5
+Access: (0700/drwx------)  Uid: ( 1006/   hb116)   Gid: ( 1009/   hb116)
+Access: 2017-10-11 23:42:17.564625163 -0400
+Modify: 2017-09-09 12:13:53.551239412 -0400
+Change: 2017-09-09 12:13:53.551239412 -0400
+ Birth: -
+  File: '/home/hc218'
+  Size: 244       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 593886      Links: 7
+Access: (0700/drwx------)  Uid: ( 1026/   hc218)   Gid: ( 1029/   hc218)
+Access: 2017-10-10 20:09:11.588917312 -0400
+Modify: 2017-10-11 15:53:51.986822772 -0400
+Change: 2017-10-11 15:53:51.986822772 -0400
+ Birth: -
+  File: '/home/hf54'
+  Size: 153       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 101433129   Links: 3
+Access: (0700/drwx------)  Uid: ( 1039/    hf54)   Gid: ( 1042/    hf54)
+Access: 2017-08-26 07:42:35.517306458 -0400
+Modify: 2017-08-25 20:46:46.167198097 -0400
+Change: 2017-08-26 07:39:20.556060307 -0400
+ Birth: -
+  File: '/home/hh176'
+  Size: 263       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 37125232    Links: 6
+Access: (0700/drwx------)  Uid: ( 1049/   hh176)   Gid: ( 1052/   hh176)
+Access: 2017-10-10 17:46:05.964731579 -0400
+Modify: 2017-10-10 18:40:40.275563652 -0400
+Change: 2017-10-10 18:40:40.275563652 -0400
+ Birth: -
+  File: '/home/hhk3'
+  Size: 153       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17626132    Links: 3
+Access: (0700/drwx------)  Uid: ( 1058/    hhk3)   Gid: ( 1061/    hhk3)
+Access: 2017-08-26 07:42:35.517306458 -0400
+Modify: 2017-08-25 20:47:13.339925766 -0400
+Change: 2017-08-26 07:39:20.572060739 -0400
+ Birth: -
+  File: '/home/hl269'
+  Size: 153       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 37129995    Links: 3
+Access: (0700/drwx------)  Uid: ( 1074/   hl269)   Gid: ( 1077/   hl269)
+Access: 2017-08-26 07:42:35.517306458 -0400
+Modify: 2017-08-25 20:47:36.160537013 -0400
+Change: 2017-08-26 07:39:20.588061169 -0400
+ Birth: -
+  File: '/home/hl297'
+  Size: 284       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 102974602   Links: 8
+Access: (0700/drwx------)  Uid: ( 1066/   hl297)   Gid: ( 1069/   hl297)
+Access: 2017-10-11 14:02:41.706879825 -0400
+Modify: 2017-10-11 14:02:41.634878727 -0400
+Change: 2017-10-11 14:02:41.634878727 -0400
+ Birth: -
+  File: '/home/hpb3'
+  Size: 261       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 33554866    Links: 6
+Access: (0700/drwx------)  Uid: ( 1007/    hpb3)   Gid: ( 1010/    hpb3)
+Access: 2017-10-11 15:34:31.776419528 -0400
+Modify: 2017-09-30 07:44:06.748527572 -0400
+Change: 2017-09-30 07:44:06.748527572 -0400
+ Birth: -
+  File: '/home/hrf5'
+  Size: 269       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71521270    Links: 7
+Access: (0700/drwx------)  Uid: ( 1035/    hrf5)   Gid: ( 1038/    hrf5)
+Access: 2017-10-11 15:13:27.696051372 -0400
+Modify: 2017-10-02 18:19:46.800008171 -0400
+Change: 2017-10-02 18:19:46.800008171 -0400
+ Birth: -
+  File: '/home/hs182'
+  Size: 153       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17904815    Links: 3
+Access: (0700/drwx------)  Uid: ( 1108/   hs182)   Gid: ( 1111/   hs182)
+Access: 2017-08-26 07:42:35.517306458 -0400
+Modify: 2017-08-25 20:48:25.445857485 -0400
+Change: 2017-08-26 07:39:20.616061922 -0400
+ Birth: -
+  File: '/home/hw184'
+  Size: 276       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 103322068   Links: 7
+Access: (0700/drwx------)  Uid: ( 1119/   hw184)   Gid: ( 1122/   hw184)
+Access: 2017-10-11 18:19:38.340710670 -0400
+Modify: 2017-09-27 16:58:59.300790468 -0400
+Change: 2017-09-27 16:58:59.300790468 -0400
+ Birth: -
+  File: '/home/hw189'
+  Size: 255       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 103322648   Links: 5
+Access: (0700/drwx------)  Uid: ( 1123/   hw189)   Gid: ( 1126/   hw189)
+Access: 2017-10-11 16:32:05.717148546 -0400
+Modify: 2017-10-09 16:16:11.882199602 -0400
+Change: 2017-10-09 16:16:11.882199602 -0400
+ Birth: -
+  File: '/home/hz147'
+  Size: 315       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71982344    Links: 6
+Access: (0700/drwx------)  Uid: ( 1165/   hz147)   Gid: ( 1168/   hz147)
+Access: 2017-10-10 22:33:14.989445585 -0400
+Modify: 2017-10-09 21:16:30.268743800 -0400
+Change: 2017-10-09 21:16:30.268743800 -0400
+ Birth: -
+  File: '/home/iel2'
+  Size: 153       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 102973938   Links: 3
+Access: (0700/drwx------)  Uid: ( 1061/    iel2)   Gid: ( 1064/    iel2)
+Access: 2017-08-26 07:42:35.517306458 -0400
+Modify: 2017-08-25 20:47:17.596039757 -0400
+Change: 2017-08-26 07:39:20.576060846 -0400
+ Birth: -
+  File: '/home/ik48'
+  Size: 260       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 104431618   Links: 7
+Access: (0700/drwx------)  Uid: ( 1177/    ik48)   Gid: ( 1180/    ik48)
+Access: 2017-10-11 12:27:23.315214306 -0400
+Modify: 2017-10-11 11:49:22.639421125 -0400
+Change: 2017-10-11 11:49:22.639421125 -0400
+ Birth: -
+  File: '/home/jb325'
+  Size: 220       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 593239      Links: 5
+Access: (0700/drwx------)  Uid: ( 1011/   jb325)   Gid: ( 1014/   jb325)
+Access: 2017-09-01 16:05:58.475963144 -0400
+Modify: 2017-08-28 10:50:46.058401018 -0400
+Change: 2017-08-28 10:50:46.058401018 -0400
+ Birth: -
+  File: '/home/jcl35'
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 37122867    Links: 13
+Access: (0700/drwx------)  Uid: ( 1060/   jcl35)   Gid: ( 1063/   jcl35)
+Access: 2017-10-11 12:50:34.611221726 -0400
+Modify: 2017-10-06 13:01:05.163517212 -0400
+Change: 2017-10-06 13:01:05.163517212 -0400
+ Birth: -
+  File: '/home/jh557'
+  Size: 153       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17622577    Links: 3
+Access: (0700/drwx------)  Uid: ( 1050/   jh557)   Gid: ( 1053/   jh557)
+Access: 2017-08-26 07:42:35.517306458 -0400
+Modify: 2017-08-25 20:47:01.903619489 -0400
+Change: 2017-08-26 07:39:20.568060630 -0400
+ Birth: -
+  File: '/home/jm562'
+  Size: 220       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17641259    Links: 5
+Access: (0700/drwx------)  Uid: ( 1085/   jm562)   Gid: ( 1088/   jm562)
+Access: 2017-10-11 16:29:21.206652507 -0400
+Modify: 2017-10-10 13:32:53.045363517 -0400
+Change: 2017-10-10 13:32:53.045363517 -0400
+ Birth: -
+  File: '/home/js751'
+  Size: 328       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 103318259   Links: 7
+Access: (0700/drwx------)  Uid: ( 1105/   js751)   Gid: ( 1108/   js751)
+Access: 2017-10-09 17:40:42.538482957 -0400
+Modify: 2017-10-07 14:27:05.830357309 -0400
+Change: 2017-10-07 14:27:05.830357309 -0400
+ Birth: -
+  File: '/home/jsd42'
+  Size: 204       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71520581    Links: 4
+Access: (0700/drwx------)  Uid: ( 1030/   jsd42)   Gid: ( 1033/   jsd42)
+Access: 2017-08-26 07:42:35.517306458 -0400
+Modify: 2017-08-28 10:49:40.084643565 -0400
+Change: 2017-08-28 10:49:40.084643565 -0400
+ Birth: -
+  File: '/home/jt251'
+  Size: 246       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 103321951   Links: 6
+Access: (0700/drwx------)  Uid: ( 1116/   jt251)   Gid: ( 1119/   jt251)
+Access: 2017-10-11 13:13:52.479075142 -0400
+Modify: 2017-10-11 13:53:22.590265188 -0400
+Change: 2017-10-11 13:53:22.590265188 -0400
+ Birth: -
+  File: '/home/jw558'
+  Size: 188       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17908777    Links: 4
+Access: (0700/drwx------)  Uid: ( 1124/   jw558)   Gid: ( 1127/   jw558)
+Access: 2017-08-26 21:42:19.181689927 -0400
+Modify: 2017-08-26 21:42:35.286081817 -0400
+Change: 2017-08-26 21:42:35.286081817 -0400
+ Birth: -
+  File: '/home/jw562'
+  Size: 280       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71973970    Links: 8
+Access: (0700/drwx------)  Uid: ( 1126/   jw562)   Gid: ( 1129/   jw562)
+Access: 2017-10-12 00:54:36.609523933 -0400
+Modify: 2017-10-12 00:54:36.601523716 -0400
+Change: 2017-10-12 00:54:36.601523716 -0400
+ Birth: -
+  File: '/home/jw573'
+  Size: 249       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 37139249    Links: 6
+Access: (0700/drwx------)  Uid: ( 1125/   jw573)   Gid: ( 1128/   jw573)
+Access: 2017-10-10 13:06:24.153634979 -0400
+Modify: 2017-10-10 13:06:23.853630291 -0400
+Change: 2017-10-10 13:06:23.853630291 -0400
+ Birth: -
+  File: '/home/jx28'
+  Size: 153       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17912139    Links: 3
+Access: (0700/drwx------)  Uid: ( 1138/    jx28)   Gid: ( 1141/    jx28)
+Access: 2017-08-26 07:42:35.517306458 -0400
+Modify: 2017-08-25 20:49:08.947023376 -0400
+Change: 2017-08-26 07:39:20.640062568 -0400
+ Birth: -
+  File: '/home/jz209'
+  Size: 153       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17920632    Links: 3
+Access: (0700/drwx------)  Uid: ( 1172/   jz209)   Gid: ( 1175/   jz209)
+Access: 2017-08-26 07:42:35.517306458 -0400
+Modify: 2017-08-25 20:49:58.068340295 -0400
+Change: 2017-08-26 07:39:20.672063429 -0400
+ Birth: -
+  File: '/home/jz223'
+  Size: 268       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17914969    Links: 7
+Access: (0700/drwx------)  Uid: ( 1154/   jz223)   Gid: ( 1157/   jz223)
+Access: 2017-10-11 23:23:44.076265847 -0400
+Modify: 2017-10-11 23:23:44.004264441 -0400
+Change: 2017-10-11 23:23:44.004264441 -0400
+ Birth: -
+  File: '/home/jz226'
+  Size: 233       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71979302    Links: 6
+Access: (0700/drwx------)  Uid: ( 1153/   jz226)   Gid: ( 1156/   jz226)
+Access: 2017-10-10 22:38:58.170833883 -0400
+Modify: 2017-09-14 11:58:15.152243121 -0400
+Change: 2017-09-14 11:58:15.152243121 -0400
+ Birth: -
+  File: '/home/jz229'
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 104139303   Links: 6
+Access: (0700/drwx------)  Uid: ( 1155/   jz229)   Gid: ( 1158/   jz229)
+Access: 2017-10-11 10:49:59.418666300 -0400
+Modify: 2017-10-11 10:49:59.414666253 -0400
+Change: 2017-10-11 10:49:59.414666253 -0400
+ Birth: -
+  File: '/home/jz230'
+  Size: 244       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71983054    Links: 7
+Access: (0700/drwx------)  Uid: ( 1169/   jz230)   Gid: ( 1172/   jz230)
+Access: 2017-10-11 14:52:24.291075350 -0400
+Modify: 2017-10-06 02:41:11.567212966 -0400
+Change: 2017-10-06 02:41:11.567212966 -0400
+ Birth: -
+  File: '/home/kb332'
+  Size: 204       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71002662    Links: 4
+Access: (0700/drwx------)  Uid: ( 1008/   kb332)   Gid: ( 1011/   kb332)
+Access: 2017-08-28 10:43:11.638306758 -0400
+Modify: 2017-08-28 10:45:18.089669199 -0400
+Change: 2017-08-28 10:45:18.089669199 -0400
+ Birth: -
+  File: '/home/kj127'
+  Size: 244       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 102278748   Links: 5
+Access: (0700/drwx------)  Uid: ( 1054/   kj127)   Gid: ( 1057/   kj127)
+Access: 2017-10-11 18:35:20.130601638 -0400
+Modify: 2017-10-05 22:43:19.770847571 -0400
+Change: 2017-10-05 22:43:19.770847571 -0400
+ Birth: -
+  File: '/home/kjl27'
+  Size: 4096      	Blocks: 16         IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17636361    Links: 7
+Access: (0700/drwx------)  Uid: ( 1073/   kjl27)   Gid: ( 1076/   kjl27)
+Access: 2017-10-11 21:55:54.682789245 -0400
+Modify: 2017-10-11 21:55:50.730731363 -0400
+Change: 2017-10-11 21:55:50.730731363 -0400
+ Birth: -
+  File: '/home/kwn8'
+  Size: 280       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71923297    Links: 7
+Access: (0700/drwx------)  Uid: ( 1092/    kwn8)   Gid: ( 1095/    kwn8)
+Access: 2017-10-10 22:42:12.309834392 -0400
+Modify: 2017-10-11 18:03:01.605976190 -0400
+Change: 2017-10-11 18:03:01.605976190 -0400
+ Birth: -
+  File: '/home/lc294'
+  Size: 248       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 101430288   Links: 6
+Access: (0700/drwx------)  Uid: ( 1018/   lc294)   Gid: ( 1021/   lc294)
+Access: 2017-10-11 11:14:58.631128507 -0400
+Modify: 2017-10-06 09:23:43.369186461 -0400
+Change: 2017-10-06 09:23:43.369186461 -0400
+ Birth: -
+  File: '/home/liz'
+  Size: 139       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 1866518     Links: 3
+Access: (0700/drwx------)  Uid: (1023939/     liz)   Gid: ( 1007/     liz)
+Access: 2017-08-26 07:42:35.517306458 -0400
+Modify: 2017-08-02 12:24:03.396848541 -0400
+Change: 2017-08-26 07:40:37.526131460 -0400
+ Birth: -
+  File: '/home/lks24'
+  Size: 222       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17920723    Links: 6
+Access: (0700/drwx------)  Uid: ( 1174/   lks24)   Gid: ( 1177/   lks24)
+Access: 2017-10-09 17:19:27.926848732 -0400
+Modify: 2017-09-08 11:39:59.250318490 -0400
+Change: 2017-09-08 11:39:59.250318490 -0400
+ Birth: -
+  File: '/home/ll285'
+  Size: 4096      	Blocks: 16         IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71547632    Links: 8
+Access: (0700/drwx------)  Uid: ( 1067/   ll285)   Gid: ( 1070/   ll285)
+Access: 2017-10-12 10:15:06.050778609 -0400
+Modify: 2017-10-12 10:15:05.790769137 -0400
+Change: 2017-10-12 10:15:05.790769137 -0400
+ Birth: -
+  File: '/home/lq24'
+  Size: 245       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 103316532   Links: 8
+Access: (0700/drwx------)  Uid: ( 1098/    lq24)   Gid: ( 1101/    lq24)
+Access: 2017-10-10 21:05:13.217618909 -0400
+Modify: 2017-09-22 07:53:44.125638946 -0400
+Change: 2017-09-22 07:53:44.125638946 -0400
+ Birth: -
+  File: '/home/lq29'
+  Size: 220       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 37133715    Links: 5
+Access: (0700/drwx------)  Uid: ( 1096/    lq29)   Gid: ( 1099/    lq29)
+Access: 2017-10-06 23:38:01.881482470 -0400
+Modify: 2017-09-08 15:12:56.993224862 -0400
+Change: 2017-09-08 15:12:56.993224862 -0400
+ Birth: -
+  File: '/home/ls334'
+  Size: 232       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 103320236   Links: 6
+Access: (0700/drwx------)  Uid: ( 1109/   ls334)   Gid: ( 1112/   ls334)
+Access: 2017-10-11 16:29:01.318350853 -0400
+Modify: 2017-10-09 21:06:34.699784425 -0400
+Change: 2017-10-09 21:06:34.699784425 -0400
+ Birth: -
+  File: '/home/lz139'
+  Size: 220       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 37142815    Links: 5
+Access: (0700/drwx------)  Uid: ( 1156/   lz139)   Gid: ( 1159/   lz139)
+Access: 2017-09-26 16:09:00.314696168 -0400
+Modify: 2017-10-11 23:07:29.713193174 -0400
+Change: 2017-10-11 23:07:29.713193174 -0400
+ Birth: -
+  File: '/home/mc514'
+  Size: 204       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 34620946    Links: 5
+Access: (0700/drwx------)  Uid: ( 1020/   mc514)   Gid: ( 1023/   mc514)
+Access: 2017-10-02 19:21:19.246743371 -0400
+Modify: 2017-08-25 22:04:43.151725882 -0400
+Change: 2017-08-26 07:39:20.540059878 -0400
+ Birth: -
+  File: '/home/mh432'
+  Size: 280       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 101434330   Links: 6
+Access: (0700/drwx------)  Uid: ( 1048/   mh432)   Gid: ( 1051/   mh432)
+Access: 2017-10-12 00:01:08.285061819 -0400
+Modify: 2017-10-12 00:56:40.688864378 -0400
+Change: 2017-10-12 00:56:40.688864378 -0400
+ Birth: -
+  File: '/home/mj194'
+  Size: 232       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17625196    Links: 6
+Access: (0700/drwx------)  Uid: ( 1056/   mj194)   Gid: ( 1059/   mj194)
+Access: 2017-10-11 22:01:32.499734527 -0400
+Modify: 2017-10-12 00:35:06.082794831 -0400
+Change: 2017-10-12 00:35:06.082794831 -0400
+ Birth: -
+  File: '/home/mjc61'
+  Size: 271       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 593632      Links: 8
+Access: (0700/drwx------)  Uid: ( 1019/   mjc61)   Gid: ( 1022/   mjc61)
+Access: 2017-10-11 16:02:11.878260361 -0400
+Modify: 2017-10-11 17:04:01.576505415 -0400
+Change: 2017-10-11 17:04:01.576505415 -0400
+ Birth: -
+  File: '/home/ms680'
+  Size: 204       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17906598    Links: 5
+Access: (0700/drwx------)  Uid: ( 1113/   ms680)   Gid: ( 1116/   ms680)
+Access: 2017-08-27 13:10:07.869071788 -0400
+Modify: 2017-08-27 13:09:49.020562850 -0400
+Change: 2017-08-27 13:09:49.020562850 -0400
+ Birth: -
+  File: '/home/ms735'
+  Size: 287       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 37133072    Links: 7
+Access: (0700/drwx------)  Uid: ( 1100/   ms735)   Gid: ( 1103/   ms735)
+Access: 2017-10-10 12:03:15.937187093 -0400
+Modify: 2017-09-23 13:21:02.239439934 -0400
+Change: 2017-09-23 13:21:02.239439934 -0400
+ Birth: -
+  File: '/home/my113'
+  Size: 251       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17913021    Links: 6
+Access: (0700/drwx------)  Uid: ( 1143/   my113)   Gid: ( 1146/   my113)
+Access: 2017-10-11 11:31:39.110999049 -0400
+Modify: 2017-10-11 11:32:21.175667109 -0400
+Change: 2017-10-11 11:32:21.175667109 -0400
+ Birth: -
+  File: '/home/nai2'
+  Size: 232       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 37124614    Links: 6
+Access: (0700/drwx------)  Uid: ( 1053/    nai2)   Gid: ( 1056/    nai2)
+Access: 2017-10-11 13:13:31.650798387 -0400
+Modify: 2017-10-10 17:49:30.115591727 -0400
+Change: 2017-10-10 17:49:30.115591727 -0400
+ Birth: -
+  File: '/home/nrd10'
+  Size: 220       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 594185      Links: 5
+Access: (0700/drwx------)  Uid: ( 1031/   nrd10)   Gid: ( 1034/   nrd10)
+Access: 2017-10-11 18:13:23.099257125 -0400
+Modify: 2017-08-27 18:37:55.348900832 -0400
+Change: 2017-08-27 18:37:55.348900832 -0400
+ Birth: -
+  File: '/home/ns247'
+  Size: 220       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71924732    Links: 5
+Access: (0700/drwx------)  Uid: ( 1101/   ns247)   Gid: ( 1104/   ns247)
+Access: 2017-10-09 16:41:57.861973237 -0400
+Modify: 2017-09-26 23:04:00.557427320 -0400
+Change: 2017-09-26 23:04:00.557427320 -0400
+ Birth: -
+  File: '/home/ny32'
+  Size: 244       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 37144057    Links: 7
+Access: (0700/drwx------)  Uid: ( 1149/    ny32)   Gid: ( 1152/    ny32)
+Access: 2017-10-10 16:11:07.111528005 -0400
+Modify: 2017-08-27 22:47:06.058108761 -0400
+Change: 2017-08-27 22:47:06.058108761 -0400
+ Birth: -
+  File: '/home/ny33'
+  Size: 245       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 103334410   Links: 7
+Access: (0700/drwx------)  Uid: ( 1147/    ny33)   Gid: ( 1150/    ny33)
+Access: 2017-10-11 16:33:40.069954023 -0400
+Modify: 2017-10-11 13:53:44.750611450 -0400
+Change: 2017-10-11 13:53:44.750611450 -0400
+ Birth: -
+  File: '/home/oy5'
+  Size: 236       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17914249    Links: 5
+Access: (0700/drwx------)  Uid: ( 1148/     oy5)   Gid: ( 1151/     oy5)
+Access: 2017-10-10 13:59:56.449405838 -0400
+Modify: 2017-09-30 15:53:59.012272120 -0400
+Change: 2017-09-30 15:53:59.012272120 -0400
+ Birth: -
+  File: '/home/pc174'
+  Size: 266       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71520335    Links: 5
+Access: (0700/drwx------)  Uid: ( 1027/   pc174)   Gid: ( 1030/   pc174)
+Access: 2017-10-12 08:46:09.110413397 -0400
+Modify: 2017-10-12 08:46:01.862220259 -0400
+Change: 2017-10-12 08:46:01.862220259 -0400
+ Birth: -
+  File: '/home/pnn2'
+  Size: 153       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17642132    Links: 3
+Access: (0700/drwx------)  Uid: ( 1090/    pnn2)   Gid: ( 1093/    pnn2)
+Access: 2017-08-26 07:42:35.521306566 -0400
+Modify: 2017-08-25 20:47:59.129152336 -0400
+Change: 2017-08-26 07:39:20.600061492 -0400
+ Birth: -
+  File: '/home/qf27'
+  Size: 252       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 34620810    Links: 6
+Access: (0700/drwx------)  Uid: ( 1033/    qf27)   Gid: ( 1036/    qf27)
+Access: 2017-10-11 10:14:31.783289337 -0400
+Modify: 2017-10-11 11:03:48.333568538 -0400
+Change: 2017-10-11 11:03:48.333568538 -0400
+ Birth: -
+  File: '/home/qh28'
+  Size: 223       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71544107    Links: 5
+Access: (0700/drwx------)  Uid: ( 1051/    qh28)   Gid: ( 1054/    qh28)
+Access: 2017-10-11 13:01:38.061060357 -0400
+Modify: 2017-10-11 13:01:38.877072524 -0400
+Change: 2017-10-11 13:01:38.877072524 -0400
+ Birth: -
+  File: '/home/rapid'
+  Size: 182       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 33891869    Links: 6
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/   rapid)   Gid: ( 1000/   admin)
+Access: 2017-10-08 22:15:59.346372026 -0400
+Modify: 2017-07-09 19:54:22.493497312 -0400
+Change: 2017-07-09 19:54:22.493497312 -0400
+ Birth: -
+  File: '/home/rc182'
+  Size: 188       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71003141    Links: 4
+Access: (0700/drwx------)  Uid: ( 1021/   rc182)   Gid: ( 1024/   rc182)
+Access: 2017-09-23 21:55:33.336238453 -0400
+Modify: 2017-09-13 19:45:58.745974166 -0400
+Change: 2017-09-13 19:45:58.745974166 -0400
+ Birth: -
+  File: '/home/rts15'
+  Size: 204       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17904784    Links: 5
+Access: (0700/drwx------)  Uid: ( 1107/   rts15)   Gid: ( 1110/   rts15)
+Access: 2017-10-10 20:12:20.343659270 -0400
+Modify: 2017-08-26 13:52:39.180811659 -0400
+Change: 2017-08-26 13:52:39.180811659 -0400
+ Birth: -
+  File: '/home/rwy2'
+  Size: 230       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 67761526    Links: 7
+Access: (0700/drwx------)  Uid: ( 1005/    rwy2)   Gid: ( 1006/    rwy2)
+Access: 2017-10-07 21:05:57.015515002 -0400
+Modify: 2017-08-11 11:44:33.123816780 -0400
+Change: 2017-08-26 07:40:37.526131460 -0400
+ Birth: -
+  File: '/home/rz59'
+  Size: 237       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71989634    Links: 6
+Access: (0700/drwx------)  Uid: ( 1178/    rz59)   Gid: ( 1181/    rz59)
+Access: 2017-10-03 10:42:57.463197056 -0400
+Modify: 2017-10-03 10:42:56.907188283 -0400
+Change: 2017-10-03 10:42:56.907188283 -0400
+ Birth: -
+  File: '/home/rz77'
+  Size: 239       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 104139379   Links: 5
+Access: (0700/drwx------)  Uid: ( 1157/    rz77)   Gid: ( 1160/    rz77)
+Access: 2017-10-10 15:03:55.307004198 -0400
+Modify: 2017-10-08 16:52:10.551665829 -0400
+Change: 2017-10-08 16:52:10.551665829 -0400
+ Birth: -
+  File: '/home/rz78'
+  Size: 334       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71980780    Links: 9
+Access: (0700/drwx------)  Uid: ( 1158/    rz78)   Gid: ( 1161/    rz78)
+Access: 2017-10-11 13:51:43.476709266 -0400
+Modify: 2017-10-11 14:34:34.171583878 -0400
+Change: 2017-10-11 14:34:34.171583878 -0400
+ Birth: -
+  File: '/home/sc543'
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 34621210    Links: 8
+Access: (0700/drwx------)  Uid: ( 1023/   sc543)   Gid: ( 1026/   sc543)
+Access: 2017-10-12 09:13:10.552994036 -0400
+Modify: 2017-10-12 09:12:59.976729155 -0400
+Change: 2017-10-12 09:12:59.976729155 -0400
+ Birth: -
+  File: '/home/sc553'
+  Size: 220       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 101430418   Links: 5
+Access: (0700/drwx------)  Uid: ( 1022/   sc553)   Gid: ( 1025/   sc553)
+Access: 2017-10-12 09:22:23.843160906 -0400
+Modify: 2017-10-12 10:42:47.905273536 -0400
+Change: 2017-10-12 10:42:47.905273536 -0400
+ Birth: -
+  File: '/home/sgc22'
+  Size: 153       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 101430679   Links: 3
+Access: (0700/drwx------)  Uid: ( 1029/   sgc22)   Gid: ( 1032/   sgc22)
+Access: 2017-08-26 07:42:35.521306566 -0400
+Modify: 2017-08-25 20:46:30.758785546 -0400
+Change: 2017-08-26 07:39:20.548060093 -0400
+ Birth: -
+  File: '/home/sl494'
+  Size: 226       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 102976955   Links: 8
+Access: (0700/drwx------)  Uid: ( 1075/   sl494)   Gid: ( 1078/   sl494)
+Access: 2017-10-11 17:58:19.713796431 -0400
+Modify: 2017-09-24 15:50:21.216093890 -0400
+Change: 2017-09-24 15:50:21.216093890 -0400
+ Birth: -
+  File: '/home/sn184'
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17642060    Links: 5
+Access: (0700/drwx------)  Uid: ( 1088/   sn184)   Gid: ( 1091/   sn184)
+Access: 2017-10-10 17:01:41.759769462 -0400
+Modify: 2017-10-11 17:50:55.367296901 -0400
+Change: 2017-10-11 17:50:55.367296901 -0400
+ Birth: -
+  File: '/home/ss668'
+  Size: 220       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17903452    Links: 5
+Access: (0700/drwx------)  Uid: ( 1102/   ss668)   Gid: ( 1105/   ss668)
+Access: 2017-09-11 00:31:32.089994454 -0400
+Modify: 2017-09-11 01:01:32.507452297 -0400
+Change: 2017-09-11 01:01:32.507452297 -0400
+ Birth: -
+  File: '/home/st283'
+  Size: 239       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 37136573    Links: 5
+Access: (0700/drwx------)  Uid: ( 1117/   st283)   Gid: ( 1120/   st283)
+Access: 2017-10-11 22:50:49.015671817 -0400
+Modify: 2017-10-11 22:50:48.299579572 -0400
+Change: 2017-10-11 22:50:48.299579572 -0400
+ Birth: -
+  File: '/home/sw360'
+  Size: 267       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17909818    Links: 6
+Access: (0700/drwx------)  Uid: ( 1127/   sw360)   Gid: ( 1130/   sw360)
+Access: 2017-10-11 14:56:36.422152045 -0400
+Modify: 2017-10-11 16:30:13.183440968 -0400
+Change: 2017-10-11 16:30:13.183440968 -0400
+ Birth: -
+  File: '/home/sw361'
+  Size: 213       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71974399    Links: 9
+Access: (0700/drwx------)  Uid: ( 1128/   sw361)   Gid: ( 1131/   sw361)
+Access: 2017-10-11 16:17:45.792129159 -0400
+Modify: 2017-10-11 16:17:46.700142849 -0400
+Change: 2017-10-11 16:17:46.700142849 -0400
+ Birth: -
+  File: '/home/sy123'
+  Size: 204       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 37141281    Links: 5
+Access: (0700/drwx------)  Uid: ( 1140/   sy123)   Gid: ( 1143/   sy123)
+Access: 2017-10-11 20:59:29.885265709 -0400
+Modify: 2017-08-26 10:35:41.271779200 -0400
+Change: 2017-08-26 10:35:41.271779200 -0400
+ Birth: -
+  File: '/home/sy167'
+  Size: 270       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71977962    Links: 8
+Access: (0700/drwx------)  Uid: ( 1144/   sy167)   Gid: ( 1147/   sy167)
+Access: 2017-10-10 17:00:09.222454680 -0400
+Modify: 2017-10-03 10:10:13.887851108 -0400
+Change: 2017-10-03 10:10:13.887851108 -0400
+ Birth: -
+  File: '/home/sz132'
+  Size: 277       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17919988    Links: 7
+Access: (0700/drwx------)  Uid: ( 1170/   sz132)   Gid: ( 1173/   sz132)
+Access: 2017-10-11 12:27:26.431262412 -0400
+Modify: 2017-10-04 12:24:42.393566276 -0400
+Change: 2017-10-04 12:24:42.393566276 -0400
+ Birth: -
+  File: '/home/tc233'
+  Size: 252       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 101430494   Links: 6
+Access: (0700/drwx------)  Uid: ( 1024/   tc233)   Gid: ( 1027/   tc233)
+Access: 2017-10-11 23:02:00.861698146 -0400
+Modify: 2017-10-11 23:02:00.677694434 -0400
+Change: 2017-10-11 23:02:00.677694434 -0400
+ Birth: -
+  File: '/home/th224'
+  Size: 220       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 37124025    Links: 5
+Access: (0700/drwx------)  Uid: ( 1047/   th224)   Gid: ( 1050/   th224)
+Access: 2017-09-06 12:02:12.204014853 -0400
+Modify: 2017-09-06 13:13:12.219931937 -0400
+Change: 2017-09-06 13:13:12.219931937 -0400
+ Birth: -
+  File: '/home/tx17'
+  Size: 255       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 103325839   Links: 5
+Access: (0700/drwx------)  Uid: ( 1136/    tx17)   Gid: ( 1139/    tx17)
+Access: 2017-10-05 10:18:37.987982087 -0400
+Modify: 2017-09-15 16:06:45.558709922 -0400
+Change: 2017-09-15 16:06:45.558709922 -0400
+ Birth: -
+  File: '/home/vcm'
+  Size: 313       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 385459      Links: 12
+Access: (0700/drwx------)  Uid: (  990/     vcm)   Gid: ( 1001/     vcm)
+Access: 2017-09-27 16:09:15.740728322 -0400
+Modify: 2017-09-23 07:10:11.389580515 -0400
+Change: 2017-09-23 07:10:11.389580515 -0400
+ Birth: -
+  File: '/home/wl125'
+  Size: 153       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 37131203    Links: 3
+Access: (0700/drwx------)  Uid: ( 1076/   wl125)   Gid: ( 1079/   wl125)
+Access: 2017-08-26 07:42:35.521306566 -0400
+Modify: 2017-08-25 20:47:38.980612556 -0400
+Change: 2017-08-26 07:39:20.588061169 -0400
+ Birth: -
+  File: '/home/wlc11'
+  Size: 220       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 593438      Links: 5
+Access: (0700/drwx------)  Uid: ( 1015/   wlc11)   Gid: ( 1018/   wlc11)
+Access: 2017-10-12 09:52:56.531420539 -0400
+Modify: 2017-09-25 22:18:34.131179384 -0400
+Change: 2017-09-25 22:18:34.131179384 -0400
+ Birth: -
+  File: '/home/wy38'
+  Size: 204       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17925689    Links: 5
+Access: (0700/drwx------)  Uid: ( 1179/    wy38)   Gid: ( 1182/    wy38)
+Access: 2017-10-10 12:30:18.971410355 -0400
+Modify: 2017-09-14 11:10:33.058663512 -0400
+Change: 2017-09-14 11:10:33.058663512 -0400
+ Birth: -
+  File: '/home/wy47'
+  Size: 249       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 103327270   Links: 6
+Access: (0700/drwx------)  Uid: ( 1141/    wy47)   Gid: ( 1144/    wy47)
+Access: 2017-10-10 12:44:57.445314832 -0400
+Modify: 2017-10-07 22:51:52.234242759 -0400
+Change: 2017-10-07 22:51:52.234242759 -0400
+ Birth: -
+  File: '/home/wy48'
+  Size: 280       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17913604    Links: 7
+Access: (0700/drwx------)  Uid: ( 1145/    wy48)   Gid: ( 1148/    wy48)
+Access: 2017-10-12 00:39:25.563416349 -0400
+Modify: 2017-10-12 00:39:23.999366959 -0400
+Change: 2017-10-12 00:39:23.999366959 -0400
+ Birth: -
+  File: '/home/wz88'
+  Size: 220       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17916571    Links: 5
+Access: (0700/drwx------)  Uid: ( 1159/    wz88)   Gid: ( 1162/    wz88)
+Access: 2017-10-09 19:26:23.065904590 -0400
+Modify: 2017-10-09 19:42:22.340176003 -0400
+Change: 2017-10-09 19:42:22.340176003 -0400
+ Birth: -
+  File: '/home/xc113'
+  Size: 153       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 34621116    Links: 3
+Access: (0700/drwx------)  Uid: ( 1028/   xc113)   Gid: ( 1031/   xc113)
+Access: 2017-08-26 07:42:35.521306566 -0400
+Modify: 2017-08-25 20:46:29.326747207 -0400
+Change: 2017-08-26 07:39:20.548060093 -0400
+ Birth: -
+  File: '/home/xc93'
+  Size: 218       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71989947    Links: 6
+Access: (0700/drwx------)  Uid: ( 1180/    xc93)   Gid: ( 1183/    xc93)
+Access: 2017-09-11 14:41:10.483404298 -0400
+Modify: 2017-09-11 14:41:09.071368116 -0400
+Change: 2017-09-11 14:41:09.071368116 -0400
+ Birth: -
+  File: '/home/xg41'
+  Size: 4096      	Blocks: 16         IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 101433191   Links: 6
+Access: (0700/drwx------)  Uid: ( 1041/    xg41)   Gid: ( 1044/    xg41)
+Access: 2017-10-12 10:01:46.549441359 -0400
+Modify: 2017-10-12 10:01:46.345435962 -0400
+Change: 2017-10-12 10:01:46.345435962 -0400
+ Birth: -
+  File: '/home/xh73'
+  Size: 220       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17174962    Links: 5
+Access: (0700/drwx------)  Uid: ( 1046/    xh73)   Gid: ( 1049/    xh73)
+Access: 2017-10-11 12:40:34.862551025 -0400
+Modify: 2017-10-11 10:57:30.428377679 -0400
+Change: 2017-10-11 10:57:30.428377679 -0400
+ Birth: -
+  File: '/home/xl213'
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 103280207   Links: 7
+Access: (0700/drwx------)  Uid: ( 1081/   xl213)   Gid: ( 1084/   xl213)
+Access: 2017-10-10 21:15:44.635645996 -0400
+Modify: 2017-10-04 13:57:29.599543246 -0400
+Change: 2017-10-04 13:57:29.599543246 -0400
+ Birth: -
+  File: '/home/xl214'
+  Size: 251       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 37132182    Links: 6
+Access: (0700/drwx------)  Uid: ( 1082/   xl214)   Gid: ( 1085/   xl214)
+Access: 2017-10-11 10:01:30.907349902 -0400
+Modify: 2017-09-06 15:40:36.568519581 -0400
+Change: 2017-09-06 15:40:36.568519581 -0400
+ Birth: -
+  File: '/home/xl215'
+  Size: 232       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 102975240   Links: 6
+Access: (0700/drwx------)  Uid: ( 1068/   xl215)   Gid: ( 1071/   xl215)
+Access: 2017-10-08 19:51:34.011939129 -0400
+Modify: 2017-09-28 16:44:30.333077482 -0400
+Change: 2017-09-28 16:44:30.333077482 -0400
+ Birth: -
+  File: '/home/xl217'
+  Size: 232       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17638664    Links: 6
+Access: (0700/drwx------)  Uid: ( 1077/   xl217)   Gid: ( 1080/   xl217)
+Access: 2017-09-26 20:13:19.165215772 -0400
+Modify: 2017-09-26 20:06:42.035101678 -0400
+Change: 2017-09-26 20:06:42.035101678 -0400
+ Birth: -
+  File: '/home/xl219'
+  Size: 310       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71549648    Links: 7
+Access: (0700/drwx------)  Uid: ( 1078/   xl219)   Gid: ( 1081/   xl219)
+Access: 2017-10-11 21:13:40.707891931 -0400
+Modify: 2017-10-09 00:05:38.477422917 -0400
+Change: 2017-10-09 00:05:38.477422917 -0400
+ Birth: -
+  File: '/home/xp16'
+  Size: 232       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 103315826   Links: 6
+Access: (0700/drwx------)  Uid: ( 1094/    xp16)   Gid: ( 1097/    xp16)
+Access: 2017-10-11 22:30:50.754841141 -0400
+Modify: 2017-10-11 22:51:37.194985385 -0400
+Change: 2017-10-11 22:51:37.194985385 -0400
+ Birth: -
+  File: '/home/xy78'
+  Size: 283       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71978034    Links: 7
+Access: (0700/drwx------)  Uid: ( 1146/    xy78)   Gid: ( 1149/    xy78)
+Access: 2017-10-12 10:15:03.694692747 -0400
+Modify: 2017-10-12 10:16:07.128973141 -0400
+Change: 2017-10-12 10:16:07.128973141 -0400
+ Birth: -
+  File: '/home/xz139'
+  Size: 220       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 37146833    Links: 5
+Access: (0700/drwx------)  Uid: ( 1161/   xz139)   Gid: ( 1164/   xz139)
+Access: 2017-10-05 13:17:29.589347523 -0400
+Modify: 2017-10-11 13:35:08.281115427 -0400
+Change: 2017-10-11 13:35:08.281115427 -0400
+ Birth: -
+  File: '/home/xz188'
+  Size: 153       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 104140124   Links: 3
+Access: (0700/drwx------)  Uid: ( 1160/   xz188)   Gid: ( 1163/   xz188)
+Access: 2017-08-26 07:42:35.521306566 -0400
+Modify: 2017-08-25 20:49:40.687874287 -0400
+Change: 2017-08-26 07:39:20.660063106 -0400
+ Birth: -
+  File: '/home/xz197'
+  Size: 335       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71983074    Links: 7
+Access: (0700/drwx------)  Uid: ( 1171/   xz197)   Gid: ( 1174/   xz197)
+Access: 2017-10-11 13:41:21.330541188 -0400
+Modify: 2017-10-09 16:58:37.356471422 -0400
+Change: 2017-10-09 16:58:37.356471422 -0400
+ Birth: -
+  File: '/home/yb54'
+  Size: 153       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 593163      Links: 3
+Access: (0700/drwx------)  Uid: ( 1009/    yb54)   Gid: ( 1012/    yb54)
+Access: 2017-08-26 07:42:35.521306566 -0400
+Modify: 2017-08-25 20:46:02.234021965 -0400
+Change: 2017-08-26 07:39:20.532059663 -0400
+ Birth: -
+  File: '/home/yc290'
+  Size: 153       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71520260    Links: 3
+Access: (0700/drwx------)  Uid: ( 1025/   yc290)   Gid: ( 1028/   yc290)
+Access: 2017-08-26 07:42:35.521306566 -0400
+Modify: 2017-08-25 20:46:24.946629944 -0400
+Change: 2017-08-26 07:39:20.544059984 -0400
+ Birth: -
+  File: '/home/yd94'
+  Size: 275       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71520657    Links: 8
+Access: (0700/drwx------)  Uid: ( 1032/    yd94)   Gid: ( 1035/    yd94)
+Access: 2017-10-11 22:35:56.167533490 -0400
+Modify: 2017-10-11 23:16:29.951512320 -0400
+Change: 2017-10-11 23:16:29.951512320 -0400
+ Birth: -
+  File: '/home/yf68'
+  Size: 167       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 614790      Links: 4
+Access: (0700/drwx------)  Uid: ( 1036/    yf68)   Gid: ( 1039/    yf68)
+Access: 2017-08-26 07:42:35.521306566 -0400
+Modify: 2017-08-28 16:47:05.039910548 -0400
+Change: 2017-08-28 16:47:05.039910548 -0400
+ Birth: -
+  File: '/home/yf83'
+  Size: 232       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71528959    Links: 6
+Access: (0700/drwx------)  Uid: ( 1037/    yf83)   Gid: ( 1040/    yf83)
+Access: 2017-10-11 13:12:51.730271215 -0400
+Modify: 2017-09-03 15:54:04.326905023 -0400
+Change: 2017-09-03 15:54:04.326905023 -0400
+ Birth: -
+  File: '/home/yg95'
+  Size: 220       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71529417    Links: 5
+Access: (0700/drwx------)  Uid: ( 1040/    yg95)   Gid: ( 1043/    yg95)
+Access: 2017-10-08 22:09:47.296764711 -0400
+Modify: 2017-09-08 16:43:46.900080562 -0400
+Change: 2017-09-08 16:43:46.900080562 -0400
+ Birth: -
+  File: '/home/yh164'
+  Size: 220       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71998155    Links: 5
+Access: (0700/drwx------)  Uid: ( 1181/   yh164)   Gid: ( 1184/   yh164)
+Access: 2017-10-03 11:23:01.874321810 -0400
+Modify: 2017-09-01 12:58:01.724625653 -0400
+Change: 2017-09-16 10:43:22.924070868 -0400
+ Birth: -
+  File: '/home/yj92'
+  Size: 153       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 37125922    Links: 3
+Access: (0700/drwx------)  Uid: ( 1055/    yj92)   Gid: ( 1058/    yj92)
+Access: 2017-08-26 07:42:35.521306566 -0400
+Modify: 2017-08-25 20:47:09.031810386 -0400
+Change: 2017-08-26 07:39:20.572060739 -0400
+ Birth: -
+  File: '/home/yl475'
+  Size: 236       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 37127632    Links: 5
+Access: (0700/drwx------)  Uid: ( 1070/   yl475)   Gid: ( 1073/   yl475)
+Access: 2017-10-11 21:41:29.782086114 -0400
+Modify: 2017-10-02 15:03:05.278273717 -0400
+Change: 2017-10-02 15:03:05.278273717 -0400
+ Birth: -
+  File: '/home/yl483'
+  Size: 275       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17639827    Links: 7
+Access: (0700/drwx------)  Uid: ( 1079/   yl483)   Gid: ( 1082/   yl483)
+Access: 2017-10-11 15:19:28.397227328 -0400
+Modify: 2017-09-17 16:12:14.937998578 -0400
+Change: 2017-09-17 16:12:14.937998578 -0400
+ Birth: -
+  File: '/home/yl489'
+  Size: 260       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71921098    Links: 7
+Access: (0700/drwx------)  Uid: ( 1084/   yl489)   Gid: ( 1087/   yl489)
+Access: 2017-10-12 02:34:32.993573336 -0400
+Modify: 2017-10-12 03:22:43.155518528 -0400
+Change: 2017-10-12 03:22:43.155518528 -0400
+ Birth: -
+  File: '/home/yl490'
+  Size: 286       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17640581    Links: 6
+Access: (0700/drwx------)  Uid: ( 1083/   yl490)   Gid: ( 1086/   yl490)
+Access: 2017-10-08 22:34:09.086803027 -0400
+Modify: 2017-10-08 22:34:09.034802258 -0400
+Change: 2017-10-08 22:34:09.034802258 -0400
+ Birth: -
+  File: '/home/yl495'
+  Size: 232       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71548594    Links: 6
+Access: (0700/drwx------)  Uid: ( 1071/   yl495)   Gid: ( 1074/   yl495)
+Access: 2017-10-11 22:33:57.713720954 -0400
+Modify: 2017-09-20 15:14:19.286049286 -0400
+Change: 2017-09-20 15:14:19.286049286 -0400
+ Birth: -
+  File: '/home/yl506'
+  Size: 253       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17635719    Links: 5
+Access: (0700/drwx------)  Uid: ( 1069/   yl506)   Gid: ( 1072/   yl506)
+Access: 2017-10-12 10:02:09.590050948 -0400
+Modify: 2017-09-07 00:29:34.663417630 -0400
+Change: 2017-09-07 00:29:34.663417630 -0400
+ Birth: -
+  File: '/home/ym106'
+  Size: 239       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 103303746   Links: 5
+Access: (0700/drwx------)  Uid: ( 1086/   ym106)   Gid: ( 1089/   ym106)
+Access: 2017-08-31 14:13:27.253566276 -0400
+Modify: 2017-08-31 14:13:17.509305172 -0400
+Change: 2017-08-31 14:13:17.509305172 -0400
+ Birth: -
+  File: '/home/ys205'
+  Size: 268       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71926263    Links: 6
+Access: (0700/drwx------)  Uid: ( 1106/   ys205)   Gid: ( 1109/   ys205)
+Access: 2017-10-11 01:32:45.643426046 -0400
+Modify: 2017-10-11 00:42:01.625851235 -0400
+Change: 2017-10-11 00:42:01.625851235 -0400
+ Birth: -
+  File: '/home/ys206'
+  Size: 259       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17905693    Links: 7
+Access: (0700/drwx------)  Uid: ( 1111/   ys206)   Gid: ( 1114/   ys206)
+Access: 2017-10-11 20:13:52.766464223 -0400
+Modify: 2017-09-16 17:54:36.555980397 -0400
+Change: 2017-09-16 17:54:36.555980397 -0400
+ Birth: -
+  File: '/home/yt114'
+  Size: 236       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 37135987    Links: 5
+Access: (0700/drwx------)  Uid: ( 1115/   yt114)   Gid: ( 1118/   yt114)
+Access: 2017-10-11 20:58:22.168372555 -0400
+Modify: 2017-10-11 20:58:22.168372555 -0400
+Change: 2017-10-11 20:58:22.168372555 -0400
+ Birth: -
+  File: '/home/yw215'
+  Size: 229       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 103324854   Links: 7
+Access: (0700/drwx------)  Uid: ( 1131/   yw215)   Gid: ( 1134/   yw215)
+Access: 2017-10-08 17:03:04.338007484 -0400
+Modify: 2017-09-06 14:30:04.685654639 -0400
+Change: 2017-09-06 14:30:04.685654639 -0400
+ Birth: -
+  File: '/home/yw262'
+  Size: 220       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 37140011    Links: 5
+Access: (0700/drwx------)  Uid: ( 1129/   yw262)   Gid: ( 1132/   yw262)
+Access: 2017-10-10 22:07:58.835830292 -0400
+Modify: 2017-08-30 16:05:09.844871816 -0400
+Change: 2017-08-30 16:05:09.844871816 -0400
+ Birth: -
+  File: '/home/yw263'
+  Size: 285       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 103324821   Links: 7
+Access: (0700/drwx------)  Uid: ( 1130/   yw263)   Gid: ( 1133/   yw263)
+Access: 2017-10-11 13:26:26.565585289 -0400
+Modify: 2017-09-29 16:22:00.325870992 -0400
+Change: 2017-09-29 16:22:00.325870992 -0400
+ Birth: -
+  File: '/home/yy194'
+  Size: 323       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71978707    Links: 6
+Access: (0700/drwx------)  Uid: ( 1150/   yy194)   Gid: ( 1153/   yy194)
+Access: 2017-10-11 14:00:49.905172566 -0400
+Modify: 2017-10-10 02:16:37.492057527 -0400
+Change: 2017-10-10 02:16:37.492057527 -0400
+ Birth: -
+  File: '/home/yz330'
+  Size: 174       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 104152034   Links: 3
+Access: (0700/drwx------)  Uid: ( 1167/   yz330)   Gid: ( 1170/   yz330)
+Access: 2017-08-29 10:27:34.473441559 -0400
+Modify: 2017-08-29 10:27:39.829589248 -0400
+Change: 2017-08-29 10:27:39.829589248 -0400
+ Birth: -
+  File: '/home/yz392'
+  Size: 287       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 37150004    Links: 6
+Access: (0700/drwx------)  Uid: ( 1173/   yz392)   Gid: ( 1176/   yz392)
+Access: 2017-10-11 15:24:59.590270933 -0400
+Modify: 2017-10-06 10:38:13.301770510 -0400
+Change: 2017-10-06 10:38:13.301770510 -0400
+ Birth: -
+  File: '/home/yz395'
+  Size: 261       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71979282    Links: 7
+Access: (0700/drwx------)  Uid: ( 1163/   yz395)   Gid: ( 1166/   yz395)
+Access: 2017-10-10 21:41:51.883076839 -0400
+Modify: 2017-10-02 14:22:34.731478036 -0400
+Change: 2017-10-02 14:22:34.731478036 -0400
+ Birth: -
+  File: '/home/yz397'
+  Size: 239       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 104151273   Links: 5
+Access: (0700/drwx------)  Uid: ( 1162/   yz397)   Gid: ( 1165/   yz397)
+Access: 2017-10-11 20:50:52.746545545 -0400
+Modify: 2017-09-29 17:29:26.634720773 -0400
+Change: 2017-09-29 17:29:26.634720773 -0400
+ Birth: -
+  File: '/home/yz406'
+  Size: 244       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 37145591    Links: 7
+Access: (0700/drwx------)  Uid: ( 1166/   yz406)   Gid: ( 1169/   yz406)
+Access: 2017-09-04 13:44:25.296952459 -0400
+Modify: 2017-09-08 15:45:26.544868327 -0400
+Change: 2017-09-08 15:45:26.544868327 -0400
+ Birth: -
+  File: '/home/zc86'
+  Size: 258       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 34620806    Links: 8
+Access: (0700/drwx------)  Uid: ( 1016/    zc86)   Gid: ( 1019/    zc86)
+Access: 2017-10-10 09:50:28.891381329 -0400
+Modify: 2017-09-30 11:22:19.007983861 -0400
+Change: 2017-09-30 11:22:19.007983861 -0400
+ Birth: -
+  File: '/home/zf29'
+  Size: 284       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 101431407   Links: 7
+Access: (0700/drwx------)  Uid: ( 1034/    zf29)   Gid: ( 1037/    zf29)
+Access: 2017-10-11 14:30:45.120152741 -0400
+Modify: 2017-09-30 23:00:07.016664299 -0400
+Change: 2017-09-30 23:00:07.016664299 -0400
+ Birth: -
+  File: '/home/zg50'
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 615536      Links: 6
+Access: (0700/drwx------)  Uid: ( 1042/    zg50)   Gid: ( 1045/    zg50)
+Access: 2017-10-11 17:24:40.695520567 -0400
+Modify: 2017-10-06 22:05:51.197136251 -0400
+Change: 2017-10-06 22:05:51.197136251 -0400
+ Birth: -
+  File: '/home/zj32'
+  Size: 233       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71545606    Links: 6
+Access: (0700/drwx------)  Uid: ( 1057/    zj32)   Gid: ( 1060/    zj32)
+Access: 2017-10-11 16:58:16.959698665 -0400
+Modify: 2017-10-03 23:47:07.543534751 -0400
+Change: 2017-10-03 23:47:07.543534751 -0400
+ Birth: -
+  File: '/home/zl157'
+  Size: 265       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 103280175   Links: 6
+Access: (0700/drwx------)  Uid: ( 1080/   zl157)   Gid: ( 1083/   zl157)
+Access: 2017-10-11 22:34:01.901785177 -0400
+Modify: 2017-10-12 00:35:04.346733720 -0400
+Change: 2017-10-12 00:35:04.346733720 -0400
+ Birth: -
+  File: '/home/zl158'
+  Size: 244       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 102976842   Links: 7
+Access: (0700/drwx------)  Uid: ( 1072/   zl158)   Gid: ( 1075/   zl158)
+Access: 2017-10-12 09:56:12.872613906 -0400
+Modify: 2017-10-12 10:47:07.996584449 -0400
+Change: 2017-10-12 10:47:07.996584449 -0400
+ Birth: -
+  File: '/home/zn17'
+  Size: 276       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71922637    Links: 7
+Access: (0700/drwx------)  Uid: ( 1089/    zn17)   Gid: ( 1092/    zn17)
+Access: 2017-10-11 13:31:58.790369634 -0400
+Modify: 2017-09-27 12:06:57.513190943 -0400
+Change: 2017-09-27 12:06:57.513190943 -0400
+ Birth: -
+  File: '/home/zp30'
+  Size: 220       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17643211    Links: 5
+Access: (0700/drwx------)  Uid: ( 1095/    zp30)   Gid: ( 1098/    zp30)
+Access: 2017-10-10 19:02:46.978868337 -0400
+Modify: 2017-09-05 18:39:11.904071534 -0400
+Change: 2017-09-05 18:39:11.904071534 -0400
+ Birth: -
+  File: '/home/zq21'
+  Size: 232       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71924090    Links: 6
+Access: (0700/drwx------)  Uid: ( 1097/    zq21)   Gid: ( 1100/    zq21)
+Access: 2017-10-11 02:08:39.134945444 -0400
+Modify: 2017-10-09 22:12:19.482746689 -0400
+Change: 2017-10-09 22:12:19.482746689 -0400
+ Birth: -
+  File: '/home/zw123'
+  Size: 220       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17910493    Links: 5
+Access: (0700/drwx------)  Uid: ( 1133/   zw123)   Gid: ( 1136/   zw123)
+Access: 2017-10-11 20:30:47.433601188 -0400
+Modify: 2017-10-11 16:21:45.655751502 -0400
+Change: 2017-10-11 16:21:45.655751502 -0400
+ Birth: -
+  File: '/home/zw124'
+  Size: 236       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 71975079    Links: 5
+Access: (0700/drwx------)  Uid: ( 1132/   zw124)   Gid: ( 1135/   zw124)
+Access: 2017-10-02 15:00:56.475759651 -0400
+Modify: 2017-09-27 11:17:37.616645191 -0400
+Change: 2017-09-27 11:17:37.616645191 -0400
+ Birth: -
+  File: '/home/zx52'
+  Size: 4096      	Blocks: 16         IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 37142764    Links: 9
+Access: (0700/drwx------)  Uid: ( 1135/    zx52)   Gid: ( 1138/    zx52)
+Access: 2017-10-12 10:48:32.134943072 -0400
+Modify: 2017-10-11 22:59:13.037595419 -0400
+Change: 2017-10-11 22:59:13.037595419 -0400
+ Birth: -
+  File: '/home/zy71'
+  Size: 220       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 103335116   Links: 5
+Access: (0700/drwx------)  Uid: ( 1151/    zy71)   Gid: ( 1154/    zy71)
+Access: 2017-10-10 16:47:10.555598229 -0400
+Modify: 2017-10-02 10:54:30.254287227 -0400
+Change: 2017-10-02 10:54:30.254287227 -0400
+ Birth: -
+  File: '/home/zz114'
+  Size: 267       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 104152067   Links: 6
+Access: (0700/drwx------)  Uid: ( 1168/   zz114)   Gid: ( 1171/   zz114)
+Access: 2017-10-11 21:21:25.379797674 -0400
+Modify: 2017-10-11 21:21:21.979742955 -0400
+Change: 2017-10-11 21:21:21.979742955 -0400
+ Birth: -
+  File: '/home/zz134'
+  Size: 269       	Blocks: 0          IO Block: 4096   directory
+Device: fc00h/64512d	Inode: 17918289    Links: 8
+Access: (0700/drwx------)  Uid: ( 1164/   zz134)   Gid: ( 1167/   zz134)
+Access: 2017-10-12 10:34:06.890463065 -0400
+Modify: 2017-09-26 11:17:57.546197314 -0400
+Change: 2017-09-26 11:17:57.546197314 -0400
+ Birth: -
