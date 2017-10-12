@@ -7,6 +7,7 @@
 #include <pwd.h>
 #include <grp.h>
 #include <unistd.h>
+#include <string.h>
 //This function is for Step 4
 char * time2str(const time_t * when, long ns) {
   char * ans = malloc(128 * sizeof(*ans));
@@ -22,35 +23,56 @@ char * time2str(const time_t * when, long ns) {
 void myStat(char * filename)
 {
    struct stat sb;
-   if (stat(filename, &sb) == -1) {
+
+   if (lstat(filename, &sb) == -1) {
        fprintf(stderr, "stat: cannot stat '%s': ", filename);
        perror ("");
        exit(EXIT_FAILURE);
    }
+   
+   if (S_ISLNK(sb.st_mode))
+   {
+       char buf[256];
+       buf[readlink(filename, buf, 256)] = '\0';
+       printf("  File: '%s' -> '%s'\n", filename, buf);
+   }
+   else 
+       printf("  File: '%s'\n", filename);
+
 
    const char * file_type;
    char fst;
 
    switch (sb.st_mode & S_IFMT) {
-   case S_IFBLK:  {file_type = "block device";      fst = 'b';} break;
-   case S_IFCHR:  {file_type = "character device";  fst = 'c';} break;
-   case S_IFDIR:  {file_type = "directory";         fst = 'd';} break;
-   case S_IFIFO:  {file_type = "FIFO/pipe";         fst = 'p';} break;
-   case S_IFLNK:  {file_type = "symlink";           fst = 'l';} break;
-   case S_IFREG:  {file_type = "regular file";      fst = '-';} break;
-   case S_IFSOCK: {file_type = "socket";            fst = 's';} break;
-   default:       {file_type = "unknown?";          fst = '@';} break;
+   case S_IFBLK:  {file_type = "block special file";        fst = 'b';} break;
+   case S_IFCHR:  {file_type = "character special file";    fst = 'c';} break;
+   case S_IFDIR:  {file_type = "directory";                 fst = 'd';} break;
+   case S_IFIFO:  {file_type = "fifo";                      fst = 'p';} break;
+   case S_IFLNK:  {file_type = "symbolic link";             fst = 'l';} break;
+   case S_IFREG:  {file_type = "regular file";              fst = '-';} break;
+   case S_IFSOCK: {file_type = "socket";                    fst = 's';} break;
+   default:       {file_type = "unknown?";                  fst = '@';} break;
    }
 
-   printf("  File: '%s'\n", filename);
    printf("  Size: %-10lu\tBlocks: %-10lu IO Block: %-6lu %s\n", 
             (long) sb.st_size,
             (long) sb.st_blocks,
             (long) sb.st_blksize,
             file_type);
 
-   printf("Device: %lxh/%lud\tInode: %-10lu  Links: %lu\n",
+
+   if (S_ISCHR(sb.st_mode) || S_ISBLK(sb.st_mode))
+   {
+       printf("Device: %lxh/%lud\tInode: %-10lu  Links: %-5lu Device type: %x,%x\n",
+            sb.st_dev, sb.st_dev, (long) sb.st_ino, (long) sb.st_nlink, 
+            major(sb.st_rdev), minor(sb.st_rdev));
+
+   }
+   else
+       printf("Device: %lxh/%lud\tInode: %-10lu  Links: %lu\n",
             sb.st_dev, sb.st_dev, (long) sb.st_ino, (long) sb.st_nlink);
+
+
 
    char hum[11];
    for (int i=0; i<11; i++)
