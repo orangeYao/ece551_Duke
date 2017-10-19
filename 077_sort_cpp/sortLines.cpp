@@ -39,11 +39,14 @@ int main(int argc, char ** argv)
   for (int i=1; i < argc; i++)
   {
     fstrm.open(argv[i]);
-    if (!fstrm.is_open())
+    if (fstrm.is_open())
+    {
+      readFile(fstrm);
+      fstrm.close();
+    }
+    else
       return -1;
 
-    readFile(fstrm);
-    fstrm.close();
   }
 
   return 0;
