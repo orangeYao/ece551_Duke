@@ -1,5 +1,5 @@
-Grading at 10/19/2017:21:00:44.157991
-For commit ID 970f239abd6bf9a44ecd0f6e82014ab403497bc9
+Grading at 10/19/2017:21:08:17.746339
+For commit ID 5a49654d9bb49f8d9aca7bcc69e3aafd4dfef1ce
 Looking for malloc in your files
 sortLines.cpp: - You should NOT use FILE, malloc, realloc, qsort, or printf.
 No uses found (good).
@@ -30,9 +30,13 @@ Your output is correct
 valgrind was clean
 #################################################
 testcase3:
-Your output is incorrect
+Your output is correct
+  - Valgrind was clean (no errors, no memory leaks)
+valgrind was clean
 #################################################
 testcase4:
-Your output is incorrect
+Your output is correct
+  - Valgrind was clean (no errors, no memory leaks)
+valgrind was clean
 
-Overall Grade: F
+Overall Grade: B
