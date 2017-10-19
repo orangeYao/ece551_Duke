@@ -41,7 +41,7 @@ int main(int argc, char ** argv)
     fstrm.open(argv[i]);
     if (!(fstrm.is_open()))
     {
-      cerr << "what a nice day~~" << argv[i];
+      cerr << "can't open file" << argv[i];
       return -1;
     }
 
