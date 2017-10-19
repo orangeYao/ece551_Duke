@@ -39,14 +39,17 @@ int main(int argc, char ** argv)
   for (int i=1; i < argc; i++)
   {
     fstrm.open(argv[i]);
-    if (!(fstrm.is_open()))
+    if (fstrm.is_open())
     {
-      cerr << "can't open file" << argv[i];
-      return -1;
+      readFile(fstrm);
+      fstrm.close();
     }
-
-    readFile(fstrm);
-    fstrm.close();
+    else
+    {
+      //cerr << "can't open file " << argv[i] << endl;
+      perror ("error");
+      exit(-1);
+    }
 
   }
 
