@@ -1,6 +1,6 @@
-t/C r#Question No. 1
-t/C r#Question No. 2
-t/D r#Question No. 3
+C r#Question No. 1
+C r#Question No. 2
+D r#Question No. 3
 C/B/C
 H/L/H
 D/C/D
