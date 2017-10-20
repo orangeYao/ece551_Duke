@@ -1,5 +1,5 @@
-Grading at 10/20/2017:22:33:48.765174
-For commit ID c6aa2278fe931c710803fc5199fb730189a82197
+Grading at 10/20/2017:22:37:00.975146
+For commit ID fd8955486a76872a0369d11e5863fd8362e60679
 Looking for malloc in your files
 sortLines.cpp: - You should NOT use FILE, malloc, realloc, qsort, or printf.
 No uses found (good).
