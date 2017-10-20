@@ -46,8 +46,7 @@ int main(int argc, char ** argv)
     }
     else
     {
-      //cerr << "can't open file " << argv[i] << endl;
-      perror ("error");
+      cerr << "can't open file "; 
       exit(-1);
     }
 
