@@ -38,8 +38,7 @@ int main(int argc, char ** argv)
 
   for (int i=1; i < argc; i++)
   {
-    fstrm.open(argv[i]);
-    cout << "test" << endl;
+    fstrm.open(argv[i], ifstream::in);
     if (fstrm.is_open())
     {
       readFile(fstrm);
@@ -48,7 +47,7 @@ int main(int argc, char ** argv)
     else
     {
       cerr << "can't open file "; 
-//      exit(-1);
+      exit(-1);
     }
 
   }
