@@ -23,6 +23,7 @@ class Matrix {
     Matrix(int r, int c): numRows(r), numColumns(c){
         if (r<0)
             numRows = 0;
+
         rows = new vector<T> * [numRows]();  
         for (int i=0; i<numRows; i++)
             rows[i] = new vector<T>(numColumns);
@@ -68,12 +69,12 @@ class Matrix {
     }
 
     const vector<T> & operator[](int index) const {
-        assert(index < numRows);
+        assert(index < numRows && index >= 0);
         return *rows[index];
     }
 
     vector<T> & operator[](int index){
-        assert(index < numRows);
+        assert(index < numRows && index >= 0);
         return *rows[index];
     }
 
