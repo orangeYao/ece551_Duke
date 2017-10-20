@@ -1,4 +1,6 @@
-#include "Matrix.h"
+#include "Matrix.cpp"
+
+
 typedef Matrix<int> IntMatrix;
 
 int main(void) {
