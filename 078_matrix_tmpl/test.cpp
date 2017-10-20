@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #include "Matrix.h"
+=======
+#include "Matrix.cpp"
+>>>>>>> 495227147f64ad9a0639b85d203607ff87c09ad8
 
 typedef Matrix<int> IntMatrix;
 
