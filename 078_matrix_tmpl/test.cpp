@@ -1,13 +1,10 @@
-<<<<<<< HEAD
 #include "Matrix.h"
-=======
-#include "Matrix.cpp"
->>>>>>> 495227147f64ad9a0639b85d203607ff87c09ad8
 
 typedef Matrix<int> IntMatrix;
 
 int main(void) {
-  IntMatrix a(4,5);
+  IntMatrix a(-1,5);
+  cout << a.getRows() << endl;
   for (int i = 0; i < a.getRows(); i++) {
     for (int j = 0; j < a.getColumns(); j++) {
       a[i][j] = i+j;
