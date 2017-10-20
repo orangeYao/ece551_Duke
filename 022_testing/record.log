@@ -1,0 +1,1 @@
+echo 0 | python test.py > 0.txt

@@ -1,0 +1,28 @@
+Grading at 10/20/2017:21:35:22.809881
+For commit ID 7dbb3a4eeee45f23416fb5f0f6e6cd916c3096ba
+-----------------------------------------------
+testcase 1 : Testing with Matrix<int>
+...compiling...
+test.cpp:1:20: fatal error: Matrix.h: No such file or directory
+compilation terminated.
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 2 : Testing with Matrix<std::string>
+...compiling...
+test.cpp:1:20: fatal error: Matrix.h: No such file or directory
+compilation terminated.
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 3 : Testing with Matrix<(a custom class we wrote)>
+...compiling...
+test.cpp:1:20: fatal error: Matrix.h: No such file or directory
+compilation terminated.
+The code did not compile.  This test failed.
+--------------------------------------------
+Preparing to test assert fails...
+Compiling assertion failure tester...
+testAbort.cpp:1:20: fatal error: Matrix.h: No such file or directory
+compilation terminated.
+This code did not compile. Skipping remaining tests.
+
+Overall Grade: F

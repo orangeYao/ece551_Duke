@@ -1,0 +1,999 @@
+Choose a number: 1 is prime
+2 is prime
+3 is prime
+4 is not prime
+5 is prime
+6 is not prime
+7 is prime
+8 is not prime
+9 is not prime
+10 is not prime
+11 is prime
+12 is not prime
+13 is prime
+14 is not prime
+15 is not prime
+16 is not prime
+17 is prime
+18 is not prime
+19 is prime
+20 is not prime
+21 is not prime
+22 is not prime
+23 is prime
+24 is not prime
+25 is not prime
+26 is not prime
+27 is not prime
+28 is not prime
+29 is prime
+30 is not prime
+31 is prime
+32 is not prime
+33 is not prime
+34 is not prime
+35 is not prime
+36 is not prime
+37 is prime
+38 is not prime
+39 is not prime
+40 is not prime
+41 is prime
+42 is not prime
+43 is prime
+44 is not prime
+45 is not prime
+46 is not prime
+47 is prime
+48 is not prime
+49 is not prime
+50 is not prime
+51 is not prime
+52 is not prime
+53 is prime
+54 is not prime
+55 is not prime
+56 is not prime
+57 is not prime
+58 is not prime
+59 is prime
+60 is not prime
+61 is prime
+62 is not prime
+63 is not prime
+64 is not prime
+65 is not prime
+66 is not prime
+67 is prime
+68 is not prime
+69 is not prime
+70 is not prime
+71 is prime
+72 is not prime
+73 is prime
+74 is not prime
+75 is not prime
+76 is not prime
+77 is not prime
+78 is not prime
+79 is prime
+80 is not prime
+81 is not prime
+82 is not prime
+83 is prime
+84 is not prime
+85 is not prime
+86 is not prime
+87 is not prime
+88 is not prime
+89 is prime
+90 is not prime
+91 is not prime
+92 is not prime
+93 is not prime
+94 is not prime
+95 is not prime
+96 is not prime
+97 is prime
+98 is not prime
+99 is not prime
+100 is not prime
+101 is prime
+102 is not prime
+103 is prime
+104 is not prime
+105 is not prime
+106 is not prime
+107 is prime
+108 is not prime
+109 is prime
+110 is not prime
+111 is not prime
+112 is not prime
+113 is prime
+114 is not prime
+115 is not prime
+116 is not prime
+117 is not prime
+118 is not prime
+119 is not prime
+120 is not prime
+121 is not prime
+122 is not prime
+123 is not prime
+124 is not prime
+125 is not prime
+126 is not prime
+127 is prime
+128 is not prime
+129 is not prime
+130 is not prime
+131 is prime
+132 is not prime
+133 is not prime
+134 is not prime
+135 is not prime
+136 is not prime
+137 is prime
+138 is not prime
+139 is prime
+140 is not prime
+141 is not prime
+142 is not prime
+143 is not prime
+144 is not prime
+145 is not prime
+146 is not prime
+147 is not prime
+148 is not prime
+149 is prime
+150 is not prime
+151 is prime
+152 is not prime
+153 is not prime
+154 is not prime
+155 is not prime
+156 is not prime
+157 is prime
+158 is not prime
+159 is not prime
+160 is not prime
+161 is not prime
+162 is not prime
+163 is prime
+164 is not prime
+165 is not prime
+166 is not prime
+167 is prime
+168 is not prime
+169 is not prime
+170 is not prime
+171 is not prime
+172 is not prime
+173 is prime
+174 is not prime
+175 is not prime
+176 is not prime
+177 is not prime
+178 is not prime
+179 is prime
+180 is not prime
+181 is prime
+182 is not prime
+183 is not prime
+184 is not prime
+185 is not prime
+186 is not prime
+187 is not prime
+188 is not prime
+189 is not prime
+190 is not prime
+191 is prime
+192 is not prime
+193 is prime
+194 is not prime
+195 is not prime
+196 is not prime
+197 is prime
+198 is not prime
+199 is prime
+200 is not prime
+201 is not prime
+202 is not prime
+203 is not prime
+204 is not prime
+205 is not prime
+206 is not prime
+207 is not prime
+208 is not prime
+209 is not prime
+210 is not prime
+211 is prime
+212 is not prime
+213 is not prime
+214 is not prime
+215 is not prime
+216 is not prime
+217 is not prime
+218 is not prime
+219 is not prime
+220 is not prime
+221 is not prime
+222 is not prime
+223 is prime
+224 is not prime
+225 is not prime
+226 is not prime
+227 is prime
+228 is not prime
+229 is prime
+230 is not prime
+231 is not prime
+232 is not prime
+233 is prime
+234 is not prime
+235 is not prime
+236 is not prime
+237 is not prime
+238 is not prime
+239 is prime
+240 is not prime
+241 is prime
+242 is not prime
+243 is not prime
+244 is not prime
+245 is not prime
+246 is not prime
+247 is not prime
+248 is not prime
+249 is not prime
+250 is not prime
+251 is prime
+252 is not prime
+253 is not prime
+254 is not prime
+255 is not prime
+256 is not prime
+257 is prime
+258 is not prime
+259 is not prime
+260 is not prime
+261 is not prime
+262 is not prime
+263 is prime
+264 is not prime
+265 is not prime
+266 is not prime
+267 is not prime
+268 is not prime
+269 is prime
+270 is not prime
+271 is prime
+272 is not prime
+273 is not prime
+274 is not prime
+275 is not prime
+276 is not prime
+277 is prime
+278 is not prime
+279 is not prime
+280 is not prime
+281 is prime
+282 is not prime
+283 is prime
+284 is not prime
+285 is not prime
+286 is not prime
+287 is not prime
+288 is not prime
+289 is not prime
+290 is not prime
+291 is not prime
+292 is not prime
+293 is prime
+294 is not prime
+295 is not prime
+296 is not prime
+297 is not prime
+298 is not prime
+299 is not prime
+300 is not prime
+301 is not prime
+302 is not prime
+303 is not prime
+304 is not prime
+305 is not prime
+306 is not prime
+307 is prime
+308 is not prime
+309 is not prime
+310 is not prime
+311 is prime
+312 is not prime
+313 is prime
+314 is not prime
+315 is not prime
+316 is not prime
+317 is prime
+318 is not prime
+319 is not prime
+320 is not prime
+321 is not prime
+322 is not prime
+323 is not prime
+324 is not prime
+325 is not prime
+326 is not prime
+327 is not prime
+328 is not prime
+329 is not prime
+330 is not prime
+331 is prime
+332 is not prime
+333 is not prime
+334 is not prime
+335 is not prime
+336 is not prime
+337 is prime
+338 is not prime
+339 is not prime
+340 is not prime
+341 is not prime
+342 is not prime
+343 is not prime
+344 is not prime
+345 is not prime
+346 is not prime
+347 is prime
+348 is not prime
+349 is prime
+350 is not prime
+351 is not prime
+352 is not prime
+353 is prime
+354 is not prime
+355 is not prime
+356 is not prime
+357 is not prime
+358 is not prime
+359 is prime
+360 is not prime
+361 is not prime
+362 is not prime
+363 is not prime
+364 is not prime
+365 is not prime
+366 is not prime
+367 is prime
+368 is not prime
+369 is not prime
+370 is not prime
+371 is not prime
+372 is not prime
+373 is prime
+374 is not prime
+375 is not prime
+376 is not prime
+377 is not prime
+378 is not prime
+379 is prime
+380 is not prime
+381 is not prime
+382 is not prime
+383 is prime
+384 is not prime
+385 is not prime
+386 is not prime
+387 is not prime
+388 is not prime
+389 is prime
+390 is not prime
+391 is not prime
+392 is not prime
+393 is not prime
+394 is not prime
+395 is not prime
+396 is not prime
+397 is prime
+398 is not prime
+399 is not prime
+400 is not prime
+401 is prime
+402 is not prime
+403 is not prime
+404 is not prime
+405 is not prime
+406 is not prime
+407 is not prime
+408 is not prime
+409 is prime
+410 is not prime
+411 is not prime
+412 is not prime
+413 is not prime
+414 is not prime
+415 is not prime
+416 is not prime
+417 is not prime
+418 is not prime
+419 is prime
+420 is not prime
+421 is prime
+422 is not prime
+423 is not prime
+424 is not prime
+425 is not prime
+426 is not prime
+427 is not prime
+428 is not prime
+429 is not prime
+430 is not prime
+431 is prime
+432 is not prime
+433 is prime
+434 is not prime
+435 is not prime
+436 is not prime
+437 is not prime
+438 is not prime
+439 is prime
+440 is not prime
+441 is not prime
+442 is not prime
+443 is prime
+444 is not prime
+445 is not prime
+446 is not prime
+447 is not prime
+448 is not prime
+449 is prime
+450 is not prime
+451 is not prime
+452 is not prime
+453 is not prime
+454 is not prime
+455 is not prime
+456 is not prime
+457 is prime
+458 is not prime
+459 is not prime
+460 is not prime
+461 is prime
+462 is not prime
+463 is prime
+464 is not prime
+465 is not prime
+466 is not prime
+467 is prime
+468 is not prime
+469 is not prime
+470 is not prime
+471 is not prime
+472 is not prime
+473 is not prime
+474 is not prime
+475 is not prime
+476 is not prime
+477 is not prime
+478 is not prime
+479 is prime
+480 is not prime
+481 is not prime
+482 is not prime
+483 is not prime
+484 is not prime
+485 is not prime
+486 is not prime
+487 is prime
+488 is not prime
+489 is not prime
+490 is not prime
+491 is prime
+492 is not prime
+493 is not prime
+494 is not prime
+495 is not prime
+496 is not prime
+497 is not prime
+498 is not prime
+499 is prime
+500 is not prime
+501 is not prime
+502 is not prime
+503 is prime
+504 is not prime
+505 is not prime
+506 is not prime
+507 is not prime
+508 is not prime
+509 is prime
+510 is not prime
+511 is not prime
+512 is not prime
+513 is not prime
+514 is not prime
+515 is not prime
+516 is not prime
+517 is not prime
+518 is not prime
+519 is not prime
+520 is not prime
+521 is prime
+522 is not prime
+523 is prime
+524 is not prime
+525 is not prime
+526 is not prime
+527 is not prime
+528 is not prime
+529 is not prime
+530 is not prime
+531 is not prime
+532 is not prime
+533 is not prime
+534 is not prime
+535 is not prime
+536 is not prime
+537 is not prime
+538 is not prime
+539 is not prime
+540 is not prime
+541 is prime
+542 is not prime
+543 is not prime
+544 is not prime
+545 is not prime
+546 is not prime
+547 is prime
+548 is not prime
+549 is not prime
+550 is not prime
+551 is not prime
+552 is not prime
+553 is not prime
+554 is not prime
+555 is not prime
+556 is not prime
+557 is prime
+558 is not prime
+559 is not prime
+560 is not prime
+561 is not prime
+562 is not prime
+563 is prime
+564 is not prime
+565 is not prime
+566 is not prime
+567 is not prime
+568 is not prime
+569 is prime
+570 is not prime
+571 is prime
+572 is not prime
+573 is not prime
+574 is not prime
+575 is not prime
+576 is not prime
+577 is prime
+578 is not prime
+579 is not prime
+580 is not prime
+581 is not prime
+582 is not prime
+583 is not prime
+584 is not prime
+585 is not prime
+586 is not prime
+587 is prime
+588 is not prime
+589 is not prime
+590 is not prime
+591 is not prime
+592 is not prime
+593 is prime
+594 is not prime
+595 is not prime
+596 is not prime
+597 is not prime
+598 is not prime
+599 is prime
+600 is not prime
+601 is prime
+602 is not prime
+603 is not prime
+604 is not prime
+605 is not prime
+606 is not prime
+607 is prime
+608 is not prime
+609 is not prime
+610 is not prime
+611 is not prime
+612 is not prime
+613 is prime
+614 is not prime
+615 is not prime
+616 is not prime
+617 is prime
+618 is not prime
+619 is prime
+620 is not prime
+621 is not prime
+622 is not prime
+623 is not prime
+624 is not prime
+625 is not prime
+626 is not prime
+627 is not prime
+628 is not prime
+629 is not prime
+630 is not prime
+631 is prime
+632 is not prime
+633 is not prime
+634 is not prime
+635 is not prime
+636 is not prime
+637 is not prime
+638 is not prime
+639 is not prime
+640 is not prime
+641 is prime
+642 is not prime
+643 is prime
+644 is not prime
+645 is not prime
+646 is not prime
+647 is prime
+648 is not prime
+649 is not prime
+650 is not prime
+651 is not prime
+652 is not prime
+653 is prime
+654 is not prime
+655 is not prime
+656 is not prime
+657 is not prime
+658 is not prime
+659 is prime
+660 is not prime
+661 is prime
+662 is not prime
+663 is not prime
+664 is not prime
+665 is not prime
+666 is not prime
+667 is not prime
+668 is not prime
+669 is not prime
+670 is not prime
+671 is not prime
+672 is not prime
+673 is prime
+674 is not prime
+675 is not prime
+676 is not prime
+677 is prime
+678 is not prime
+679 is not prime
+680 is not prime
+681 is not prime
+682 is not prime
+683 is prime
+684 is not prime
+685 is not prime
+686 is not prime
+687 is not prime
+688 is not prime
+689 is not prime
+690 is not prime
+691 is prime
+692 is not prime
+693 is not prime
+694 is not prime
+695 is not prime
+696 is not prime
+697 is not prime
+698 is not prime
+699 is not prime
+700 is not prime
+701 is prime
+702 is not prime
+703 is not prime
+704 is not prime
+705 is not prime
+706 is not prime
+707 is not prime
+708 is not prime
+709 is prime
+710 is not prime
+711 is not prime
+712 is not prime
+713 is not prime
+714 is not prime
+715 is not prime
+716 is not prime
+717 is not prime
+718 is not prime
+719 is prime
+720 is not prime
+721 is not prime
+722 is not prime
+723 is not prime
+724 is not prime
+725 is not prime
+726 is not prime
+727 is prime
+728 is not prime
+729 is not prime
+730 is not prime
+731 is not prime
+732 is not prime
+733 is prime
+734 is not prime
+735 is not prime
+736 is not prime
+737 is not prime
+738 is not prime
+739 is prime
+740 is not prime
+741 is not prime
+742 is not prime
+743 is prime
+744 is not prime
+745 is not prime
+746 is not prime
+747 is not prime
+748 is not prime
+749 is not prime
+750 is not prime
+751 is prime
+752 is not prime
+753 is not prime
+754 is not prime
+755 is not prime
+756 is not prime
+757 is prime
+758 is not prime
+759 is not prime
+760 is not prime
+761 is prime
+762 is not prime
+763 is not prime
+764 is not prime
+765 is not prime
+766 is not prime
+767 is not prime
+768 is not prime
+769 is prime
+770 is not prime
+771 is not prime
+772 is not prime
+773 is prime
+774 is not prime
+775 is not prime
+776 is not prime
+777 is not prime
+778 is not prime
+779 is not prime
+780 is not prime
+781 is not prime
+782 is not prime
+783 is not prime
+784 is not prime
+785 is not prime
+786 is not prime
+787 is prime
+788 is not prime
+789 is not prime
+790 is not prime
+791 is not prime
+792 is not prime
+793 is not prime
+794 is not prime
+795 is not prime
+796 is not prime
+797 is prime
+798 is not prime
+799 is not prime
+800 is not prime
+801 is not prime
+802 is not prime
+803 is not prime
+804 is not prime
+805 is not prime
+806 is not prime
+807 is not prime
+808 is not prime
+809 is prime
+810 is not prime
+811 is prime
+812 is not prime
+813 is not prime
+814 is not prime
+815 is not prime
+816 is not prime
+817 is not prime
+818 is not prime
+819 is not prime
+820 is not prime
+821 is prime
+822 is not prime
+823 is prime
+824 is not prime
+825 is not prime
+826 is not prime
+827 is prime
+828 is not prime
+829 is prime
+830 is not prime
+831 is not prime
+832 is not prime
+833 is not prime
+834 is not prime
+835 is not prime
+836 is not prime
+837 is not prime
+838 is not prime
+839 is prime
+840 is not prime
+841 is not prime
+842 is not prime
+843 is not prime
+844 is not prime
+845 is not prime
+846 is not prime
+847 is not prime
+848 is not prime
+849 is not prime
+850 is not prime
+851 is not prime
+852 is not prime
+853 is prime
+854 is not prime
+855 is not prime
+856 is not prime
+857 is prime
+858 is not prime
+859 is prime
+860 is not prime
+861 is not prime
+862 is not prime
+863 is prime
+864 is not prime
+865 is not prime
+866 is not prime
+867 is not prime
+868 is not prime
+869 is not prime
+870 is not prime
+871 is not prime
+872 is not prime
+873 is not prime
+874 is not prime
+875 is not prime
+876 is not prime
+877 is prime
+878 is not prime
+879 is not prime
+880 is not prime
+881 is prime
+882 is not prime
+883 is prime
+884 is not prime
+885 is not prime
+886 is not prime
+887 is prime
+888 is not prime
+889 is not prime
+890 is not prime
+891 is not prime
+892 is not prime
+893 is not prime
+894 is not prime
+895 is not prime
+896 is not prime
+897 is not prime
+898 is not prime
+899 is not prime
+900 is not prime
+901 is not prime
+902 is not prime
+903 is not prime
+904 is not prime
+905 is not prime
+906 is not prime
+907 is prime
+908 is not prime
+909 is not prime
+910 is not prime
+911 is prime
+912 is not prime
+913 is not prime
+914 is not prime
+915 is not prime
+916 is not prime
+917 is not prime
+918 is not prime
+919 is prime
+920 is not prime
+921 is not prime
+922 is not prime
+923 is not prime
+924 is not prime
+925 is not prime
+926 is not prime
+927 is not prime
+928 is not prime
+929 is prime
+930 is not prime
+931 is not prime
+932 is not prime
+933 is not prime
+934 is not prime
+935 is not prime
+936 is not prime
+937 is prime
+938 is not prime
+939 is not prime
+940 is not prime
+941 is prime
+942 is not prime
+943 is not prime
+944 is not prime
+945 is not prime
+946 is not prime
+947 is prime
+948 is not prime
+949 is not prime
+950 is not prime
+951 is not prime
+952 is not prime
+953 is prime
+954 is not prime
+955 is not prime
+956 is not prime
+957 is not prime
+958 is not prime
+959 is not prime
+960 is not prime
+961 is not prime
+962 is not prime
+963 is not prime
+964 is not prime
+965 is not prime
+966 is not prime
+967 is prime
+968 is not prime
+969 is not prime
+970 is not prime
+971 is prime
+972 is not prime
+973 is not prime
+974 is not prime
+975 is not prime
+976 is not prime
+977 is prime
+978 is not prime
+979 is not prime
+980 is not prime
+981 is not prime
+982 is not prime
+983 is prime
+984 is not prime
+985 is not prime
+986 is not prime
+987 is not prime
+988 is not prime
+989 is not prime
+990 is not prime
+991 is prime
+992 is not prime
+993 is not prime
+994 is not prime
+995 is not prime
+996 is not prime
+997 is prime
+998 is not prime
+999 is not prime
