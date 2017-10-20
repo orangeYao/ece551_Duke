@@ -1,28 +1,48 @@
-Grading at 10/20/2017:21:35:22.809881
-For commit ID 7dbb3a4eeee45f23416fb5f0f6e6cd916c3096ba
+Grading at 10/20/2017:21:58:14.072752
+For commit ID 28f60aa4ae05e1c0d59d5480fbcd4c9123902725
 -----------------------------------------------
 testcase 1 : Testing with Matrix<int>
 ...compiling...
-test.cpp:1:20: fatal error: Matrix.h: No such file or directory
-compilation terminated.
-The code did not compile.  This test failed.
+The code compiled.
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed 
 -----------------------------------------------
 testcase 2 : Testing with Matrix<std::string>
 ...compiling...
-test.cpp:1:20: fatal error: Matrix.h: No such file or directory
-compilation terminated.
-The code did not compile.  This test failed.
+The code compiled.
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed 
 -----------------------------------------------
 testcase 3 : Testing with Matrix<(a custom class we wrote)>
 ...compiling...
-test.cpp:1:20: fatal error: Matrix.h: No such file or directory
-compilation terminated.
-The code did not compile.  This test failed.
+The code compiled.
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed 
 --------------------------------------------
 Preparing to test assert fails...
 Compiling assertion failure tester...
-testAbort.cpp:1:20: fatal error: Matrix.h: No such file or directory
-compilation terminated.
-This code did not compile. Skipping remaining tests.
+Compiled.
+-----------------------------------------------
+testcase 4 :  operator[]: row number too high
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed
+-----------------------------------------------
+testcase 5 :  operator[]: row number too low
+  - Valgrind reported errors
+Valgrind reported errors (test failed).
+-----------------------------------------------
+testcase 6 :  operator+: different number of rows
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed
+-----------------------------------------------
+testcase 7 :  operator+: different number of columns
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed
 
-Overall Grade: F
+Overall Grade: C
