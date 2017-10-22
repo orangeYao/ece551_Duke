@@ -25,6 +25,7 @@ Expression * makeExpr(char op, Expression * lhs, Expression * rhs) {
     abort();
   }
 }
+
 bool isValidOp(char c) {
   return strchr("+-*/", c) != NULL;
 }
@@ -57,6 +58,7 @@ Expression * parseOp(const char ** strp) {
   delete rhs;
   return NULL;
 }
+
 Expression * parse(const char ** strp) {
   skipSpace(strp);
   if (**strp == '\0') {
