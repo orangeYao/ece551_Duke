@@ -7,5 +7,5 @@ B #Question No. 6
 C #Question No. 7
 D #Question No. 8
 C #Question No. 9
-C #Question No. 10
-B #Question No. 11
+B #Question No. 10
+B r#Question No. 11
