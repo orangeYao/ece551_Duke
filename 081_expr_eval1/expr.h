@@ -31,6 +31,8 @@ class NumExpression: public Expression {
     {
       return espr;
     }
+
+//    virtual ~NumExpression(){}
 };
 
 class PlusExpression: public Expression {
@@ -39,12 +41,16 @@ class PlusExpression: public Expression {
     PlusExpression(Expression * lhs, Expression * rhs)
     {
       espr = "(" + lhs->getEspr() + " + " + rhs->getEspr() + ")";
+      delete lhs;
+      delete rhs;
     }
 
     string toString() const
     {
       return espr;
     }
+
+//    virtual ~PlusExpression(){} 
 };
 
 #endif
