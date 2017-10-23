@@ -35,16 +35,12 @@ class NumExpression: public Expression {
 //    virtual ~NumExpression(){}
 };
 
-class OperatorExpression: public Expression {
-  protected:
-    string l_espr;
-    string r_espr;
+class PlusExpression: public Expression {
 
   public:
-    OperatorExpression(Expression * lhs, Expression * rhs)
+    PlusExpression(Expression * lhs, Expression * rhs)
     {
-      l_espr = "(" + lhs->getEspr();
-      r_espr = rhs->getEspr() + ")";
+      espr = "(" + lhs->getEspr() + " + " + rhs->getEspr() + ")";
       delete lhs;
       delete rhs;
     }
@@ -53,15 +49,8 @@ class OperatorExpression: public Expression {
     {
       return espr;
     }
-};
 
-
-class PlusExpression: public OperatorExpression {
-  public:
-    PlusExpression(Expression * lhs, Expression * rhs): OperatorExpression(lhs, rhs)
-    {
-      espr = l_espr + " + " + r_espr;
-    }
+//    virtual ~PlusExpression(){} 
 };
 
 #endif
