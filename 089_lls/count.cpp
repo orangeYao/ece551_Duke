@@ -56,8 +56,12 @@ template<typename T>
 LinkedList<Counted_OrdItem<T> > count(const LinkedList<T> & ll) {
   LinkedList<Counted_OrdItem<T> > ans;
   for (int i = 0; i < ll.getSize(); i++) {
+      //cout << "debug\n";
+      //cout << i << endl;
     const T & curr = ll[i];
+      //cout << curr << endl;
     int index = ans.find(Counted_OrdItem<T>(curr));
+      //cout << index << endl;
     if (index == -1) {
       ans.addBack(Counted_OrdItem<T>(curr));
     }
@@ -93,6 +97,8 @@ void addInput (LinkedList<std::string> * list, char * line) {
       line++;
     }
     if (!isspace(*start)) {
+      //debugging
+      //std::cout << std::string(start,line) << "  ";
       list->addFront(std::string(start,line));
     }
     start = line;
@@ -131,8 +137,14 @@ int main(int argc, char ** argv) {
     delete items;
     return EXIT_FAILURE;
   }
+
+//  std::cout << items->getHead()->data << '\n';
+//  std::cout << items->getHead()->next->data << '\n';
+//  std::cout << items->getSize() << '\n';
+
   LinkedList<Counted_OrdItem<std::string> > counts = count(*items);
   int sz = toRemove->getSize();
+  std::cout << sz << "\n";//hesr
   while (sz > 0){
     std::string s = (*toRemove)[sz-1];
     if (counts.remove(Counted_OrdItem<std::string>(s))) {

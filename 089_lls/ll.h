@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <exception>
 #include <assert.h>
+#include <iostream>
 using namespace std;
 
 class listException: public exception
@@ -51,8 +52,10 @@ class LinkedList {
   LinkedList(const LinkedList &ll): head(NULL), tail(NULL), size(0)
   {
     Node *tmp = ll.getHead();
+    cout << "test\n";
     while (tmp != NULL)
     {
+      cout << getSize() << "\n";
       addBack(tmp -> data);
       tmp = tmp -> next;
     }
@@ -128,6 +131,7 @@ class LinkedList {
     {
       if (tmp->data == item)
         return i; 
+      tmp = tmp->next;
       i++;
     }
     return -1;
