@@ -1,187 +1,25 @@
-Grading at 10/31/2017:22:58:23.774920
-For commit ID 02d42b88f489818afeeaa7b4f89ee5b71ba5cd0e
+Grading at 10/31/2017:23:02:26.727152
+For commit ID 7180dcc090e29e0a1b286c8d471e7d9ca198ebfc
 -----------------------------------------------
 testcase 1 : Testing with LinkedList<int>
 ...compiling...
 The code compiled.
   - Valgrind was clean (no errors, no memory leaks)
-Line_78_did_not_match
-Line_79_did_not_match
-Line_80_did_not_match
-Line_81_did_not_match
-Line_82_did_not_match
-Line_83_did_not_match
-Line_84_did_not_match
-Line_85_did_not_match
-Line_86_did_not_match
-Line_87_did_not_match
-Line_88_did_not_match
-Line_89_did_not_match
-Line_90_did_not_match
-Line_91_did_not_match
-Line_92_did_not_match
-Line_93_did_not_match
-Line_94_did_not_match
-Line_95_did_not_match
-Line_96_did_not_match
-Line_97_did_not_match
-Line_98_did_not_match
-Line_99_did_not_match
-Line_100_did_not_match
-Line_101_did_not_match
-Line_102_did_not_match
-Line_103_did_not_match
-Line_104_did_not_match
-Line_105_did_not_match
-Line_106_did_not_match
-Line_107_did_not_match
-Line_108_did_not_match
-Line_109_did_not_match
-Line_110_did_not_match
-Line_111_did_not_match
-Line_112_did_not_match
-Line_113_did_not_match
-Line_114_did_not_match
-Line_115_did_not_match
-Line_116_did_not_match
-Line_117_did_not_match
-Line_118_did_not_match
-Line_119_did_not_match
-Line_120_did_not_match
-Line_121_did_not_match
-Line_122_did_not_match
-Line_123_did_not_match
-Line_124_did_not_match
-Line_125_did_not_match
-Line_126_did_not_match
-Line_127_did_not_match
-Line_128_did_not_match
-Line_238_did_not_match
-Line_239_did_not_match
-Line_240_did_not_match
-Your file did not match the expected ouput
-Testcase failed 
+Your file matched the expected output
+Testcase passed 
 -----------------------------------------------
 testcase 2 : Testing with LinkedList<std::string>
 ...compiling...
 The code compiled.
   - Valgrind was clean (no errors, no memory leaks)
-Line_78_did_not_match
-Line_79_did_not_match
-Line_80_did_not_match
-Line_81_did_not_match
-Line_82_did_not_match
-Line_83_did_not_match
-Line_84_did_not_match
-Line_85_did_not_match
-Line_86_did_not_match
-Line_87_did_not_match
-Line_88_did_not_match
-Line_89_did_not_match
-Line_90_did_not_match
-Line_91_did_not_match
-Line_92_did_not_match
-Line_93_did_not_match
-Line_94_did_not_match
-Line_95_did_not_match
-Line_96_did_not_match
-Line_97_did_not_match
-Line_98_did_not_match
-Line_99_did_not_match
-Line_100_did_not_match
-Line_101_did_not_match
-Line_102_did_not_match
-Line_103_did_not_match
-Line_104_did_not_match
-Line_105_did_not_match
-Line_106_did_not_match
-Line_107_did_not_match
-Line_108_did_not_match
-Line_109_did_not_match
-Line_110_did_not_match
-Line_111_did_not_match
-Line_112_did_not_match
-Line_113_did_not_match
-Line_114_did_not_match
-Line_115_did_not_match
-Line_116_did_not_match
-Line_117_did_not_match
-Line_118_did_not_match
-Line_119_did_not_match
-Line_120_did_not_match
-Line_121_did_not_match
-Line_122_did_not_match
-Line_123_did_not_match
-Line_124_did_not_match
-Line_125_did_not_match
-Line_126_did_not_match
-Line_127_did_not_match
-Line_128_did_not_match
-Line_238_did_not_match
-Line_239_did_not_match
-Line_240_did_not_match
-Your file did not match the expected ouput
-Testcase failed 
+Your file matched the expected output
+Testcase passed 
 -----------------------------------------------
 testcase 3 : Testing with LinkedList<(a custom class we wrote)>
 ...compiling...
 The code compiled.
   - Valgrind was clean (no errors, no memory leaks)
-Line_78_did_not_match
-Line_79_did_not_match
-Line_80_did_not_match
-Line_81_did_not_match
-Line_82_did_not_match
-Line_83_did_not_match
-Line_84_did_not_match
-Line_85_did_not_match
-Line_86_did_not_match
-Line_87_did_not_match
-Line_88_did_not_match
-Line_89_did_not_match
-Line_90_did_not_match
-Line_91_did_not_match
-Line_92_did_not_match
-Line_93_did_not_match
-Line_94_did_not_match
-Line_95_did_not_match
-Line_96_did_not_match
-Line_97_did_not_match
-Line_98_did_not_match
-Line_99_did_not_match
-Line_100_did_not_match
-Line_101_did_not_match
-Line_102_did_not_match
-Line_103_did_not_match
-Line_104_did_not_match
-Line_105_did_not_match
-Line_106_did_not_match
-Line_107_did_not_match
-Line_108_did_not_match
-Line_109_did_not_match
-Line_110_did_not_match
-Line_111_did_not_match
-Line_112_did_not_match
-Line_113_did_not_match
-Line_114_did_not_match
-Line_115_did_not_match
-Line_116_did_not_match
-Line_117_did_not_match
-Line_118_did_not_match
-Line_119_did_not_match
-Line_120_did_not_match
-Line_121_did_not_match
-Line_122_did_not_match
-Line_123_did_not_match
-Line_124_did_not_match
-Line_125_did_not_match
-Line_126_did_not_match
-Line_127_did_not_match
-Line_128_did_not_match
-Line_238_did_not_match
-Line_239_did_not_match
-Line_240_did_not_match
-Your file did not match the expected ouput
-Testcase failed 
+Your file matched the expected output
+Testcase passed 
 
-Overall Grade: F
+Overall Grade: A
