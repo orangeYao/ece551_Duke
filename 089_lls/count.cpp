@@ -57,11 +57,11 @@ LinkedList<Counted_OrdItem<T> > count(const LinkedList<T> & ll) {
   LinkedList<Counted_OrdItem<T> > ans;
   for (int i = 0; i < ll.getSize(); i++) {
       //cout << "debug\n";
-      //cout << i << endl;
     const T & curr = ll[i];
+      //cout << ll[i] << endl;
       //cout << curr << endl;
     int index = ans.find(Counted_OrdItem<T>(curr));
-      //cout << index << endl;
+      //cout << "index: "<< index << endl;
     if (index == -1) {
       ans.addBack(Counted_OrdItem<T>(curr));
     }
@@ -140,11 +140,13 @@ int main(int argc, char ** argv) {
 
 //  std::cout << items->getHead()->data << '\n';
 //  std::cout << items->getHead()->next->data << '\n';
+//  std::cout << items->getHead()->next->next->data << '\n';
 //  std::cout << items->getSize() << '\n';
 
   LinkedList<Counted_OrdItem<std::string> > counts = count(*items);
+//    std::cout << counts.getSize() << "\n";
   int sz = toRemove->getSize();
-  std::cout << sz << "\n";//hesr
+//  std::cout << sz << "\n";//hesr
   while (sz > 0){
     std::string s = (*toRemove)[sz-1];
     if (counts.remove(Counted_OrdItem<std::string>(s))) {
@@ -154,6 +156,8 @@ int main(int argc, char ** argv) {
       std::cout << "Did not find " << s << "\n";
     }
     while(toRemove->remove(s)) { sz--; }
+//    std::cout << sz << "\n";
+//    std::cout << counts.getSize() << "\n";
   }
   LinkedList<Counted_OrdCount<std::string> > converted = convertTypes(counts);
   sort(converted);

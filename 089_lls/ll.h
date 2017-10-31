@@ -108,7 +108,7 @@ class LinkedList {
 
     Node *tmp = head;
     while(index --)
-      tmp = head->next;
+      tmp = tmp->next;
     return tmp->data;
   }
 
@@ -119,7 +119,7 @@ class LinkedList {
 
     Node *tmp = head;
     while(index --)
-      tmp = head->next;
+      tmp = tmp->next;
     return tmp->data;
   }
 
