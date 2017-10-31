@@ -52,10 +52,8 @@ class LinkedList {
   LinkedList(const LinkedList &ll): head(NULL), tail(NULL), size(0)
   {
     Node *tmp = ll.getHead();
-    cout << "test\n";
     while (tmp != NULL)
     {
-      cout << getSize() << "\n";
       addBack(tmp -> data);
       tmp = tmp -> next;
     }

@@ -146,7 +146,7 @@ int main(int argc, char ** argv) {
   LinkedList<Counted_OrdItem<std::string> > counts = count(*items);
 //    std::cout << counts.getSize() << "\n";
   int sz = toRemove->getSize();
-//  std::cout << sz << "\n";//hesr
+  std::cout << sz << "\n";//hesr
   while (sz > 0){
     std::string s = (*toRemove)[sz-1];
     if (counts.remove(Counted_OrdItem<std::string>(s))) {
