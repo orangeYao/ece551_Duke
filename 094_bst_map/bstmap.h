@@ -40,9 +40,9 @@ class BstMap: public Map <K, V> {
   {
      if (current != NULL)
      {
+       cout << current->value << "  ";
        printHelper(current -> left);
        printHelper(current -> right);
-       cout << current->value << "  ";
      }
   }
 
@@ -125,12 +125,13 @@ class BstMap: public Map <K, V> {
         //
         current->key = tmp->key;
         current->value = tmp->value;
-        delete tmp;
 
         if (right_null)
-          parent-> right = NULL;
+          parent-> right = tmp->right;
         else 
-          parent-> left = NULL;
+          parent-> left = tmp->right;
+
+        delete tmp;
         return current;
       }
     }

@@ -15,8 +15,11 @@ int main()
   a -> add(-2,-2);
   cout << a-> lookup(1) << endl;
   a -> remove(1);
-  a -> remove(3);
   a -> remove(-1);
+  a -> remove(0);
+  a -> remove(2);
+//  a -> remove(2);
+//  a -> remove(-1);
   a -> printTesting();
   cout << '\n';
   delete a;
