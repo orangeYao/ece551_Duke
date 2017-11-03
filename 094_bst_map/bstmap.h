@@ -24,7 +24,7 @@ class BstMap: public Map <K, V> {
     freeHelper(root);
   }
 
-  Node * freeHelper(Node * current)
+  void freeHelper(Node * current)
   {
     if (current != NULL)
     {
@@ -108,9 +108,15 @@ class BstMap: public Map <K, V> {
     }
     
     else if (key < current->key)
+    {
       current->left = removeHelper(current->left, key);
+      return current;
+    }
     else
+    {
       current->right = removeHelper(current->right, key);
+      return current;
+    }
   }
 
   void add(const K & key, const V & value)
