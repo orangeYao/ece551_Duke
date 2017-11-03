@@ -1,0 +1,11 @@
+Grading at 11/03/2017:19:23:14.996301
+For commit ID f85b1210f7190c712fa9cde3269d9e4e8ac89a55
+Stripping out any main you may have written, and compiling...
+newsearch.cpp: In function ‘int binarySearchForZero(Function<int, int>*, int, int)’:
+newsearch.cpp:10:10: error: unused variable ‘tmp’ [-Werror=unused-variable]
+   int x, tmp, result;
+          ^
+cc1plus: all warnings being treated as errors
+The code did not compile
+
+Overall Grade: F
