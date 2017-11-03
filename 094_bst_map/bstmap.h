@@ -1,6 +1,8 @@
 #ifndef __bstMAP_H__
 #define __bstMAP_H__
 #include "map.h"
+#include <iostream>
+using namespace std;
 
 template<typename K, typename V>
 class BstMap: public Map <K, V> {
@@ -33,6 +35,22 @@ class BstMap: public Map <K, V> {
       delete current;
     }
   }
+
+  void printHelper (Node * current)
+  {
+     if (current != NULL)
+     {
+       printHelper(current -> left);
+       printHelper(current -> right);
+       cout << current->value << "  ";
+     }
+  }
+
+  void printTesting ()
+  {
+    printHelper(root);
+  }
+
 
   
   Node * add (Node *current, const K & key, const V & value)
@@ -94,15 +112,25 @@ class BstMap: public Map <K, V> {
       {
         // right once then going left
         Node *tmp = current->right;
+        Node *parent = current;
+        bool right_null = true;
+
         while (tmp->left != NULL)
         {
+          parent = tmp;
           tmp = tmp->left;
+          right_null = false;
         }
         // tmp now is the leftmost node
+        //
         current->key = tmp->key;
         current->value = tmp->value;
         delete tmp;
-        tmp = NULL;
+
+        if (right_null)
+          parent-> right = NULL;
+        else 
+          parent-> left = NULL;
         return current;
       }
     }

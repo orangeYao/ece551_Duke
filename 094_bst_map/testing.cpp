@@ -9,11 +9,16 @@ int main()
   a -> add(1,1);
   a -> add(3,3);
   a -> add(2,2);
-  a -> add(1,4);
+  a -> add(4,4);
+  a -> add(-1,-1);
+  a -> add(0,0);
+  a -> add(-2,-2);
   cout << a-> lookup(1) << endl;
-  a -> remove(2);
   a -> remove(1);
   a -> remove(3);
+  a -> remove(-1);
+  a -> printTesting();
+  cout << '\n';
   delete a;
   a = NULL;
 
