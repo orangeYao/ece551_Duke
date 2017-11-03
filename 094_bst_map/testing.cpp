@@ -7,9 +7,13 @@ int main()
 {
   BstMap<int, int> * a = new BstMap<int, int>();
   a -> add(1,1);
+  a -> add(3,3);
   a -> add(2,2);
   a -> add(1,4);
   cout << a-> lookup(1) << endl;
+  a -> remove(2);
+  a -> remove(1);
+  a -> remove(3);
   delete a;
   a = NULL;
 

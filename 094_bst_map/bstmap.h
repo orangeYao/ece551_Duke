@@ -126,7 +126,7 @@ class BstMap: public Map <K, V> {
 
   void remove(const K& key)
   {
-    removeHelper(root, key);
+    root = removeHelper(root, key);
   }
 
 
