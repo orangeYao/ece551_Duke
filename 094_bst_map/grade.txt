@@ -1,58 +1,148 @@
-Grading at 11/03/2017:20:55:13.582142
-For commit ID ae98609d5c0a9f939ffdf553a644ee53714a19b9
+Grading at 11/03/2017:21:33:55.682390
+For commit ID d8a1a8b23e66226ae859d5316a09ef5a81b1ace9
 -----------------------------------------------
 testcase 1 : Testing with BstMap<int,int>
 ...compiling...
-89-tester.cpp:1:20: fatal error: bstmap.h: No such file or directory
-compilation terminated.
+In file included from 89-tester.cpp:1:0:
+bstmap.h: In instantiation of ‘BstMap<K, V>::Node* BstMap<K, V>::freeHelper(BstMap<K, V>::Node*) [with K = int; V = int]’:
+bstmap.h:24:15:   required from ‘BstMap<K, V>::~BstMap() [with K = int; V = int]’
+89-tester.cpp:164:10:   required from here
+bstmap.h:35:3: error: no return statement in function returning non-void [-Werror=return-type]
+   }
+   ^
+bstmap.h: In member function ‘BstMap<K, V>::Node* BstMap<K, V>::removeHelper(BstMap<K, V>::Node*, const K&) [with K = int; V = int]’:
+bstmap.h:114:3: error: control reaches end of non-void function [-Werror=return-type]
+   }
+   ^
+cc1plus: all warnings being treated as errors
 The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 2 : Testing with BstMap<int,std::string>
 ...compiling...
-89-tester.cpp:1:20: fatal error: bstmap.h: No such file or directory
-compilation terminated.
+In file included from 89-tester.cpp:1:0:
+bstmap.h: In instantiation of ‘BstMap<K, V>::Node* BstMap<K, V>::freeHelper(BstMap<K, V>::Node*) [with K = int; V = std::__cxx11::basic_string<char>]’:
+bstmap.h:24:15:   required from ‘BstMap<K, V>::~BstMap() [with K = int; V = std::__cxx11::basic_string<char>]’
+89-tester.cpp:164:10:   required from here
+bstmap.h:35:3: error: no return statement in function returning non-void [-Werror=return-type]
+   }
+   ^
+bstmap.h: In member function ‘BstMap<K, V>::Node* BstMap<K, V>::removeHelper(BstMap<K, V>::Node*, const K&) [with K = int; V = std::__cxx11::basic_string<char>]’:
+bstmap.h:114:3: error: control reaches end of non-void function [-Werror=return-type]
+   }
+   ^
+cc1plus: all warnings being treated as errors
 The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 3 : Testing with BstMap<int,(a custom class we wrote)>
 ...compiling...
-89-tester.cpp:1:20: fatal error: bstmap.h: No such file or directory
-compilation terminated.
+In file included from 89-tester.cpp:1:0:
+bstmap.h: In instantiation of ‘BstMap<K, V>::Node* BstMap<K, V>::freeHelper(BstMap<K, V>::Node*) [with K = int; V = Tester]’:
+bstmap.h:24:15:   required from ‘BstMap<K, V>::~BstMap() [with K = int; V = Tester]’
+89-tester.cpp:164:10:   required from here
+bstmap.h:35:3: error: no return statement in function returning non-void [-Werror=return-type]
+   }
+   ^
+bstmap.h: In member function ‘BstMap<K, V>::Node* BstMap<K, V>::removeHelper(BstMap<K, V>::Node*, const K&) [with K = int; V = Tester]’:
+bstmap.h:114:3: error: control reaches end of non-void function [-Werror=return-type]
+   }
+   ^
+cc1plus: all warnings being treated as errors
 The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 4 : Testing with BstMap<std::string,int>
 ...compiling...
-89-tester.cpp:1:20: fatal error: bstmap.h: No such file or directory
-compilation terminated.
+In file included from 89-tester.cpp:1:0:
+bstmap.h: In instantiation of ‘BstMap<K, V>::Node* BstMap<K, V>::freeHelper(BstMap<K, V>::Node*) [with K = std::__cxx11::basic_string<char>; V = int]’:
+bstmap.h:24:15:   required from ‘BstMap<K, V>::~BstMap() [with K = std::__cxx11::basic_string<char>; V = int]’
+89-tester.cpp:164:10:   required from here
+bstmap.h:35:3: error: no return statement in function returning non-void [-Werror=return-type]
+   }
+   ^
+bstmap.h: In member function ‘BstMap<K, V>::Node* BstMap<K, V>::removeHelper(BstMap<K, V>::Node*, const K&) [with K = std::__cxx11::basic_string<char>; V = int]’:
+bstmap.h:114:3: error: control reaches end of non-void function [-Werror=return-type]
+   }
+   ^
+cc1plus: all warnings being treated as errors
 The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 5 : Testing with BstMap<std::string,std::string>
 ...compiling...
-89-tester.cpp:1:20: fatal error: bstmap.h: No such file or directory
-compilation terminated.
+In file included from 89-tester.cpp:1:0:
+bstmap.h: In instantiation of ‘BstMap<K, V>::Node* BstMap<K, V>::freeHelper(BstMap<K, V>::Node*) [with K = std::__cxx11::basic_string<char>; V = std::__cxx11::basic_string<char>]’:
+bstmap.h:24:15:   required from ‘BstMap<K, V>::~BstMap() [with K = std::__cxx11::basic_string<char>; V = std::__cxx11::basic_string<char>]’
+89-tester.cpp:164:10:   required from here
+bstmap.h:35:3: error: no return statement in function returning non-void [-Werror=return-type]
+   }
+   ^
+bstmap.h: In member function ‘BstMap<K, V>::Node* BstMap<K, V>::removeHelper(BstMap<K, V>::Node*, const K&) [with K = std::__cxx11::basic_string<char>; V = std::__cxx11::basic_string<char>]’:
+bstmap.h:114:3: error: control reaches end of non-void function [-Werror=return-type]
+   }
+   ^
+cc1plus: all warnings being treated as errors
 The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 6 : Testing with BstMap<std::string,(a custom class we wrote)>
 ...compiling...
-89-tester.cpp:1:20: fatal error: bstmap.h: No such file or directory
-compilation terminated.
+In file included from 89-tester.cpp:1:0:
+bstmap.h: In instantiation of ‘BstMap<K, V>::Node* BstMap<K, V>::freeHelper(BstMap<K, V>::Node*) [with K = std::__cxx11::basic_string<char>; V = Tester]’:
+bstmap.h:24:15:   required from ‘BstMap<K, V>::~BstMap() [with K = std::__cxx11::basic_string<char>; V = Tester]’
+89-tester.cpp:164:10:   required from here
+bstmap.h:35:3: error: no return statement in function returning non-void [-Werror=return-type]
+   }
+   ^
+bstmap.h: In member function ‘BstMap<K, V>::Node* BstMap<K, V>::removeHelper(BstMap<K, V>::Node*, const K&) [with K = std::__cxx11::basic_string<char>; V = Tester]’:
+bstmap.h:114:3: error: control reaches end of non-void function [-Werror=return-type]
+   }
+   ^
+cc1plus: all warnings being treated as errors
 The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 7 : Testing with BstMap<(a custom class we wrote),int>
 ...compiling...
-89-tester.cpp:1:20: fatal error: bstmap.h: No such file or directory
-compilation terminated.
+In file included from 89-tester.cpp:1:0:
+bstmap.h: In instantiation of ‘BstMap<K, V>::Node* BstMap<K, V>::freeHelper(BstMap<K, V>::Node*) [with K = Tester; V = int]’:
+bstmap.h:24:15:   required from ‘BstMap<K, V>::~BstMap() [with K = Tester; V = int]’
+89-tester.cpp:164:10:   required from here
+bstmap.h:35:3: error: no return statement in function returning non-void [-Werror=return-type]
+   }
+   ^
+bstmap.h: In member function ‘BstMap<K, V>::Node* BstMap<K, V>::removeHelper(BstMap<K, V>::Node*, const K&) [with K = Tester; V = int]’:
+bstmap.h:114:3: error: control reaches end of non-void function [-Werror=return-type]
+   }
+   ^
+cc1plus: all warnings being treated as errors
 The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 8 : Testing with BstMap<(a custom class we wrote),std::string>
 ...compiling...
-89-tester.cpp:1:20: fatal error: bstmap.h: No such file or directory
-compilation terminated.
+In file included from 89-tester.cpp:1:0:
+bstmap.h: In instantiation of ‘BstMap<K, V>::Node* BstMap<K, V>::freeHelper(BstMap<K, V>::Node*) [with K = Tester; V = std::__cxx11::basic_string<char>]’:
+bstmap.h:24:15:   required from ‘BstMap<K, V>::~BstMap() [with K = Tester; V = std::__cxx11::basic_string<char>]’
+89-tester.cpp:164:10:   required from here
+bstmap.h:35:3: error: no return statement in function returning non-void [-Werror=return-type]
+   }
+   ^
+bstmap.h: In member function ‘BstMap<K, V>::Node* BstMap<K, V>::removeHelper(BstMap<K, V>::Node*, const K&) [with K = Tester; V = std::__cxx11::basic_string<char>]’:
+bstmap.h:114:3: error: control reaches end of non-void function [-Werror=return-type]
+   }
+   ^
+cc1plus: all warnings being treated as errors
 The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 9 : Testing with BstMap<(a custom class we wrote),(a custom class we wrote)>
 ...compiling...
-89-tester.cpp:1:20: fatal error: bstmap.h: No such file or directory
-compilation terminated.
+In file included from 89-tester.cpp:1:0:
+bstmap.h: In instantiation of ‘BstMap<K, V>::Node* BstMap<K, V>::freeHelper(BstMap<K, V>::Node*) [with K = Tester; V = Tester]’:
+bstmap.h:24:15:   required from ‘BstMap<K, V>::~BstMap() [with K = Tester; V = Tester]’
+89-tester.cpp:164:10:   required from here
+bstmap.h:35:3: error: no return statement in function returning non-void [-Werror=return-type]
+   }
+   ^
+bstmap.h: In member function ‘BstMap<K, V>::Node* BstMap<K, V>::removeHelper(BstMap<K, V>::Node*, const K&) [with K = Tester; V = Tester]’:
+bstmap.h:114:3: error: control reaches end of non-void function [-Werror=return-type]
+   }
+   ^
+cc1plus: all warnings being treated as errors
 The code did not compile.  This test failed.
 
 Overall Grade: F
