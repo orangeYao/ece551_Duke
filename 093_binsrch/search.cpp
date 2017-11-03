@@ -7,7 +7,8 @@ int binarySearchForZero(Function<int, int> * f, int low, int high)
 {
   int l = low;
   int h = high;
-  int x, tmp, result;
+  int x, result;
+  /*
   if (l == h)
   {
     result = f->invoke(l);
@@ -16,7 +17,7 @@ int binarySearchForZero(Function<int, int> * f, int low, int high)
     else
       return l;
   }
-
+*/
 
   while (true)
   {
