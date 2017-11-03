@@ -94,6 +94,9 @@ class BstMap: public Map <K, V> {
 
   Node * removeHelper (Node *current, const K& key)
   {
+    if (current == NULL)
+      return current;
+
     if (key == current->key)
     {
       if (current->left == NULL)
