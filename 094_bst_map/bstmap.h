@@ -19,12 +19,38 @@ class BstMap: public Map <K, V> {
   Node *root;
 
   public:
-  BstMap(): root(NULL){};
+  BstMap(): root(NULL){}
+
+  BstMap(const BstMap & bmap):root(NULL)
+  {
+    assignmentHelper(bmap.root);
+  }
 
   ~BstMap()
   {
     freeHelper(root);
   }
+
+  void assignmentHelper(Node * current)
+  {
+    if (current != NULL)
+    {
+      add(current->key, current->value);
+      assignmentHelper(current->left);
+      assignmentHelper(current->right);
+    }
+  }
+
+  BstMap & operator= (const BstMap & bmap)
+  {
+    if (this == &bmap)
+      return *this;
+    freeHelper(root);
+    
+    assignmentHelper(bmap.root);
+    return *this;
+  }
+
 
   void freeHelper(Node * current)
   {
@@ -40,7 +66,7 @@ class BstMap: public Map <K, V> {
   {
      if (current != NULL)
      {
-       cout << current->value << "  ";
+       cout << current->key << "  ";
        printHelper(current -> left);
        printHelper(current -> right);
      }
