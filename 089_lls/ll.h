@@ -135,7 +135,7 @@ class LinkedList {
     return -1;
   }
 
-  LinkedList operator=(const LinkedList & ll)
+  LinkedList & operator=(const LinkedList & ll)
   {
     if (this == & ll)
       return *this;
