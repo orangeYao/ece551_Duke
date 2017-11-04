@@ -10,7 +10,10 @@ int main()
   z.add(1,1);
   z.printTesting();
   cout << "\n mid \n";
+
   BstMap<int, int>  d;
+
+  d.add(2,2);
   d = z;
   cout << "\n ending \n";
   return 0;

@@ -46,7 +46,7 @@ class BstMap: public Map <K, V> {
     if (this == &bmap)
       return *this;
     freeHelper(root);
-    
+    root = NULL;
     assignmentHelper(bmap.root);
     return *this;
   }
