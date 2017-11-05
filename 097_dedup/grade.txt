@@ -1,5 +1,5 @@
-Grading at 11/05/2017:16:57:20.882513
-For commit ID 0b6a45496ccfe05042ff8d41193ca216c7f86087
+Grading at 11/05/2017:17:14:29.521981
+For commit ID aa9fcc181d395f8ea1c5ecadfe243ab7241d622c
 Running make
 g++ dedup.cpp -o dedup  -Wall -Werror --std=gnu++11
 Found executable dedup
@@ -10,18 +10,13 @@ Checking output:
 Testcase passed 
 -----------------------------------------------
 testcase 2 : ./dedup /var/dedup/d001
-  - Valgrind reported errors
-Valgrind reported errors (test failed).
-==14163== Memcheck, a memory error detector
-==14163== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==14163== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==14163== Command: ./dedup /var/dedup/d001
-==14163== Parent PID: 14161
-==14163== 
+  - Valgrind was clean (no errors, no memory leaks)
+Checking output:
+Testcase passed 
 -----------------------------------------------
 testcase 3 : ./dedup /var/dedup/*
   - Valgrind was clean (no errors, no memory leaks)
 Checking output:
 Testcase passed 
 
-Overall Grade: D
+Overall Grade: A
