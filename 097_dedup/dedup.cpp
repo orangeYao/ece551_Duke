@@ -14,15 +14,20 @@
 #include <list>
 
 using namespace std;
-const size_t table_size = 19971;
+const size_t table_size = 99971;
 vector<list<string> > table(table_size);
+
+string reading_slow(string file)
+{
+  ifstream t(file);
+  string str((istreambuf_iterator<char>(t)),
+              istreambuf_iterator<char>());
+  return str;
+}
 
 string reading(string file)
 {
   ifstream t(file);
-//  string str((istreambuf_iterator<char>(t)),
-//              istreambuf_iterator<char>());
-  //return str;
 
   ostringstream ss = ostringstream();
   ss << t.rdbuf();
@@ -35,10 +40,22 @@ size_t hashing (string content)
   return str_hash(content);
 }
 
+size_t combine(string file)
+{
+  ifstream t(file);
+
+  ostringstream ss = ostringstream();
+  ss << t.rdbuf();
+  hash<string> str_hash;
+  return str_hash(ss.str());
+}
+
 
 void addHashing (string file)
 {
-  size_t hash = hashing(reading(file));
+//  size_t hash = hashing(reading(file));
+
+  size_t hash = combine(file);
   table[hash%table_size].push_front(file);
 
   //cout << hash%table_size << endl;
