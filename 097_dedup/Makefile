@@ -1,2 +1,2 @@
-dedup: dedup.cpp
-	g++ dedup.cpp -Wall -Werror -o dedup
+hashing: hashing.cpp
+	g++ hashing.cpp  -Wall -Werror -o hashing --std=gnu++11
