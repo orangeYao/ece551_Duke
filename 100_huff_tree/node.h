@@ -23,10 +23,12 @@ public:
     }
   }
 };
+
 class NodePtrCompare: std::binary_function <Node *,Node *,bool> {
 public:
   bool operator() (Node *const& x,Node*const& y) const {return x->freq>y->freq;}
 };
+
 typedef std::priority_queue<Node *,std::vector<Node*>,NodePtrCompare> priority_queue_t;
 
 Node *  buildTree(uint64_t * counts);
