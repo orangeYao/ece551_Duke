@@ -1,0 +1,32 @@
+Grading at 11/05/2017:03:43:02.790446
+For commit ID 80ef1055fdb3361e7ea03cf5241b5a8955c1f10e
+Running make
+g++ dedup.cpp -o dedup  -Wall -Werror --std=gnu++11
+Found executable dedup
+-----------------------------------------------
+testcase 1 : ./dedup /var/dedup/d000
+  - Valgrind reported errors
+Valgrind reported errors (test failed).
+==70030== Memcheck, a memory error detector
+==70030== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==70030== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==70030== Command: ./dedup /var/dedup/d000
+==70030== Parent PID: 70028
+==70030== 
+-----------------------------------------------
+testcase 2 : ./dedup /var/dedup/d001
+  - Valgrind was clean (no errors, no memory leaks)
+Checking output:
+Testcase passed 
+-----------------------------------------------
+testcase 3 : ./dedup /var/dedup/*
+  - Valgrind reported errors
+Valgrind reported errors (test failed).
+==70111== Memcheck, a memory error detector
+==70111== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==70111== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==70111== Command: ./dedup /var/dedup/d000 /var/dedup/d001 /var/dedup/d002 /var/dedup/d003 /var/dedup/d004 /var/dedup/d005 /var/dedup/d006 /var/dedup/d007 /var/dedup/d008 /var/dedup/d009
+==70111== Parent PID: 70109
+==70111== 
+
+Overall Grade: F
