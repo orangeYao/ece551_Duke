@@ -19,18 +19,33 @@ vector<list<string> > table(table_size);
 
 string reading(string file)
 {
-  ifstream t(file);
+//  ifstream t(file);
 //  string str((istreambuf_iterator<char>(t)),
 //              istreambuf_iterator<char>());
-  //return str;
+
+  //string str(static_cast<ostringstream&>(
+  //              ostringstream{} << t.rdbuf()));
+
+  ifstream in(file);
 
   ostringstream ss = ostringstream();
-  ss << t.rdbuf();
+  ss << in.rdbuf();
   return ss.str();
 }
 
-size_t hashing (string content) 
+
+size_t hashing (string content)
 {
+  hash<string> str_hash;
+  return str_hash(content);
+}
+
+
+size_t reading2(string file)
+{
+  ifstream t(file);
+  string content((istreambuf_iterator<char>(t)),
+              istreambuf_iterator<char>());
   hash<string> str_hash;
   return str_hash(content);
 }
@@ -38,8 +53,12 @@ size_t hashing (string content)
 
 void addHashing (string file)
 {
-  size_t hash = hashing(reading(file));
-  table[hash%table_size].push_front(file);
+  cout << file << endl;
+  //size_t hash = hashing(reading(file));
+  if (file == "/var/dedup/d000/file495")
+    cout << reading(file);
+  //hashing(reading(file));
+  //table[hash%table_size].push_front(file);
 
   //cout << hash%table_size << endl;
   //cout << file << endl << endl;
@@ -128,6 +147,5 @@ int main(int argc, char *argv[])
     fileTreeWalk(argv[i]);
 
   cout << "#!/bin/bash\n";
-  iterate();
   return 0;
 }
