@@ -4,11 +4,12 @@
 #include <map>
 #include <queue>
 #include <assert.h>
+#include <fstream>
 #include <functional>
 #include <stdlib.h>
 #include "readFreq.h"
 #include "node.h"
-
+using namespace std;
 
 
 void writeHeader(BitFileWriter * bfw, const std::map<unsigned,BitString> &theMap) {
@@ -33,6 +34,15 @@ void writeCompressedOutput(const char* inFile,
   //WRITE YOUR CODE HERE!
   //open the input file for reading
 
+  ifstream is(inFile);
+  char c;
+  while(is.get(c))
+  {
+    unsigned char cc = c;
+    bfw.writeBitString(theMap.find(unsigned(cc))->second);
+  }
+
+  bfw.writeBitString(theMap.find(256)->second);
   //You need to read the input file, lookup the characters in the map,
   //and write the proper bit string with the BitFileWriter
 
@@ -47,6 +57,18 @@ int main(int argc, char ** argv) {
     fprintf(stderr,"Usage: compress input output\n");
     return EXIT_FAILURE;
   }
+
+  map<unsigned,BitString> theMap;
+
+  uint64_t * counts = readFrequencies(argv[1]);
+  Node * tree = buildTree (counts);
+  delete[] counts;
+
+  BitString empty;
+  tree->buildMap(empty, theMap);
+  delete tree;
+
+  writeCompressedOutput(argv[1], argv[2], theMap);
   //WRITE YOUR CODE HERE
   //Implement main
   //hint 1: most of the work is already done. 
