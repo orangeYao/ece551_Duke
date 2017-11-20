@@ -7,8 +7,8 @@ E #Question No. 6
 B #Question No. 7
 D #Question No. 8
 B #Question No. 9
- #Question No. 10
- #Question No. 11
- #Question No. 12
- #Question No. 13
- #Question No. 14
+D #Question No. 10
+B #Question No. 11
+A #Question No. 12
+C #Question No. 13
+D #Question No. 14
