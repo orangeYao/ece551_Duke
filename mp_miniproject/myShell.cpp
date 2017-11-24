@@ -1,4 +1,5 @@
 #include <iostream>
+#include <sstream>
 #include <string>
 #include <cstring>
 #include <cstdlib>
@@ -7,16 +8,19 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <dirent.h>
+#include "lines.h"
 using namespace std;
-
 
 string findCommandHelper(const char * c_cmd)
 {
-  char *pPath, *pch;
+  char *pPath_origin, *pPath, *pch;
   DIR *d;
   struct dirent *dir;
 
-  pPath = getenv ("PATH");
+  pPath_origin = getenv ("PATH");
+  pPath = (char *) malloc (strlen(pPath_origin) + 10);
+  strcpy(pPath, pPath_origin);
+
   pch = strtok (pPath,":");
 
   while (pch != NULL) {
@@ -25,7 +29,9 @@ string findCommandHelper(const char * c_cmd)
       while ((dir = readdir(d)) != NULL) {
         if (strcmp(dir->d_name, c_cmd) == 0) {
           closedir(d);
-          return string(pch) + "/" + string(c_cmd);
+          string rtn = string(pch) + "/" + string(c_cmd);
+          free(pPath);
+          return rtn; 
         }
       }
       closedir(d);
@@ -33,19 +39,22 @@ string findCommandHelper(const char * c_cmd)
 
     pch = strtok (NULL, ":");
   }
+  free(pPath);
   return "";
 }
 
 
-string findCommand(string command)
+string findCommand(char * c_cmd)
 {
-  const char * c_cmd = command.c_str();
-  if (strchr(c_cmd, '/') != NULL) // path given by user
-    return command;
-  else
-  {
-    string ss = findCommandHelper(c_cmd);
-    return ss; 
+  if (strchr(c_cmd, '/') != NULL) { // path given by user
+
+    if(access(c_cmd, X_OK) < 0) // path not accessible
+      return "";
+    else
+      return string(c_cmd);
+
+  } else {
+    return findCommandHelper(c_cmd); 
   }
 }
 
@@ -55,14 +64,32 @@ int main()
   string command, cmd_result;
   pid_t cpid, w;
   int status;
-  char *newargv[] = {NULL, NULL};
   char *newenviron[] = {NULL};
+  string input;
 
   cout << "myShell $ ";
 
+  while(getline (cin, input)) {
 
-  while (cin>>command && command != "exit")
-  {
+      istringstream iss(input);
+      string chk_exit;
+      iss >> chk_exit;
+      if (chk_exit == "exit")
+        break;
+
+      Command *cmd = new Command (input);
+      if (cmd->length() > 0) {
+        cmd_result = findCommand(cmd->getArgv()[0]);
+        if (cmd_result == "") {
+          cout << "Command " << cmd->getArgv()[0] << " not found" << endl;
+          cout << "myShell $ ";
+          delete cmd;
+          continue;
+        } 
+        cmd->setArgvZero(cmd_result);
+      }
+
+      char ** newargv = cmd->getArgv();
       cpid = fork();
       if (cpid == -1) {
         perror("fork");
@@ -70,14 +97,6 @@ int main()
       }  
       
       if (cpid == 0) {
-        cmd_result = findCommand(command);
-        //if (cmd_result == "")
-        //{
-        //  cout << "Command " << command << " not found" << endl;
-          //execve: No such file or directory
-        //}
-
-        newargv[0] = const_cast<char*> (cmd_result.c_str());
         execve(newargv[0], newargv, newenviron);
         perror("execve");
         exit(EXIT_FAILURE);
@@ -95,6 +114,7 @@ int main()
 		}
       }
       cout << "myShell $ ";
+  	  delete cmd;
   }
   return EXIT_SUCCESS;
 }
