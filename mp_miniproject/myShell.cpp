@@ -8,7 +8,10 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <dirent.h>
-#include "lines.h"
+#include <pwd.h>
+#include <map>
+#include "command.h"
+#include "environ.h"
 using namespace std;
 
 string findCommandHelper(const char * c_cmd)
@@ -59,37 +62,146 @@ string findCommand(char * c_cmd)
 }
 
 
+void parseEnviron(char **env, map <string, string> & env_map)
+{
+  int i = 0;
+  while(environ[i]) {
+     char * pch = strchr(environ[i], '=');
+
+     *pch = '\0';
+     string key = string(environ[i]);
+     string value = string(pch+1);
+     *pch = '=';
+
+     env_map[key] = value;
+     i++;
+  }
+}
+
+void cdChangeDir (Command *cmd)
+{
+	char ** newargv = cmd->getArgv();
+
+	if (newargv[1] == NULL) // cd without argument
+    {
+      const char *homedir;
+	  if ((homedir = getenv("HOME")) == NULL) {
+	    homedir = getpwuid(getuid())->pw_dir;
+	  }
+	  cmd->setArgv(homedir, 1);
+    }
+
+	if (chdir (newargv[1]) == -1)
+      cout << "cd: " << newargv[1]  <<": No such file or directory" << endl;
+}
+
+bool commandPreprocess(Command *cmd)
+{
+  char ** newargv = cmd->getArgv();
+    string cmd_result = findCommand (newargv[0]);
+    if (cmd_result == "") {
+      cout << "Command " << newargv[0] << " not found" << endl;
+      return true;
+    }
+    cmd->setArgv(cmd_result, 0); // replace command with full path
+    return false;
+}
+
+bool builtInFunc(Command *cmd, Environ* env)
+{
+  char ** newargv = cmd->getArgv();
+
+  if (cmd->length() == 0)
+	return true;
+
+  if (strcmp(newargv[0], "cd") == 0) {
+    cdChangeDir(cmd);
+	return true;
+  }
+
+  if (strcmp(newargv[0], "set") == 0) {
+    if (newargv[1] != NULL && newargv[2] != NULL) // some restrict on [1]
+      env->insertMap(newargv[1], newargv[2]);
+    return true;
+  }
+
+  if (strcmp(newargv[0], "export") == 0) {
+    if (newargv[1] != NULL)
+    {
+      bool exist;
+      string key = string(newargv[1]);
+      string value = env->searchMap(key, exist);
+      if (exist)
+        env->insertEnviron(key, value);
+    }
+    return true;
+  }
+  return false; 
+}
+
+void parseVar (Command *cmd, Environ* env) 
+{
+  char ** newargv = cmd->getArgv();
+  map <string, string> env_map = env->getEnvMap();
+
+  if (cmd->length() > 1 && newargv[1][0] == '$')
+  {
+    bool exist;
+    string value = env->searchMap(string(newargv[1] + 1), exist);
+    cmd->setArgv(value, 1);
+  }
+}
+
+bool isExit(string &input)
+{
+  istringstream iss(input);
+  string chk_exit;
+  iss >> chk_exit;
+  return (chk_exit == "exit");
+}
+
+void promptMyShell()
+{
+  char * dir_name = get_current_dir_name();
+  cout << "myShell:" << dir_name << " $ ";
+  free(dir_name);
+}
+
+extern char **environ;
 int main()
 {
-  string command, cmd_result;
+  string command;
   pid_t cpid, w;
   int status;
-  char *newenviron[] = {NULL};
   string input;
 
-  cout << "myShell $ ";
+  promptMyShell();
 
-  while(getline (cin, input)) {
+  Environ *env = new Environ (environ);
+  char **newenviron = env->getEnviron();
+  map <string, string> env_map = env->getEnvMap();
 
-      istringstream iss(input);
-      string chk_exit;
-      iss >> chk_exit;
-      if (chk_exit == "exit")
+  while(getline (cin, input)) { //check getline error
+
+      if (isExit(input))
         break;
 
       Command *cmd = new Command (input);
-      if (cmd->length() > 0) {
-        cmd_result = findCommand(cmd->getArgv()[0]);
-        if (cmd_result == "") {
-          cout << "Command " << cmd->getArgv()[0] << " not found" << endl;
-          cout << "myShell $ ";
-          delete cmd;
-          continue;
-        } 
-        cmd->setArgvZero(cmd_result);
+
+      bool skip_cmd = builtInFunc(cmd, env);
+
+      if (!skip_cmd)
+        skip_cmd = commandPreprocess(cmd);
+      
+      if (skip_cmd) {
+        delete cmd;
+        promptMyShell();
+        continue;
       }
 
+      parseVar(cmd, env);
       char ** newargv = cmd->getArgv();
+
       cpid = fork();
       if (cpid == -1) {
         perror("fork");
@@ -113,8 +225,9 @@ int main()
           printf("Program was killed by signal %d", WTERMSIG(status));
 		}
       }
-      cout << "myShell $ ";
+      promptMyShell();
   	  delete cmd;
   }
+  delete env;
   return EXIT_SUCCESS;
 }

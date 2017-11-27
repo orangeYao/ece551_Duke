@@ -1,0 +1,6 @@
+set aa ECE551 Not Finished
+echo $aa
+export aa
+env
+set aa ECE551 Finished
+
