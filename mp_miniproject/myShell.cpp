@@ -14,15 +14,16 @@
 #include "environ.h"
 using namespace std;
 
-string findCommandHelper(const char * c_cmd)
+string findCommandHelper(const char * c_cmd, Environ *env)
 {
-  char *pPath_origin, *pPath, *pch;
+  char *pPath, *pch;
   DIR *d;
   struct dirent *dir;
 
-  pPath_origin = getenv ("PATH");
-  pPath = (char *) malloc (strlen(pPath_origin) + 10);
-  strcpy(pPath, pPath_origin);
+  string path = env->searchMap("PATH");
+
+  pPath = (char *) malloc (path.length() + 10);
+  strcpy(pPath, path.c_str());
 
   pch = strtok (pPath,":");
 
@@ -39,7 +40,6 @@ string findCommandHelper(const char * c_cmd)
       }
       closedir(d);
     }
-
     pch = strtok (NULL, ":");
   }
   free(pPath);
@@ -47,67 +47,89 @@ string findCommandHelper(const char * c_cmd)
 }
 
 
-string findCommand(char * c_cmd)
+string findCommand(char * c_cmd, Environ *env)
 {
   if (strchr(c_cmd, '/') != NULL) { // path given by user
-
     if(access(c_cmd, X_OK) < 0) // path not accessible
       return "";
     else
       return string(c_cmd);
-
   } else {
-    return findCommandHelper(c_cmd); 
+    return findCommandHelper(c_cmd, env); 
   }
 }
 
 
-void parseEnviron(char **env, map <string, string> & env_map)
-{
-  int i = 0;
-  while(environ[i]) {
-     char * pch = strchr(environ[i], '=');
-
-     *pch = '\0';
-     string key = string(environ[i]);
-     string value = string(pch+1);
-     *pch = '=';
-
-     env_map[key] = value;
-     i++;
-  }
-}
-
-void cdChangeDir (Command *cmd)
-{
-	char ** newargv = cmd->getArgv();
-
-	if (newargv[1] == NULL) // cd without argument
-    {
-      const char *homedir;
-	  if ((homedir = getenv("HOME")) == NULL) {
-	    homedir = getpwuid(getuid())->pw_dir;
-	  }
-	  cmd->setArgv(homedir, 1);
-    }
-
-	if (chdir (newargv[1]) == -1)
-      cout << "cd: " << newargv[1]  <<": No such file or directory" << endl;
-}
-
-bool commandPreprocess(Command *cmd)
+void cdChangeDir (Command *cmd, Environ* env)
 {
   char ** newargv = cmd->getArgv();
-    string cmd_result = findCommand (newargv[0]);
-    if (cmd_result == "") {
-      cout << "Command " << newargv[0] << " not found" << endl;
-      return true;
-    }
-    cmd->setArgv(cmd_result, 0); // replace command with full path
-    return false;
+
+  if (newargv[1] == NULL) // cd without argument
+  {
+    string home = env->searchMap("HOME");
+    if (home == "") 
+      home = ".";
+    cmd->setArgv(home, 1);
+  }
+
+  if (chdir (newargv[1]) == -1)
+    cout << "cd: " << newargv[1]  <<": No such file or directory" << endl;
 }
 
-bool builtInFunc(Command *cmd, Environ* env)
+bool commandPreprocess(Command *cmd, Environ *env)
+{
+  char ** newargv = cmd->getArgv();
+  string cmd_result = findCommand (newargv[0], env);
+  if (cmd_result == "") {
+    cout << "Command " << newargv[0] << " not found" << endl;
+    return true;
+  }
+  cmd->setArgv(cmd_result, 0); // replace command with full path
+  return false;
+}
+
+bool isValidName(char c)
+{
+  if (c >= 'a'  && c <= 'z')
+    return true;
+  if (c >= 'A'  && c <= 'Z')
+    return true;
+  if (c >= '0'  && c <= '9')
+    return true;
+  if (c == '_')
+    return true;
+
+  return false;
+}
+
+
+void set(Command *cmd, Environ* env, string input)
+{
+  char ** newargv = cmd->getArgv();
+  if (newargv[1] == NULL)
+    return;
+
+  string var = newargv[1];
+  size_t len = var.length();
+
+  for (size_t i=0; i<len; i++)
+    if (!isValidName(var[i])) {
+      cout << "Var name in set is not valid!!\n";
+      return;
+    }
+
+  if (newargv[2] == NULL)
+  {
+    env->insertMap(newargv[1], "");
+    return; 
+  }
+
+  size_t found = input.find(string(newargv[2]));
+  env->insertMap(newargv[1], input.substr(found));
+}
+
+
+bool builtInFunc(Command *cmd, Environ* env, string input)
 {
   char ** newargv = cmd->getArgv();
 
@@ -115,42 +137,56 @@ bool builtInFunc(Command *cmd, Environ* env)
 	return true;
 
   if (strcmp(newargv[0], "cd") == 0) {
-    cdChangeDir(cmd);
+    cdChangeDir(cmd, env);
 	return true;
   }
 
   if (strcmp(newargv[0], "set") == 0) {
-    if (newargv[1] != NULL && newargv[2] != NULL) // some restrict on [1]
-      env->insertMap(newargv[1], newargv[2]);
+    set(cmd, env, input);
     return true;
   }
 
   if (strcmp(newargv[0], "export") == 0) {
-    if (newargv[1] != NULL)
-    {
-      bool exist;
+    if (newargv[1] != NULL) {
       string key = string(newargv[1]);
-      string value = env->searchMap(key, exist);
-      if (exist)
-        env->insertEnviron(key, value);
+      env->insertEnviron(key);
     }
     return true;
   }
   return false; 
 }
 
-void parseVar (Command *cmd, Environ* env) 
+string parseVar (string input, Environ* env)
+// interpret variables starting with $ in input 
 {
-  char ** newargv = cmd->getArgv();
-  map <string, string> env_map = env->getEnvMap();
+  size_t len = input.length();
+  bool at_var = false;
+  string rtn = "", var = "";
 
-  if (cmd->length() > 1 && newargv[1][0] == '$')
+  for (size_t i=0; i<len; i++)
   {
-    bool exist;
-    string value = env->searchMap(string(newargv[1] + 1), exist);
-    cmd->setArgv(value, 1);
+    if(input[i] == '$')
+    {
+      at_var = true;
+      continue;
+    }
+
+    if (!at_var) {
+      rtn += input[i];
+    } else if (isValidName(input[i])) {
+      var += input[i];
+    } else {
+      at_var = false;
+      rtn += env->searchMap(var);
+      var = ""; 
+      rtn += input[i]; 
+    }
   }
+  if (var != "")
+    rtn += env->searchMap(var);
+  return rtn;
 }
+
 
 bool isExit(string &input)
 {
@@ -179,19 +215,20 @@ int main()
 
   Environ *env = new Environ (environ);
   char **newenviron = env->getEnviron();
-  map <string, string> env_map = env->getEnvMap();
+  map <string, pair_v> env_map = env->getEnvMap();
 
   while(getline (cin, input)) { //check getline error
 
       if (isExit(input))
         break;
 
+      input = parseVar (input, env);
       Command *cmd = new Command (input);
 
-      bool skip_cmd = builtInFunc(cmd, env);
+      bool skip_cmd = builtInFunc(cmd, env, input);
 
       if (!skip_cmd)
-        skip_cmd = commandPreprocess(cmd);
+        skip_cmd = commandPreprocess(cmd, env); // here, change envirno
       
       if (skip_cmd) {
         delete cmd;
@@ -199,7 +236,6 @@ int main()
         continue;
       }
 
-      parseVar(cmd, env);
       char ** newargv = cmd->getArgv();
 
       cpid = fork();

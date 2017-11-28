@@ -4,3 +4,28 @@ export aa
 env
 set aa ECE551 Finished
 
+set PATH /usr/local/sbin
+export PATH
+env
+
+set aa ls
+$aa
+set bb $aa
+$bb
+
+set PATH $PATH:/home/netidi/ece551 
+echo $PATH
+
+set PATH meaninglesssss
+echo $PATH
+
+set HOME /home/zx52/ece551
+cd
+
+set HOME
+cd
+
+set asdf^ adsf
+
+set HOME meaninglesssss
+cd

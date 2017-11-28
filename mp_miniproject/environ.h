@@ -1,15 +1,21 @@
 #ifndef __environ_H__
 #define __environ_H__
+#include <iostream>
 #include <string>
 #include <string.h>
 #include <stdlib.h>
 #include <map>
 using namespace std;
 
+typedef pair<string, int> pair_v;
+
+#define NOT_FOUND -2       // never set before 
+#define NOT_UPDATED_ENV -1 // already set, but not exported
+
 class Environ
 {
 private:
-  map <string, string> env_map;
+  map <string, pair_v> env_map; // <varName, pair<varValue, char* of var in newenviron>>
   char **newenviron;
   size_t size; // size of newenviron, doubled when not enough
   size_t var_cnt; // actual length of newenviron
@@ -40,41 +46,85 @@ public:
     return newenviron;
   }
 
-  const map <string, string> & getEnvMap()
+  const map <string, pair_v> & getEnvMap()
   {
     return env_map;
   }
 
-  void insertMap (string key, string value)
+  string searchMap (string key)
   {
-    env_map[key] = value;
-  }
-
-  string searchMap (string key, bool &exist)
-  {
-    map<string, string>::iterator it;
+    map<string, pair_v>::iterator it;
     it = env_map.find(key);
     if (it != env_map.end()) {
-      exist = true;
-      return it->second;
+      pair_v result = it->second;
+      return result.first;
     } else {
-      exist = false;
       return "";
     }
   }
 
-  void insertEnviron (string key, string value)
+  int searchMapIdx (string key)
+  {
+    map<string, pair_v>::iterator it;
+    it = env_map.find(key);
+    if (it != env_map.end()) {
+      pair_v result = it->second;
+      return result.second;
+    } else {
+      return NOT_FOUND; //
+    }
+  }
+
+  void enlargeEnviron ()
   {
     if (var_cnt+1 >= size) {
       size *= 2;
       newenviron = (char **) realloc(newenviron, size * sizeof(char*));
 	}
-	string to_add = key+ "=" + value;
-	newenviron[var_cnt] = (char *) malloc(to_add.length() + 1);
-	strcpy(newenviron[var_cnt], to_add.c_str());
-
 	var_cnt++;
 	newenviron[var_cnt] = NULL;
+  }
+
+  void insertMap (string key, string value) // set
+  {
+    int value_i = searchMapIdx(key);
+
+    if (value_i == NOT_FOUND) {
+      env_map[key] = make_pair(value, NOT_UPDATED_ENV);
+
+    } else { 
+      env_map[key] = make_pair(value, value_i);
+      if (value_i != NOT_UPDATED_ENV) // var already in env
+        insertEnviron(key); // export automatically
+    }
+  }
+
+  void insertMapIdx (string key, string value, int value_i)
+  {
+     env_map[key] = make_pair(value, value_i);
+  }
+
+  void insertEnviron (string key) // export
+  {
+    int value_i = searchMapIdx(key);
+    if (value_i == NOT_FOUND) // not set before export
+      return;
+
+    string value = searchMap(key);
+    string to_add = key+ "=" + value;
+
+    int index = value_i; 
+    if (value_i == NOT_UPDATED_ENV) {// append to newenviron
+      index = var_cnt;
+      insertMapIdx(key, value, index);
+      enlargeEnviron();
+
+    } else { // replace in newenviron
+      free (newenviron[index]);
+    }
+
+    newenviron[index] = (char *) malloc(to_add.length() + 1);
+	strcpy(newenviron[index], to_add.c_str());
   }
 
   void initEnviron (char **environ)
@@ -109,9 +159,8 @@ public:
       string value = string(pch+1);
       *pch = '=';
 
-      env_map[key] = value;
+      env_map[key] = make_pair(value, i);
       i++;
-     //printf("%s\n", environ[i]); // prints in form of "variable=value"
     }
   }
 };
