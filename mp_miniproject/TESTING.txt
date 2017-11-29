@@ -1,8 +1,56 @@
+####################step 1:
+
+/bin/ls
+/bin/pwd
+/usr/bin/clear
+
+/bin/notExist
+./notExist
+
+/bin
+.
+..
+
+
+####################step 2:
+
+/bin/ls -ltr
+ls -a
+ls -lh
+df -h
+top
+pwd
+clear
+env
+echo $PATH
+cat README
+
+cd ls
+ls cd
+notExist
+##Q**#@$&*#
+
+./testProgram/printAllArgument 1 2 3 4 5 6 7 8 9 10 a b c d e f g h i j k llllllllll
+./testProgram/printAllArgument 1\ 2\ 3 \  \ 45 
+
+EOF
+exit
+
+
+
+####################step 3:
+
+cd ..
+cd /
+cd .. ..
+
 set aa ECE551 Not Finished
 echo $aa
+env
 export aa
 env
 set aa ECE551 Finished
+env
 
 set PATH /usr/local/sbin
 export PATH
@@ -10,14 +58,24 @@ env
 
 set aa ls
 $aa
-set bb $aa
-$bb
+set _ $aa
+set __ -ltr
+$_  $__
+set __ -a
+$_  $__
+
+
+set asdf^ someValue 
+set --- someValue 
+
 
 set PATH $PATH:/home/netidi/ece551 
 echo $PATH
 
 set PATH meaninglesssss
-echo $PATH
+/bin/echo $PATH
+env
+/usr/bin/env
 
 set HOME /home/zx52/ece551
 cd
@@ -25,7 +83,32 @@ cd
 set HOME
 cd
 
-set asdf^ adsf
-
 set HOME meaninglesssss
 cd
+
+./testProgram/printAllArgument some argument 
+set PATH $PATH:./testProgram/
+printAllArgument some argument 
+printAllArgument $PATH
+
+
+./testProgram/ls
+set PATH $PATH:./testProgram/
+ls
+set PATH ./testProgram/:$PATH
+ls
+
+
+set a 324
+set print ./testProgram/printAllArgument
+$print  $a
+$print  b$a 
+$print  $ab 
+$print  $a^ 
+
+
+
+
+
+
+

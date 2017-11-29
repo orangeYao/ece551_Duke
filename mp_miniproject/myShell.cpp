@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <sys/stat.h>
 #include <dirent.h>
 #include <pwd.h>
 #include <map>
@@ -52,9 +53,17 @@ string findCommand(char * c_cmd, Environ *env)
   if (strchr(c_cmd, '/') != NULL) { // path given by user
     if(access(c_cmd, X_OK) < 0) // path not accessible
       return "";
-    else
-      return string(c_cmd);
-  } else {
+
+    struct stat sb;
+    if (stat(c_cmd, &sb) == 0 && !S_ISREG(sb.st_mode))
+      return "";
+
+    return string(c_cmd);
+  
+  }  else {
+    if (!strcmp(c_cmd, ".") || !strcmp(c_cmd, "..")) 
+      return "";
+
     return findCommandHelper(c_cmd, env); 
   }
 }
