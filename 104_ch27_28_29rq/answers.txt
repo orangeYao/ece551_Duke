@@ -1,8 +1,8 @@
 B #Question No. 1
-G #Question No. 2
+K/G #Question No. 2
 G #Question No. 3
- #Question No. 4
- #Question No. 5
+C #Question No. 4
+F #Question No. 5
 C #Question No. 6
 C #Question No. 7
  #Question No. 8
