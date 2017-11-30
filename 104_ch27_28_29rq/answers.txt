@@ -5,14 +5,14 @@ C r#Question No. 4
 F r#Question No. 5
 C r#Question No. 6
 C r#Question No. 7
-C #Question No. 8
-D #Question No. 9
-C #Question No. 10
-B #Question No. 11
-D #Question No. 12
-B #Question No. 13
- #Question No. 14
- #Question No. 15
+C r#Question No. 8
+D r#Question No. 9
+C r#Question No. 10
+B r#Question No. 11
+D r#Question No. 12
+B r#Question No. 13
+D #Question No. 14
+C #Question No. 15
  #Question No. 16
  #Question No. 17
  #Question No. 18
