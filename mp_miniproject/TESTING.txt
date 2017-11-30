@@ -1,4 +1,4 @@
-####################step 1:
+#################### step 1:
 
 /bin/ls
 /bin/pwd
@@ -12,7 +12,7 @@
 ..
 
 
-####################step 2:
+#################### step 2:
 
 /bin/ls -ltr
 ls -a
@@ -37,23 +37,18 @@ EOF
 exit
 
 
-
-####################step 3:
+#################### step 3:
 
 cd ..
 cd /
 cd .. ..
 
-set aa ECE551 Not Finished
+set aa          ECE551 Not Finished
 echo $aa
 env
 export aa
 env
 set aa ECE551 Finished
-env
-
-set PATH /usr/local/sbin
-export PATH
 env
 
 set aa ls
@@ -106,9 +101,18 @@ $print  b$a
 $print  $ab 
 $print  $a^ 
 
+set PATH $PATH:./testProgram/printAllArgument
+printAllArgument
+
+
+#################### step 4:
 
 
 
 
+
+
+/home/zx52/assist/testOverflow
+rule of three
 
 

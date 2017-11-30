@@ -9,8 +9,8 @@ using namespace std;
 
 typedef pair<string, int> pair_v;
 
-#define NOT_FOUND -2       // never set before 
-#define NOT_UPDATED_ENV -1 // already set, but not exported
+#define NOT_FOUND -2       // element never set before 
+#define NOT_UPDATED_ENV -1 // element already set, but not exported
 
 class Environ
 {

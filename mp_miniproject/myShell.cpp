@@ -15,6 +15,8 @@
 #include "environ.h"
 using namespace std;
 
+// Search path for a command without '/'
+// Called by findCommand() only
 string findCommandHelper(const char * c_cmd, Environ *env)
 {
   char *pPath, *pch;
@@ -47,7 +49,9 @@ string findCommandHelper(const char * c_cmd, Environ *env)
   return "";
 }
 
-
+// For a command, return corresponding executable file 
+// Return "" when command does not exist
+// Call findCommandHelper() when path '/' not given by user
 string findCommand(char * c_cmd, Environ *env)
 {
   if (strchr(c_cmd, '/') != NULL) { // path given by user
@@ -69,6 +73,8 @@ string findCommand(char * c_cmd, Environ *env)
 }
 
 
+// Implement command 'cd', go to $HOME when argument not given
+//   stay in same place when $HOME is not a valid Dir
 void cdChangeDir (Command *cmd, Environ* env)
 {
   char ** newargv = cmd->getArgv();
@@ -85,6 +91,10 @@ void cdChangeDir (Command *cmd, Environ* env)
     cout << "cd: " << newargv[1]  <<": No such file or directory" << endl;
 }
 
+// Return true when command not found by findCommand(), 
+//   the command will be skipped 
+// Return false otherwise, 
+//   update Command object and command will be executed in child process
 bool commandPreprocess(Command *cmd, Environ *env)
 {
   char ** newargv = cmd->getArgv();
@@ -97,6 +107,7 @@ bool commandPreprocess(Command *cmd, Environ *env)
   return false;
 }
 
+// Whether a char is valid for variable name 
 bool isValidName(char c)
 {
   if (c >= 'a'  && c <= 'z')
@@ -111,7 +122,8 @@ bool isValidName(char c)
   return false;
 }
 
-
+// Implement the 'set' command: set var value
+// Update the Environ object
 void set(Command *cmd, Environ* env, string input)
 {
   char ** newargv = cmd->getArgv();
@@ -138,6 +150,7 @@ void set(Command *cmd, Environ* env, string input)
 }
 
 
+// Implement empty command, cd, set, export
 bool builtInFunc(Command *cmd, Environ* env, string input)
 {
   char ** newargv = cmd->getArgv();
@@ -165,8 +178,9 @@ bool builtInFunc(Command *cmd, Environ* env, string input)
   return false; 
 }
 
+// Parse variables starting with $ in input 
+// like $PATH, $user_defined
 string parseVar (string input, Environ* env)
-// interpret variables starting with $ in input 
 {
   size_t len = input.length();
   bool at_var = false;
@@ -196,7 +210,7 @@ string parseVar (string input, Environ* env)
   return rtn;
 }
 
-
+// Check whether user typed 'exit'
 bool isExit(string &input)
 {
   istringstream iss(input);
@@ -205,6 +219,7 @@ bool isExit(string &input)
   return (chk_exit == "exit");
 }
 
+// Print 'myShell:' and current directory
 void promptMyShell()
 {
   char * dir_name = get_current_dir_name();
