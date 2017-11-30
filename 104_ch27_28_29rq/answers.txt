@@ -12,9 +12,9 @@ B r#Question No. 11
 D r#Question No. 12
 B r#Question No. 13
 D #Question No. 14
-C #Question No. 15
- #Question No. 16
- #Question No. 17
+D/C #Question No. 15
+D #Question No. 16
+A #Question No. 17
  #Question No. 18
  #Question No. 19
  #Question No. 20
