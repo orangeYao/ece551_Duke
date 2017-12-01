@@ -1,6 +1,6 @@
-Grading at 12/01/2017:01:11:18.030375
-For commit ID e66179f75b9e16acdf6a24b0d8274e7571a205a5
+Grading at 12/01/2017:02:47:05.151346
+For commit ID a77ebced492761520886b0fe179143b90c922a35
 Reading your quiz answers from answers.txt
-You have 2 wrong answers
+You have 1 wrong answer
 
 Overall Grade: FAILED
