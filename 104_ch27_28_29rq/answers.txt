@@ -13,10 +13,10 @@ D r#Question No. 12
 B r#Question No. 13
 D #Question No. 14
 D/C #Question No. 15
-D #Question No. 16
+B/D #Question No. 16
 A #Question No. 17
- #Question No. 18
- #Question No. 19
+D #Question No. 18
+B #Question No. 19
  #Question No. 20
  #Question No. 21
  #Question No. 22
