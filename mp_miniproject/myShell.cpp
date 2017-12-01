@@ -145,8 +145,11 @@ void set(Command *cmd, Environ* env, string input)
     return; 
   }
 
-  size_t found = input.find(string(newargv[2]));
-  env->insertMap(newargv[1], input.substr(found));
+  size_t value_i = input.find(string(newargv[1])) + strlen(newargv[1]);
+  while (input[value_i] == ' ')
+    value_i ++;  // skip spaces, find start index of value
+
+  env->insertMap(newargv[1], input.substr(value_i));
 }
 
 
