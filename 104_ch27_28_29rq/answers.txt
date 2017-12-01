@@ -19,5 +19,5 @@ D r#Question No. 18
 B r#Question No. 19
 D #Question No. 20
 C #Question No. 21
-E/C #Question No. 22
+A/E/C #Question No. 22
 B r#Question No. 23
