@@ -352,7 +352,19 @@ Program exited with status 0
 aaa=ECE551 Finished
 Program exited with status 0
 ***
+myShell:/home/zx52/ece551/mp_miniproject $ export bbb
+myShell:/home/zx52/ece551/mp_miniproject $ env | grep bbb
+***
+Program exited with status 0
+Program exited with status 1
+***
 Why correct:
+1. 'aaa' is set to 'ECE551 Not Finished', skipping many spaces.
+2. 'aaa' does not show up in 'env'.
+3. By calling 'export', 'aaa' shows up in 'env'.
+4. 'set aaa ECE551 Finished' change the value of 'aaa' in 'env' 
+   from 'ECE551 Not Finished' to 'ECE551 Finished'.
+5. Export 'bbb' without 'set', 'bbb' will not show up in 'env'.
 
 
 (3.3) Run ./myShell
@@ -391,6 +403,9 @@ myShell:/home/zx52/ece551/mp_miniproject $ $_  $__
 Program exited with status 0
 ***
 Why correct:
+1. aa is set to ls, $aa invokes '/bin/ls'.
+2. _ is set to aa, which is 'ls'. __ is set to '-ltr'. $_  $__ equals 'ls -ltr'.
+3. reset __ to '-a', $_  $__ equals 'ls -a'.
 
 
 (3.4) Run ./myShell
@@ -407,6 +422,7 @@ myShell:/home/zx52/ece551/mp_miniproject $ set \ a someValue
 Var name in set is not valid!!
 ***
 Why correct:
+Our shell detect invalid variable names for command 'set'.
 
 
 (3.5) Run ./myShell
@@ -433,6 +449,10 @@ PATH=meaninglesssss
 Program exited with status 0
 ***
 Why correct:
+1. 'set PATH $PATH:/home/netidi/ece551' append '/home/netidi/ece551' to PATH.
+2. 'set PATH meaninglesssss' change PATH to 'meaninglesssss'.
+3. In this case commands like 'env' can no longer be found. 
+4. '/usr/bin/env' shows PATH is indeed 'meaninglesssss'.
 
 
 (3.6) Run ./myShell
@@ -449,6 +469,10 @@ myShell:/home/zx52/ece551 $ cd mp_miniproject
 myShell:/home/zx52/ece551/mp_miniproject $ exit
 (Program quit)
 Why correct:
+1. HOME can be set to '/home/zx52/ece551'
+2. In this case 'cd' moves tp '/home/zx52/ece551', our new home.
+3. When HOME set to 'meaninglesssss', 'cd' will not work.
+4. cd to specific path still works. 
 
 
 (3.7) Run ./myShell
@@ -471,6 +495,9 @@ myShell:/home/zx52/ece551/mp_miniproject $ printAllArgument $PATH
 Program exited with status 0
 ***
 Why correct:
+1. './testProgram/printAllArgument' prints all arguments it receives.
+2. By appending './testProgram/' to PATH, 'printAllArgument' can be directly called without path.
+3. 'printAllArgument' can print PATH as its arguments. 
 
 
 (3.8) Run ./myShell
@@ -497,6 +524,10 @@ myShell:/home/zx52/ece551/mp_miniproject $ echo $PATH
 ./testProgram/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:./testProgram/
 ***
 Why correct:
+1. './testProgram/ls' is a program prints 'This is a fake ls!!'
+2. When put './testProgram' at the front of PATH, 'ls' invoke '/bin/ls'.
+3. When put './testProgram' at the end of PATH, 'ls' invoke './testProgram/ls'. 
+4. This is correct since my shell searches command from front of PATH to end.
 
 
 (3.9) Run ./myShell
@@ -522,6 +553,10 @@ myShell:/home/zx52/ece551/mp_miniproject $ $print  $a^
 Program exited with status 0
 ***
 Why correct:
+1. a is set to 324 and print is set to './testProgram/printAllArgument'
+2. b$a = b324, b$a is interpreted as b + $a 
+   $ab = '',   $ab is interpreted as variable ab, which does not exist.
+   $a^ = 324^, $a^ is interpreted as $a + ^, since a^ is not a valid argument name. 
 
 
 (3.10) Run ./myShell
@@ -534,6 +569,7 @@ Program exited with status 0
 Program exited with status 0
 ***
 Why correct:
+When set aaa,  aaa='', and export will still add 'aaa' into 'env'.
 
 
 (3.11) Run ./myShell
@@ -545,6 +581,7 @@ c d
 Program exited with status 0
 ***
 Why correct:
+set a b makes $a=b, then 'set $a c d' is 'set b c d', b is set to 'c d' 
 
 
 (3.12) Run ./myShell
@@ -555,6 +592,7 @@ adf  adf 78 3\
 Program exited with status 0
 ***
 Why correct:
+'set' also parse '\ ' to be space ' ' correctly.
 
 
 #################### step 4:
@@ -600,6 +638,9 @@ testProgram
 Program exited with status 0
 ***
 Why correct:
+1. 'ls > aa' redirect output of 'ls' to a new file aa.
+2. './testProgram/printUserInput < aa > bb', 'printUserInput' takes input from aa and send output to bb.
+3. 'aa' and 'bb' have same content, which mean that our STDIN and STDOUT redirection is correct.
 
 
 (4.2) Run ./myShell
@@ -609,6 +650,7 @@ myShell:/home/zx52/ece551/mp_miniproject $ wc -l < command.h
 Program exited with status 0
 ***
 Why correct:
+wc -l takes input form command.h, there are 193 lines in command.h.
 
 
 (4.3) Run ./myShell
@@ -622,6 +664,7 @@ myShell:/home/zx52/ece551/mp_miniproject $ cat error
 Program exited with status 0
 ***
 Why correct:
+'2>' redirect the error 'Program exited with status 2' into a file called error.
 
 
 (4.4) Run ./myShell
@@ -647,6 +690,8 @@ Program exited with status 0
 Program exited with status 0
 ***
 Why correct:
+Multiple (N) commands connect by N-1 pipes. The 'grep' commands correctly select files containing
+'print' or 'printUserInput'.  
 
 
 (4.5) Run ./myShell
@@ -680,6 +725,10 @@ Program exited with status 0
 Program exited with status 0
 ***
 Why correct:
+1. Test a 25MB text file 'largeData.txt' over many pipes. Processes do not block or deadlock.
+2. Pipes with input redirection at first command, output redirection at last command.
+   'largeData.txt' is sent through many pipes, greped by condtions, and printed into 'duplicateData.txt'.
+3. By checking number of lines in output after 'grep', result of redirection and pipe is correct. 
 
 
 (4.6) Run ./myShell
@@ -697,6 +746,8 @@ numerics.txt
 Program exited with status 0
 ***
 Why correct:
+Multiple pipes connected and output redirected to file ad\ ad, which is correctly parsed 
+into 'ad ad'. The result shows all files containing 'txt', which is correct.
 
 
 ################### meaningless command
@@ -724,5 +775,13 @@ dup2: Bad file descriptor
 Program exited with status 1
 ***
 
+myShell:/home/zx52/ece551/mp_miniproject $ |||
+***
+Syntax Error in Pipe !!
+***
 
+myShell:/home/zx52/ece551/mp_miniproject $ 22|2>
+***
+Syntax Error in Pipe !!
+***
 

@@ -55,18 +55,41 @@ std::string* delimitPipe (std::string str, size_t &count)
 Command ** createCmdArray(std::string *delim_input, size_t count)
 {
   Command **cmd_array = new Command *[count]();
-  for (size_t i=0; i<count; i++) 
+  for (size_t i=0; i<count; i++) { 
     cmd_array[i] = new Command (delim_input[i]); 
+  }
   delete[] delim_input;
   return cmd_array;
+}
+
+// Check if any command in pipe is empty (all space)
+// Empty means all spaces after removing redirection signs < > 2>
+bool checkFullSpace(std::string *delim_input, size_t count)
+{
+  if (count == 1)
+    return false;
+
+  for (size_t i=0; i<count; i++) {
+    bool rtn = true; 
+    for (size_t j=0; j<delim_input[i].length(); j++) {
+      if (delim_input[i][j]=='2' && j+1 <delim_input[i].length()
+                            && delim_input[i][j+1] == '>')
+          continue;
+
+      if (delim_input[i][j] != ' ' && delim_input[i][j] != '<'
+                            && delim_input[i][j] != '>')
+        rtn = false;
+    }
+    if (rtn == true)
+      return true;
+  }
+  return false;
 }
 
 extern char **environ; //Current environment before start 
 int main()
 {
-  std::string command;
   std::string input;
-
   promptMyShell();
 
   Environ *env = new Environ (environ); //Initialize environment 
@@ -78,6 +101,14 @@ int main()
 
 	  size_t count = 0; // Delimit input by '|'
       std::string * delim_input = delimitPipe(input, count);
+
+      // Check input syntax for pipe, command can't be empty
+      if (checkFullSpace(delim_input, count)) {
+        std::cout << "Syntax Error in Pipe !!\n";
+        delete[] delim_input;
+        promptMyShell();
+        continue;
+      }
       Command **cmd_array = createCmdArray(delim_input, count);
 	
       if (count > 1) {  // Pipe exists
