@@ -15,211 +15,13 @@
 #include "command.h"
 #include "environ.h"
 #include "execute.h"
-using namespace std;
-
-// Search path for a command without '/'
-// Called by findCommand() only
-string findCommandHelper(const char * c_cmd, Environ *env)
-{
-  char *pPath, *pch;
-  DIR *d;
-  struct dirent *dir;
-
-  string path = env->searchMap("PATH");
-
-  pPath = (char *) malloc (path.length() + 10);
-  strcpy(pPath, path.c_str());
-
-  pch = strtok (pPath,":");
-
-  while (pch != NULL) {
-    d = opendir(pch);
-    if (d) {
-      while ((dir = readdir(d)) != NULL) {
-        if (strcmp(dir->d_name, c_cmd) == 0) {
-          closedir(d);
-          string rtn = string(pch) + "/" + string(c_cmd);
-          free(pPath);
-          return rtn; 
-        }
-      }
-      closedir(d);
-    }
-    pch = strtok (NULL, ":");
-  }
-  free(pPath);
-  return "";
-}
-
-// For a command, return corresponding executable file 
-// Return "" when command does not exist
-// Call findCommandHelper() when path '/' not given by user
-string findCommand(char * c_cmd, Environ *env)
-{
-  if (strchr(c_cmd, '/') != NULL) { // path given by user
-    if(access(c_cmd, X_OK) < 0) // path not accessible
-      return "";
-
-    struct stat sb;
-    if (stat(c_cmd, &sb) == 0 && !S_ISREG(sb.st_mode))
-      return "";
-
-    return string(c_cmd);
-  
-  }  else {
-    if (!strcmp(c_cmd, ".") || !strcmp(c_cmd, "..")) 
-      return "";
-
-    return findCommandHelper(c_cmd, env); 
-  }
-}
-
-
-// Implement command 'cd', go to $HOME when argument not given
-//   stay in same place when $HOME is not a valid Dir
-void cdChangeDir (Command *cmd, Environ* env)
-{
-  char ** newargv = cmd->getArgv();
-
-  if (newargv[1] == NULL) // cd without argument
-  {
-    string home = env->searchMap("HOME");
-    if (home == "") 
-      home = ".";
-    cmd->setArgv(home, 1);
-  }
-
-  if (chdir (newargv[1]) == -1)
-    cout << "cd: " << newargv[1]  <<": No such file or directory" << endl;
-}
-
-// Return true when command not found by findCommand(), 
-//   the command will be skipped 
-// Return false otherwise, 
-//   update Command object and command will be executed in child process
-bool commandPreprocess(Command *cmd, Environ *env)
-{
-  char ** newargv = cmd->getArgv();
-  string cmd_result = findCommand (newargv[0], env);
-  if (cmd_result == "") {
-    cout << "Command " << newargv[0] << " not found" << endl;
-    return true;
-  }
-  cmd->setArgv(cmd_result, 0); // replace command with full path
-  return false;
-}
-
-// Whether a char is valid for variable name 
-bool isValidName(char c)
-{
-  if (c >= 'a'  && c <= 'z')
-    return true;
-  if (c >= 'A'  && c <= 'Z')
-    return true;
-  if (c >= '0'  && c <= '9')
-    return true;
-  if (c == '_')
-    return true;
-
-  return false;
-}
-
-// Implement the 'set' command: set var value
-// Update the Environ object
-void set(Command *cmd, Environ* env, string input)
-{
-  char ** newargv = cmd->getArgv();
-  if (newargv[1] == NULL)
-    return;
-
-  string var = newargv[1];
-  size_t len = var.length();
-
-  for (size_t i=0; i<len; i++)
-    if (!isValidName(var[i])) {
-      cout << "Var name in set is not valid!!\n";
-      return;
-    }
-
-  if (newargv[2] == NULL)
-  {
-    env->insertMap(newargv[1], "");
-    return; 
-  }
-
-  size_t value_i = input.find(string(newargv[1])) + strlen(newargv[1]);
-  while (input[value_i] == ' ')
-    value_i ++;  // skip spaces, find start index of value
-
-  env->insertMap(newargv[1], input.substr(value_i));
-}
-
-
-// Implement empty command, cd, set, export
-bool builtInFunc(Command *cmd, Environ* env, string input)
-{
-  char ** newargv = cmd->getArgv();
-
-  if (cmd->length() == 0)
-	return true;
-
-  if (strcmp(newargv[0], "cd") == 0) {
-    cdChangeDir(cmd, env);
-	return true;
-  }
-
-  if (strcmp(newargv[0], "set") == 0) {
-    set(cmd, env, input);
-    return true;
-  }
-
-  if (strcmp(newargv[0], "export") == 0) {
-    if (newargv[1] != NULL) {
-      string key = string(newargv[1]);
-      env->insertEnviron(key);
-    }
-    return true;
-  }
-  return false; 
-}
-
-// Parse variables starting with $ in input 
-// like $PATH, $user_defined
-string parseVar (string input, Environ* env)
-{
-  size_t len = input.length();
-  bool at_var = false;
-  string rtn = "", var = "";
-
-  for (size_t i=0; i<len; i++)
-  {
-    if(input[i] == '$')
-    {
-      at_var = true;
-      continue;
-    }
-
-    if (!at_var) {
-      rtn += input[i];
-    } else if (isValidName(input[i])) {
-      var += input[i];
-    } else {
-      at_var = false;
-      rtn += env->searchMap(var);
-      var = ""; 
-      rtn += input[i]; 
-    }
-  }
-  if (var != "")
-    rtn += env->searchMap(var);
-  return rtn;
-}
+#include "preprocess.h"
 
 // Check whether user typed 'exit'
-bool isExit(string &input)
+bool isExit(std::string &input)
 {
-  istringstream iss(input);
-  string chk_exit;
+  std::istringstream iss(input);
+  std::string chk_exit;
   iss >> chk_exit;
   return (chk_exit == "exit");
 }
@@ -228,16 +30,16 @@ bool isExit(string &input)
 void promptMyShell()
 {
   char * dir_name = get_current_dir_name();
-  cout << "myShell:" << dir_name << " $ ";
+  std::cout << "myShell:" << dir_name << " $ ";
   free(dir_name);
 }
 
-
-string* delimitPipe (string str, size_t &count)
+// Delimit input by '|', store multiple command in a string array
+std::string* delimitPipe (std::string str, size_t &count)
 {
   size_t pos;
-  string * input = new string [10];
-  while ((pos = str.find("|"))!=string::npos) {
+  std::string * input = new std::string [10];
+  while ((pos = str.find("|"))!=std::string::npos) {
     input[count] = str.substr(0, pos);
     str.erase(0, pos + 1);
     count ++;
@@ -247,7 +49,10 @@ string* delimitPipe (string str, size_t &count)
   return input;
 }
 
-Command ** createCmdArray(string *delim_input, size_t count)
+// Take a string array containing multiple input,
+// Convert it to a array containing Command pointers
+// Then delete the string array
+Command ** createCmdArray(std::string *delim_input, size_t count)
 {
   Command **cmd_array = new Command *[count]();
   for (size_t i=0; i<count; i++) 
@@ -256,33 +61,34 @@ Command ** createCmdArray(string *delim_input, size_t count)
   return cmd_array;
 }
 
-extern char **environ; //Environment variable at begining
+extern char **environ; //Current environment before start 
 int main()
 {
-  string command;
-  string input;
+  std::string command;
+  std::string input;
 
   promptMyShell();
 
-  Environ *env = new Environ (environ);
-  while(getline (cin, input)) { 
+  Environ *env = new Environ (environ); //Initialize environment 
+  while(getline (std::cin, input)) { 
       if (isExit(input))
         break;
 
-      input = parseVar (input, env);
-	  size_t count = 0;
-	  string * delim_input = delimitPipe(input, count);
+      input = parseVar (input, env); // Parse the input, replace $var_name by var_value
+
+	  size_t count = 0; // Delimit input by '|'
+      std::string * delim_input = delimitPipe(input, count);
       Command **cmd_array = createCmdArray(delim_input, count);
 	
       if (count > 1) {  // Pipe exists
 	    for (size_t i=0; i<count; i++)
-		  commandPreprocess(cmd_array[i], env);
+		  commandPreprocess(cmd_array[i], env); // Search for command 
         setPipe(cmd_array, count, env);
 
       } else {  // No pipe
         Command * cmd = cmd_array[0];
 
-        // built in functions like cd, set, export 
+        // Check if it's built-in functions like cd, set, export 
         bool skip_cmd = builtInFunc(cmd, env, input); 
         if (!skip_cmd)
           skip_cmd = commandPreprocess(cmd, env); 

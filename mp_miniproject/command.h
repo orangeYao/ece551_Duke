@@ -4,6 +4,10 @@
 #include <cstring>
 #include <stdlib.h>
 
+// This class stores all information about one line of user input (command)
+// User command is parsed into an argument array newargv, which can be
+// taken as the second argument of execve() 
+
 class Command
 {
 private:
@@ -141,7 +145,8 @@ public:
   }
 
   // Parse user command into argument array char** newargv,
-  // Each char* stores one argument.
+  // Each char* stores one argument
+  // Argument array end with NULL, to be taken by evecue
   void parseCommand (std::string input)
   {
     newargv = (char **) malloc(size * sizeof(char*));

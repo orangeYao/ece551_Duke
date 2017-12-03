@@ -1,163 +1,728 @@
+All following testcases are valgrind clean.
+
 #################### step 1:
 
-/bin/ls
-/bin/pwd
-/usr/bin/clear
+(1.1) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ /bin/ls
+*****
+Makefile  TESTING.txt  commandShell.txt  execute.h  myShell  numerics.txt  testProgram
+README    command.h    environ.h     input      myShell.cpp  preprocess.h
+Program exited with status 0
+*****
+Why correct:
+'/bin/ls' list all files in current directory and finish successfully.
 
-/bin/notExist
-./notExist
 
-/bin
-.
-..
+(1.2) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ /bin/pwd
+*****
+/home/zx52/ece551/mp_miniproject
+Program exited with status 0
+*****
+Why correct:
+'/bin/pwd' get current directory.
+
+
+(1.3) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ /usr/bin/clear
+*****
+Program exited with status 0 (terminal is cleared)
+*****
+Why correct:
+'/usr/bin/clear' clears current terminal.
+
+
+(1.4) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ ls dontexist
+*****
+/bin/ls: cannot access 'dontexist': No such file or directory
+Program exited with status 2
+*****
+Why correct:
+'dontexist' is not an valid argument of 'ls', thus exit with status 2,
+which represents 'Misuse of shell builtins'. 
+
+
+(1.5) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ cat ..
+*****
+/bin/cat: ..: Is a directory
+Program exited with status 1
+*****
+Why correct:
+'..' is not a regular file, thus exit with status 1,
+which represents general errors.
+
+
+(1.6) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ EOF
+(Program quit)
+Why correct:
+program should quit on End Of File.
+
+
+(1.7) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ exit
+(Program quit)
+Why correct:
+program should quit on command 'exit'.
 
 
 #################### step 2:
 
-/bin/ls -ltr
-ls -a
-ls -lh
-df -h
-top
-pwd
-clear
-env
-echo $PATH
-cat README
+(2.1) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ /bin/notExist
+*****
+Command /bin/notExist not found
+*****
+Why correct:
+'/bin/notExist' is not a regular file in PATH
 
-cd ls
-ls cd
-notExist
-##Q**#@$&*#
 
-touch aa\ aa\ aa
-ls
-rm aa\ aa\ aa
+(2.2) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ /bin
+*****
+Command /bin not found
+*****
+Why correct:
+'/bin' is not a regular file in PATH
 
-./testProgram/printAllArgument 1 2 3 4 5 6 7 8 9 10 a b c d e f g h i j k llllllllll
-./testProgram/printAllArgument 1\ 2\ 3 \  \ 45 
-./testProgram/printAllArgument a\ b c\ \ d
-./testProgram/printAllArgument a\  b c \ d 
 
-./testProgram/printUserInput
+(2.3) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ ..
+*****
+Command .. not found
+*****
+Why correct:
+'..' is not a regular file in PATH
+
+
+(2.4) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ /bin/ls -ltr
+*****
+total 336
+-rw-rw-r-- 1 zx52 zx52   5686 Nov 13 10:47 commandShell.txt
+-rw-rw-r-- 1 zx52 zx52   2389 Nov 13 10:47 README
+-rw-rw-r-- 1 zx52 zx52   6802 Nov 13 10:47 numerics.txt
+-rw-rw-r-- 1 zx52 zx52     12 Dec  1 17:44 input
+-rw-rw-r-- 1 zx52 zx52   4639 Dec  3 01:48 command.h
+-rw-rw-r-- 1 zx52 zx52    132 Dec  3 02:03 Makefile
+-rw-r--r-- 1 zx52 zx52   5796 Dec  3 02:22 environ.h
+-rw-rw-r-- 1 zx52 zx52   2735 Dec  3 02:55 myShell.cpp
+-rw-rw-r-- 1 zx52 zx52   3955 Dec  3 03:06 execute.h
+-rwxrwxr-x 1 zx52 zx52 275328 Dec  3 03:10 myShell
+-rw-rw-r-- 1 zx52 zx52   5634 Dec  3 03:20 preprocess.h
+drwxrwxr-x 2 zx52 zx52    177 Dec  3 03:29 testProgram
+-rw-rw-r-- 1 zx52 zx52   2735 Dec  3 03:43 TESTING.txt
+Program exited with status 0
+*****
+Why correct:
+'/bin/ls -ltr' list files in this way.
+
+(2.5) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ ls -lh
+*****
+total 336K
+-rw-rw-r-- 1 zx52 zx52  132 Dec  3 02:03 Makefile
+-rw-rw-r-- 1 zx52 zx52 2.4K Nov 13 10:47 README
+-rw-rw-r-- 1 zx52 zx52 2.7K Dec  3 03:43 TESTING.txt
+-rw-rw-r-- 1 zx52 zx52 4.6K Dec  3 01:48 command.h
+-rw-rw-r-- 1 zx52 zx52 5.6K Nov 13 10:47 commandShell.txt
+-rw-r--r-- 1 zx52 zx52 5.7K Dec  3 02:22 environ.h
+-rw-rw-r-- 1 zx52 zx52 3.9K Dec  3 03:06 execute.h
+-rw-rw-r-- 1 zx52 zx52   12 Dec  1 17:44 input
+-rwxrwxr-x 1 zx52 zx52 269K Dec  3 03:10 myShell
+-rw-rw-r-- 1 zx52 zx52 2.7K Dec  3 02:55 myShell.cpp
+-rw-rw-r-- 1 zx52 zx52 6.7K Nov 13 10:47 numerics.txt
+-rw-rw-r-- 1 zx52 zx52 5.6K Dec  3 03:20 preprocess.h
+drwxrwxr-x 2 zx52 zx52  177 Dec  3 03:29 testProgram
+Program exited with status 0
+*****
+Why correct:
+'/bin/ls -lh' list files in this way.
+
+
+(2.6) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ top
+***** (keep changing)
+top - 03:53:25 up 26 days,  6:40, 83 users,  load average: 0.66, 0.76, 0.95
+Tasks: 650 total,   1 running, 630 sleeping,  14 stopped,   4 zombie
+%Cpu(s):  0.3 us,  1.5 sy, 11.6 ni, 86.4 id,  0.0 wa,  0.0 hi,  0.2 si,  0.0 st
+KiB Mem :  2029944 total,   416228 free,  1010672 used,   603044 buff/cache
+KiB Swap:  2097148 total,  1470956 free,   626192 used.   673828 avail Mem
+
+   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+ 72200 cc556     30  10  393376  31308  20412 S   5.3  1.5   0:00.64 emacs
+ 27900 st283     30  10  394224  20132   9604 S   4.6  1.0   0:18.00 emacs
+ 73279 ms735     30  10  395472  17516   5820 S   3.3  0.9   1:43.13 emacs
+                                        ...
+*****
+Why correct:
+'/usr/bin/top' show processes in server this way.
+
+
+(2.7) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ echo $PATH
+*****
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+Program exited with status 0
+*****
+Why correct:
+'/bin/echo' displays variable PATH.
+
+
+(2.8) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ cat README
+*****
+Your final programming assignment is the "mini project."
+For this assignment, you have may choose from two different
+options.  You only need to choose ONE of these options (do
+NOT  do all of them).  Each mini-project option has
+                                ...
+As always, you should perform good error checking, and valgrind cleanly.
+
+
+*****
+Why correct:
+'/bin/cat' prints the content of file 'README'
+
+
+(2.9) Run ./myShell 
+myShell:/home/zx52/ece551/mp_miniproject $ cd ls
+***
+cd: ls: No such file or directory
+***
+myShell:/home/zx52/ece551/mp_miniproject $ ls cd
+***
+/bin/ls: cannot access 'cd': No such file or directory
+Program exited with status 2
+***
+myShell:/home/zx52/ece551/mp_miniproject $ ##Q**#@$&*#
+***
+Command ##Q**#@&*# not found
+***
+Why correct:
+'cd ls', 'ls cd' are not valid input. Our shell behaves reasonablely.
+'##Q**#@&*#' is not regular file in PATH.
+
+
+(2.10) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ touch aa\ aa\ aa
+***
+Program exited with status 0
+***
+myShell:/home/zx52/ece551/mp_miniproject $ ls 
+***
+Makefile  TESTING.txt  command.h     environ.h  input    myShell.cpp   preprocess.h
+README    aa aa aa     commandShell.txt  execute.h  myShell  numerics.txt  testProgram
+Program exited with status 0
+***
+myShell:/home/zx52/ece551/mp_miniproject $ rm aa\ aa\ aa
+***
+Program exited with status 0
+***
+myShell:/home/zx52/ece551/mp_miniproject $ ls
+***
+Makefile  TESTING.txt  commandShell.txt  execute.h  myShell  numerics.txt  testProgram
+README    command.h    environ.h     input      myShell.cpp  preprocess.h
+Program exited with status 0
+***
+Why correct:
+'touch aa\ aa\ aa' creates a file 'aa aa aa'.
+'ls' shows this file.
+'rm aa\ aa\ aa' removes this file.
+'ls' shows this file deleted.
+
+
+(2.11) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ ./testProgram/printAllArgument 1 2 3 4 5 6 7 8 9 10 a b c d e f g h i j k llllllllll
+***
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+a
+b
+c
+d
+e
+f
+g
+h
+i
+j
+k
+llllllllll
+Program exited with status 0
+***
+myShell:/home/zx52/ece551/mp_miniproject $ ./testProgram/printAllArgument 1\ 2\ 3 \  \ 45
+***
+1 2 3
+
+ 45
+Program exited with status 0
+***
+myShell:/home/zx52/ece551/mp_miniproject $ ./testProgram/printAllArgument a\ b c\ \ d
+***
+a b
+c  d
+Program exited with status 0
+***
+myShell:/home/zx52/ece551/mp_miniproject $ ./testProgram/printAllArgument a\  b c \ d
+***
+a
+b
+c
+ d
+Program exited with status 0
+***
+Why correct:
+for input '1 2 3 4 5 6 7 8 9 10 a b c d e f g h i j k llllllllll',
+'./testProgram/printAllArgument' takes long input with about 20 arguments, print them correctly.
+for intput '1\ 2\ 3 \  \ 45', 
+'./testProgram/printAllArgument' prints arguments '1 2 3', ' ', ' 45'.
+for intput 'a\ b c\ \ d',
+'./testProgram/printAllArgument' prints arguments 'a b', 'c  d'.
+for intput a\  b c \ d,
+'./testProgram/printAllArgument' prints arguments 'a', 'b', 'c' , ' d'.
+
+
+(2.12) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ ./testProgram/printUserInput
+(user_input)test_intput
+***
 test_intput
+***
+(user_input)test_intput2
+***
 test_intput2
-exit
-
-
-EOF
-exit
+***
+(user_input)EOF
+***
+Program exited with status 0
+***
+Why correct:
+'./testProgram/printUserInput' takes user input line by line and print it out correctly.
 
 
 #################### step 3:
-
-cd ..
-cd /
-cd .. ..
-
-set aa          ECE551 Not Finished
-echo $aa
-env
-export aa
-env
-set aa ECE551 Finished
-env
-
-set aa ls
-$aa
-set _ $aa
-set __ -ltr
-$_  $__
-set __ -a
-$_  $__
+(3.1) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ cd ..
+myShell:/home/zx52/ece551 $ cd /
+myShell:/ $ cd
+myShell:/home/zx52 $ cd .
+myShell:/home/zx52 $ cd .. ..
+myShell:/home $ cd /home/zx52/ece551/mp_miniproject
+myShell:/home/zx52/ece551/mp_miniproject $ exit
+(Program quit) 
+Why correct:
+Built-in function 'cd' changes directory correctly, given argument 
+'..', '.', '/', '/home/zx52/ece551/mp_miniproject'.
 
 
-set asdf^ someValue 
-set --- someValue 
-set \ a someValue
+(3.2) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ set aaa          ECE551 Not Finished
+myShell:/home/zx52/ece551/mp_miniproject $ echo $aaa
+***
+ECE551 Not Finished
+Program exited with status 0
+***
+myShell:/home/zx52/ece551/mp_miniproject $ env | grep aaa (used pipe in stp 4 for shorter output)
+***
+Program exited with status 0
+Program exited with status 1
+***
+myShell:/home/zx52/ece551/mp_miniproject $ export aaa
+myShell:/home/zx52/ece551/mp_miniproject $ env| grep aaa
+***
+Program exited with status 0
+aaa=ECE551 Not Finished
+Program exited with status 0
+***
+myShell:/home/zx52/ece551/mp_miniproject $ set aaa ECE551 Finished
+myShell:/home/zx52/ece551/mp_miniproject $ env | grep aaa
+***
+Program exited with status 0
+aaa=ECE551 Finished
+Program exited with status 0
+***
+Why correct:
 
 
-set PATH $PATH:/home/netidi/ece551 
-echo $PATH
-
-set PATH meaninglesssss
-/bin/echo $PATH
-env
-/usr/bin/env
-
-set HOME /home/zx52/ece551
-cd
-
-set HOME
-cd
-
-set HOME meaninglesssss
-cd
-
-./testProgram/printAllArgument some argument 
-set PATH $PATH:./testProgram/
-printAllArgument some argument 
-printAllArgument $PATH
-
-
-./testProgram/ls
-set PATH $PATH:./testProgram/
-ls
-set PATH ./testProgram/:$PATH
-ls
-
-
-set a 324
-set print ./testProgram/printAllArgument
-$print  $a
-$print  b$a 
-$print  $ab 
-$print  $a^ 
-
-set PATH $PATH:./testProgram/printAllArgument
-printAllArgument
+(3.3) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ set aa ls
+myShell:/home/zx52/ece551/mp_miniproject $ $aa
+***
+Makefile  TESTING.txt  commandShell.txt  execute.h  myShell  numerics.txt  testProgram
+README    command.h    environ.h     input      myShell.cpp  preprocess.h
+Program exited with status 0
+***
+myShell:/home/zx52/ece551/mp_miniproject $ set _ $aa
+myShell:/home/zx52/ece551/mp_miniproject $ set __ -ltr
+myShell:/home/zx52/ece551/mp_miniproject $ $_  $__
+***
+total 340
+-rw-rw-r-- 1 zx52 zx52   5686 Nov 13 10:47 commandShell.txt
+-rw-rw-r-- 1 zx52 zx52   2389 Nov 13 10:47 README
+-rw-rw-r-- 1 zx52 zx52   6802 Nov 13 10:47 numerics.txt
+-rw-rw-r-- 1 zx52 zx52     12 Dec  1 17:44 input
+-rw-rw-r-- 1 zx52 zx52   4639 Dec  3 01:48 command.h
+-rw-rw-r-- 1 zx52 zx52    132 Dec  3 02:03 Makefile
+-rw-r--r-- 1 zx52 zx52   5796 Dec  3 02:22 environ.h
+-rw-rw-r-- 1 zx52 zx52   2735 Dec  3 02:55 myShell.cpp
+-rw-rw-r-- 1 zx52 zx52   3955 Dec  3 03:06 execute.h
+-rwxrwxr-x 1 zx52 zx52 275328 Dec  3 03:10 myShell
+-rw-rw-r-- 1 zx52 zx52   5634 Dec  3 03:20 preprocess.h
+drwxrwxr-x 2 zx52 zx52    177 Dec  3 03:29 testProgram
+-rw-rw-r-- 1 zx52 zx52   8147 Dec  3 04:17 TESTING.txt
+Program exited with status 0
+***
+myShell:/home/zx52/ece551/mp_miniproject $ set __ -a
+myShell:/home/zx52/ece551/mp_miniproject $ $_  $__
+***
+.   .honor    README       command.h         environ.h  input    myShell.cpp   preprocess.h
+..  Makefile  TESTING.txt  commandShell.txt  execute.h  myShell  numerics.txt  testProgram
+Program exited with status 0
+***
+Why correct:
 
 
-set a
-export a
-env
+(3.4) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ set asdf^ someValue 
+***
+Var name in set is not valid!!
+***
+myShell:/home/zx52/ece551/mp_miniproject $ set --- someValue 
+***
+Var name in set is not valid!!
+***
+myShell:/home/zx52/ece551/mp_miniproject $ set \ a someValue
+***
+Var name in set is not valid!!
+***
+Why correct:
 
-set a b
-set $a c d
-echo $b
 
-set $a c d
-echo $c
+(3.5) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ set PATH $PATH:/home/netidi/ece551 
+myShell:/home/zx52/ece551/mp_miniproject $ echo $PATH
+***
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/netidi/ece551
+Program exited with status 0
+***
+myShell:/home/zx52/ece551/mp_miniproject $ set PATH meaninglesssss
+myShell:/home/zx52/ece551/mp_miniproject $ /bin/echo $PATH
+***
+meaninglesssss
+Program exited with status 0
+***
+myShell:/home/zx52/ece551/mp_miniproject $ env
+***
+Command env not found
+***
+myShell:/home/zx52/ece551/mp_miniproject $ /usr/bin/env | /bin/grep PATH 
+***
+Program exited with status 0
+PATH=meaninglesssss
+Program exited with status 0
+***
+Why correct:
 
 
-set    a      adf\   adf 78\ 3\
-echo $a 
-(adf  adf 78 3\)
+(3.6) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ set HOME /home/zx52/ece551
+myShell:/home/zx52/ece551/mp_miniproject $ cd
+myShell:/home/zx52/ece551 $ set HOME
+myShell:/home/zx52/ece551 $ cd
+myShell:/home/zx52/ece551 $ set HOME meaninglesssss
+myShell:/home/zx52/ece551 $ cd
+***
+cd: meaninglesssss: No such file or directory
+***
+myShell:/home/zx52/ece551 $ cd mp_miniproject
+myShell:/home/zx52/ece551/mp_miniproject $ exit
+(Program quit)
+Why correct:
+
+
+(3.7) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ ./testProgram/printAllArgument some argument 
+***
+some
+argument
+Program exited with status 0
+***
+myShell:/home/zx52/ece551/mp_miniproject $ set PATH $PATH:./testProgram/
+myShell:/home/zx52/ece551/mp_miniproject $ printAllArgument some argument 
+***
+some
+argument
+Program exited with status 0
+***
+myShell:/home/zx52/ece551/mp_miniproject $ printAllArgument $PATH
+***
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:./testProgram/
+Program exited with status 0
+***
+Why correct:
+
+
+(3.8) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ ./testProgram/ls
+***
+This is a fake ls!!
+Program exited with status 0
+***
+myShell:/home/zx52/ece551/mp_miniproject $ set PATH $PATH:./testProgram/
+myShell:/home/zx52/ece551/mp_miniproject $ ls
+***
+Makefile  TESTING.txt  commandShell.txt  execute.h  myShell  numerics.txt  testProgram
+README    command.h    environ.h     input      myShell.cpp  preprocess.h
+Program exited with status 0
+***
+myShell:/home/zx52/ece551/mp_miniproject $ set PATH ./testProgram/:$PATH
+myShell:/home/zx52/ece551/mp_miniproject $ ls
+***
+This is a fake ls!!
+Program exited with status 0
+***
+myShell:/home/zx52/ece551/mp_miniproject $ echo $PATH
+***
+./testProgram/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:./testProgram/
+***
+Why correct:
+
+
+(3.9) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ set a 324
+myShell:/home/zx52/ece551/mp_miniproject $ set print ./testProgram/printAllArgument
+myShell:/home/zx52/ece551/mp_miniproject $ $print  $a
+***
+324
+Program exited with status 0
+***
+myShell:/home/zx52/ece551/mp_miniproject $ $print  b$a 
+***
+b324
+Program exited with status 0
+***
+myShell:/home/zx52/ece551/mp_miniproject $ $print  $ab 
+***
+Program exited with status 0
+***
+myShell:/home/zx52/ece551/mp_miniproject $ $print  $a^ 
+***
+324^
+Program exited with status 0
+***
+Why correct:
+
+
+(3.10) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ set aaa 
+myShell:/home/zx52/ece551/mp_miniproject $ export aaa
+myShell:/home/zx52/ece551/mp_miniproject $ env | grep aaa
+***
+aaa=
+Program exited with status 0
+Program exited with status 0
+***
+Why correct:
+
+
+(3.11) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ set a b
+myShell:/home/zx52/ece551/mp_miniproject $ set $a c d
+myShell:/home/zx52/ece551/mp_miniproject $ echo $b
+***
+c d
+Program exited with status 0
+***
+Why correct:
+
+
+(3.12) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ set    a      adf\   adf 78\ 3\
+myShell:/home/zx52/ece551/mp_miniproject $ echo $a 
+***
+adf  adf 78 3\
+Program exited with status 0
+***
+Why correct:
 
 
 #################### step 4:
 
-ls > aa
-cat aa
-./testProgram/printUserInput < aa > bb
-cat bb
+(4.1) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ ls > aa
+Program exited with status 0
+myShell:/home/zx52/ece551/mp_miniproject $ cat aa
+***
+Makefile
+README
+TESTING.txt
+aa
+command.h
+commandShell.txt
+environ.h
+execute.h
+input
+myShell
+myShell.cpp
+numerics.txt
+preprocess.h
+testProgram
+Program exited with status 0
+***
+myShell:/home/zx52/ece551/mp_miniproject $ ./testProgram/printUserInput < aa > bb
+myShell:/home/zx52/ece551/mp_miniproject $ cat bb
+***
+Makefile
+README
+TESTING.txt
+aa
+command.h
+commandShell.txt
+environ.h
+execute.h
+input
+myShell
+myShell.cpp
+numerics.txt
+preprocess.h
+testProgram
+Program exited with status 0
+***
+Why correct:
 
-wc -l < command.h
 
-ls not_exist 2> aa
+(4.2) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ wc -l < command.h
+***
+193
+Program exited with status 0
+***
+Why correct:
 
 
-ls | grep p | grep print | grep printUser | grep printUserInput
+(4.3) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ ls not_exist 2> error 
+***
+Program exited with status 2
+***
+myShell:/home/zx52/ece551/mp_miniproject $ cat error
+***
+/bin/ls: cannot access 'not_exist': No such file or directory
+Program exited with status 0
+***
+Why correct:
 
-./printUserInput < largeData.txt | ./printUserInput | ./printUserInput | grep Epoch > duplicateData.txt
 
-ls | ./printUserInput | grep print > ad\ ad
-cat ad\ ad
+(4.4) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ ls testProgram | grep p | grep print
+***
+Program exited with status 0
+Program exited with status 0
+printAllArgument
+printAllArgument.cpp
+printPartInput.cpp
+printUserInput
+printUserInput.cpp
+Program exited with status 0
+***
+myShell:/home/zx52/ece551/mp_miniproject $ ls testProgram | grep p | grep print | grep printUser | grep printUserInput
+***
+Program exited with status 0
+Program exited with status 0
+printUserInput
+printUserInput.cpp
+Program exited with status 0
+Program exited with status 0
+Program exited with status 0
+***
+Why correct:
+
+
+(4.5) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ cd testProgram
+myShell:/home/zx52/ece551/mp_miniproject $ cat largeData.txt | wc -l
+***
+Program exited with status 0
+390740
+Program exited with status 0
+*** 
+myShell:/home/zx52/ece551/mp_miniproject $ cat largeData.txt | grep Epoch | wc -l
+***
+Program exited with status 0
+Program exited with status 0
+120973
+Program exited with status 0
+***
+myShell:/home/zx52/ece551/mp_miniproject/testProgram $ ./printUserInput < largeData.txt | ./printUserInput | ./printUserInput | grep Epoch | ./printUserInput | grep Epoch > duplicateData.txt
+***
+Program exited with status 0
+Program exited with status 0
+Program exited with status 0
+Program exited with status 0
+Program exited with status 0
+Program exited with status 0
+***
+myShell:/home/zx52/ece551/mp_miniproject/testProgram $ cat duplicateData.txt | wc -l 
+***
+Program exited with status 0
+120973
+Program exited with status 0
+***
+Why correct:
+
+
+(4.6) Run ./myShell
+myShell:/home/zx52/ece551/mp_miniproject $ ls | ./testProgram/printUserInput | grep txt > ad\ ad
+***
+Program exited with status 0
+Program exited with status 0
+Program exited with status 0 
+***
+myShell:/home/zx52/ece551/mp_miniproject $ cat ad\ ad
+***
+TESTING.txt
+commandShell.txt
+numerics.txt
+Program exited with status 0
+***
+Why correct:
 
 
 ################### meaningless command
-env | asdf
-cd  | ls 
+
+myShell:/home/zx52/ece551/mp_miniproject $ env | asdf
+***
+Command asdf not found
+execve: No such file or directory
+Program exited with status 1
+***
+
+myShell:/home/zx52/ece551/mp_miniproject $ cd  | ls 
+***
+Command cd not found
+execve: No such file or directory
+Program exited with status 1
+Makefile  TESTING.txt  command.h     environ.h  input    myShell.cpp   preprocess.h
+README    ad ad        commandShell.txt  execute.h  myShell  numerics.txt  testProgram
+Program exited with status 0
+***
+
+myShell:/home/zx52/ece551/mp_miniproject $ ls < notexist 
+***
+dup2: Bad file descriptor
+Program exited with status 1
+***
 
 
 

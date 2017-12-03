@@ -9,6 +9,17 @@
 #include "command.h"
 #include "environ.h"
 
+// This file contains all functions about executing executable files
+// by fork() + execve()
+// These functions also deal with Pipe and Redirection 
+//
+
+void redirect(Command *cmd);
+void child (Command *cmd, Environ *env);
+void setPipe(Command ** cmd_array, size_t count, Environ *env);
+void executeCommand (Command *cmd, Environ *env);
+
+
 // redirect stdin, stdout, stderr to files
 void redirect(Command *cmd)
 {
@@ -55,6 +66,14 @@ void child (Command *cmd, Environ *env)
     exit(EXIT_FAILURE);
 }
 
+// This function takes an array of commands, and lenth of the array
+// (N-1) sequential pipes are built among n commands
+// N childs are forked
+// End of pipes are properly duplicated by dup2() and closed
+// For child k, it should read pipe[(k-1)*2], write pipe[i*2+1]
+// The first child takes STDIN and last child gives STDOUT
+//
+// Parent close all pipe ends and wait for all N child
 void setPipe(Command ** cmd_array, size_t count, Environ *env)
 {
   int * mypipe = new int [2*count];
@@ -91,13 +110,18 @@ void setPipe(Command ** cmd_array, size_t count, Environ *env)
       child(cmd_array[i], env);
     }
   }
-
   for (size_t i=0; i<count*2; i++)
     close(mypipe[i]);
 
   pid_t wpid;
   int status = 0;
-  while ((wpid = wait(&status)) > 0);
+  //while ((wpid = wait(&status)) > 0);
+  while ((wpid = wait(&status)) > 0)
+  {
+    if (WIFEXITED(status)) {
+      printf("Program exited with status %d\n", WEXITSTATUS(status));
+    }
+  }
 
   delete [] pids;
   delete [] mypipe;
