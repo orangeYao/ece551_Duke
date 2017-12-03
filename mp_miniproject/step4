@@ -1,0 +1,17 @@
+0 stdin
+1 stdout
+2 stderr
+
+
+dup2(fd, 1); // redirect stdout to fd (file)
+
+
+touch ad\ ad
+
+./printUserInput < ad\ ad
+
+
+./printUserInput < test > hehe
+
+
+reading and writing ends of the pipe (respectively) into filedes[0] and filedes[1]

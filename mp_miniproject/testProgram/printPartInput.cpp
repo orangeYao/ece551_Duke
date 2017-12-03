@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+#include <cstring>
+#include <cstdlib>
+#include <unistd.h>
+#include <stdio.h>
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+  string name;
+  int count = 0;
+  while(getline(cin, name))
+  {
+    if (name == "exit")
+      break;
+    cout << name << endl;
+    count ++;
+
+    if (count > 4)
+      break;
+  }
+  return 0;
+}

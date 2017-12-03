@@ -30,6 +30,10 @@ ls cd
 notExist
 ##Q**#@$&*#
 
+touch aa\ aa\ aa
+ls
+rm aa\ aa\ aa
+
 ./testProgram/printAllArgument 1 2 3 4 5 6 7 8 9 10 a b c d e f g h i j k llllllllll
 ./testProgram/printAllArgument 1\ 2\ 3 \  \ 45 
 ./testProgram/printAllArgument a\ b c\ \ d
@@ -133,10 +137,27 @@ echo $a
 
 #################### step 4:
 
+ls > aa
+cat aa
+./testProgram/printUserInput < aa > bb
+cat bb
+
+wc -l < command.h
+
+ls not_exist 2> aa
 
 
+ls | grep p | grep print | grep printUser | grep printUserInput
 
-/home/zx52/assist/testOverflow
-rule of three
+./printUserInput < largeData.txt | ./printUserInput | ./printUserInput | grep Epoch > duplicateData.txt
+
+ls | ./printUserInput | grep print > ad\ ad
+cat ad\ ad
+
+
+################### meaningless command
+env | asdf
+cd  | ls 
+
 
 

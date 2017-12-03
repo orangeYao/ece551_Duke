@@ -11,8 +11,10 @@
 #include <dirent.h>
 #include <pwd.h>
 #include <map>
+#include <fcntl.h>
 #include "command.h"
 #include "environ.h"
+#include "execute.h"
 using namespace std;
 
 // Search path for a command without '/'
@@ -230,66 +232,71 @@ void promptMyShell()
   free(dir_name);
 }
 
-extern char **environ;
+
+string* delimitPipe (string str, size_t &count)
+{
+  size_t pos;
+  string * input = new string [10];
+  while ((pos = str.find("|"))!=string::npos) {
+    input[count] = str.substr(0, pos);
+    str.erase(0, pos + 1);
+    count ++;
+  }
+  input[count] =  str;
+  count ++;
+  return input;
+}
+
+Command ** createCmdArray(string *delim_input, size_t count)
+{
+  Command **cmd_array = new Command *[count]();
+  for (size_t i=0; i<count; i++) 
+    cmd_array[i] = new Command (delim_input[i]); 
+  delete[] delim_input;
+  return cmd_array;
+}
+
+extern char **environ; //Environment variable at begining
 int main()
 {
   string command;
-  pid_t cpid, w;
-  int status;
   string input;
 
   promptMyShell();
 
   Environ *env = new Environ (environ);
-  char **newenviron = env->getEnviron();
-  map <string, pair_v> env_map = env->getEnvMap();
-
-  while(getline (cin, input)) { //check getline error
-
+  while(getline (cin, input)) { 
       if (isExit(input))
         break;
 
       input = parseVar (input, env);
-      Command *cmd = new Command (input);
+	  size_t count = 0;
+	  string * delim_input = delimitPipe(input, count);
+      Command **cmd_array = createCmdArray(delim_input, count);
+	
+      if (count > 1) {  // Pipe exists
+	    for (size_t i=0; i<count; i++)
+		  commandPreprocess(cmd_array[i], env);
+        setPipe(cmd_array, count, env);
 
-      bool skip_cmd = builtInFunc(cmd, env, input);
+      } else {  // No pipe
+        Command * cmd = cmd_array[0];
 
-      if (!skip_cmd)
-        skip_cmd = commandPreprocess(cmd, env); // here, change envirno
+        // built in functions like cd, set, export 
+        bool skip_cmd = builtInFunc(cmd, env, input); 
+        if (!skip_cmd)
+          skip_cmd = commandPreprocess(cmd, env); 
       
-      if (skip_cmd) {
-        delete cmd;
-        promptMyShell();
-        continue;
+        if (skip_cmd) {
+          delete cmd;
+          promptMyShell();
+          delete[] cmd_array;
+          continue;
+        }
+        executeCommand(cmd, env);
       }
-
-      char ** newargv = cmd->getArgv();
-
-      cpid = fork();
-      if (cpid == -1) {
-        perror("fork");
-        exit(EXIT_FAILURE);
-      }  
-      
-      if (cpid == 0) {
-        execve(newargv[0], newargv, newenviron);
-        perror("execve");
-        exit(EXIT_FAILURE);
-
-      } else {
-        w = waitpid(0, &status, WUNTRACED | WCONTINUED);
-        if (w == -1) {
-		  perror("waitpid");
-		  exit(EXIT_FAILURE);
-		} 
-	    if (WIFEXITED(status)) {
-		  printf("Program exited with status %d\n", WEXITSTATUS(status));
-		} else if (WIFSIGNALED(status)) {
-          printf("Program was killed by signal %d", WTERMSIG(status));
-		}
-      }
+      delete[] cmd_array;
       promptMyShell();
-  	  delete cmd;
   }
   delete env;
   return EXIT_SUCCESS;

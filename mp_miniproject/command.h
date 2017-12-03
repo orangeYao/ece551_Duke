@@ -1,9 +1,8 @@
 #ifndef __command_H__
 #define __command_H__
 #include <string>
-#include <string.h>
+#include <cstring>
 #include <stdlib.h>
-using namespace std;
 
 class Command
 {
@@ -11,10 +10,13 @@ private:
   char **newargv; // argument array
   size_t size; // size of newargv, doubled when not enough
   size_t arg_cnt; // actual length of newargv
+  int redirect [3]; // Rediction file at which argument, 
+                    // for stdin, stdout, stderr. 0 means no redirection 
 
-  string backslashToSpace(string s)
+  // Parse the '\ ' to ' '
+  std::string backslashToSpace(std::string s)
   {
-    string arg = "";
+    std::string arg = "";
     size_t len = s.length(); 
     for (size_t i=0; i<len; i++)
     {
@@ -29,11 +31,48 @@ private:
 public:
   Command(): newargv(NULL), size(5), arg_cnt(0) {}
 
-  Command(string input): newargv(NULL), size(5), arg_cnt(0) 
+  Command(std::string input): newargv(NULL), size(5), arg_cnt(0) 
   {
     parseCommand (input);
   }
-  // ToDo: copy constructor and assignment operator
+
+  Command(const Command &cmd):  newargv(NULL), size(5), arg_cnt(0)
+  {
+	copyHelper(cmd);
+  }
+
+  Command &operator=(const Command &cmd) 
+  {
+    if (this != &cmd) {
+      for (size_t i=0; i<=arg_cnt; i++)
+        free(newargv[i]);
+      free (newargv);
+
+	  copyHelper(cmd);
+      return *this;
+    }
+  }
+
+  // Make deep copy, called by copy constructor and
+  // assignment operator
+  void copyHelper(const Command &cmd)
+  {
+      size = cmd.getsize();
+      arg_cnt = cmd.length();
+
+      int * cmd_rdt = cmd.getRedirect();
+      char ** cmd_argv = cmd.getArgv();
+
+      for (int i=0; i<3; i++)
+        redirect[i] = cmd_rdt[i];
+
+      newargv = (char **) malloc(size * sizeof(char*));
+      for (size_t i=0; i<arg_cnt; i++) {
+        newargv[i] = (char *) malloc(strlen(cmd_argv[i]) + 1);
+        strcpy(newargv[i], cmd_argv[i]);
+      }
+      newargv[arg_cnt] = NULL;
+  }
 
   ~Command()
   {
@@ -42,38 +81,85 @@ public:
     free (newargv);
   }
 
-  size_t length()
+  int * getRedirect() const
+  {
+    return (int *) redirect;
+  }
+
+  size_t length() const
   {
 	return arg_cnt;
   }
 
-  char ** getArgv()
+  size_t getsize() const
+  {
+    return size;
+  }
+
+  char ** getArgv() const
   {
     return newargv;
   }
 
-  void setArgv(string s, int i)
+  // Change content in newargv[i] to be s
+  // e.g. change newargv[0] from 'ls' to '/bin/ls'
+  void setArgv(std::string s, int i)
   {
-    // test here
     newargv[i] = (char *) realloc (newargv[i], s.length()+1);
     strcpy(newargv[i], s.c_str());
   }
 
-  void parseCommand (string input)
+  // Parse command with <, >, 2>
+  // Record redirection file location (ith argument) in redirect[k] = i
+  // k = 0,1,2 refers stdin, stdout, stderr respectively
+  // Called by parseCommand() only
+  void parseRedirect (std::string &input, size_t prev,  size_t i)
+  {
+    if (input[i] == '<') {
+      if (prev != i)
+        redirect[0] = arg_cnt+1;
+      else
+        redirect[0] = arg_cnt;
+
+      input[i] = ' ';
+    }
+
+    if (input[i] == '>') {
+      if (prev != i)
+        redirect[1] = arg_cnt+1;
+      else
+        redirect[1] = arg_cnt;
+      input[i] = ' ';
+    }    
+
+    if (input[i] == '2' && i+1 < input.length() 
+                        && input[i+1] == '>' && prev == i) {
+        redirect[2] = arg_cnt;
+        input[i] = ' ';
+        input[i+1] = ' ';
+    }
+  }
+
+  // Parse user command into argument array char** newargv,
+  // Each char* stores one argument.
+  void parseCommand (std::string input)
   {
     newargv = (char **) malloc(size * sizeof(char*));
-    size_t len = input.length(), prev = 0;
+    memset (redirect, 0, sizeof(redirect));
+
+    size_t len = input.length(); 
+    size_t prev = 0; // prev stores place of the end of previous argument
 
     for (size_t i=0; i<len; i++)
     {
-      if (input[i] == ' ')
-      {
-        if (i == prev) // previous also (real) space
-        {
+	  parseRedirect(input, prev, i);
+
+      if (input[i] == ' ') {
+        if (i == prev) { // previous also a space, continue searching
           prev = i+1;
 
         } else if (input[i-1] != '\\') {
-          string arg = input.substr(prev, i-prev);
+          std::string arg = input.substr(prev, i-prev);
           arg = backslashToSpace(arg);
 
           newargv[arg_cnt] = (char *) malloc(arg.length() + 1);
@@ -81,10 +167,9 @@ public:
           arg_cnt++;
           prev = i+1; 
         }
-      }
-      else if (i == len-1)
-      {
-        string arg = input.substr(prev, i-prev+1);
+
+      } else if (i == len-1) {
+        std::string arg = input.substr(prev, i-prev+1);
         arg = backslashToSpace(arg);
 
         newargv[arg_cnt] = (char *) malloc(arg.length() + 1);
@@ -92,8 +177,7 @@ public:
         arg_cnt++;
       }
 
-      if (arg_cnt >= size)
-      {
+      if (arg_cnt >= size) {
         size *= 2; //double the size
         newargv = (char **) realloc(newargv, size * sizeof(char*));
       }
