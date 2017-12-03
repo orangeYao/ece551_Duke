@@ -752,6 +752,8 @@ into 'ad ad'. The result shows all files containing 'txt', which is correct.
 
 ################### meaningless command
 
+Here are some meaningless/invalid command, our shell does not crash on them.
+
 myShell:/home/zx52/ece551/mp_miniproject $ env | asdf
 ***
 Command asdf not found
